@@ -1,16 +1,16 @@
 <script setup>
-import { computed } from "vue";
-import { beautifyObjectName } from "./utils";
-import AutoFormLabel from "./AutoFormLabel.vue";
+import { computed } from 'vue'
+import { Checkbox } from '~/components/ui/checkbox'
 import {
   FormControl,
   FormDescription,
   FormField,
   FormItem,
   FormMessage,
-} from "~/components/ui/form";
-import { Switch } from "~/components/ui/switch";
-import { Checkbox } from "~/components/ui/checkbox";
+} from '~/components/ui/form'
+import { Switch } from '~/components/ui/switch'
+import AutoFormLabel from './AutoFormLabel.vue'
+import { beautifyObjectName } from './utils'
 
 const props = defineProps({
   fieldName: { type: String, required: true },
@@ -18,17 +18,17 @@ const props = defineProps({
   required: { type: Boolean, required: false },
   config: { type: Object, required: false },
   disabled: { type: Boolean, required: false },
-});
+})
 
 const booleanComponent = computed(() =>
-  props.config?.component === "switch" ? Switch : Checkbox,
-);
+  props.config?.component === 'switch' ? Switch : Checkbox,
+)
 </script>
 
 <template>
   <FormField v-slot="slotProps" :name="fieldName">
     <FormItem>
-      <div class="space-y-0 mb-3 flex items-center gap-3">
+      <div class="mb-3 flex items-center gap-3 space-y-0">
         <FormControl>
           <slot v-bind="slotProps">
             <component

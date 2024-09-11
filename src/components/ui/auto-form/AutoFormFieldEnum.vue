@@ -1,22 +1,22 @@
 <script setup>
-import AutoFormLabel from "./AutoFormLabel.vue";
-import { beautifyObjectName } from "./utils";
 import {
   FormControl,
   FormDescription,
   FormField,
   FormItem,
   FormMessage,
-} from "~/components/ui/form";
+} from '~/components/ui/form'
+import { Label } from '~/components/ui/label'
+import { RadioGroup, RadioGroupItem } from '~/components/ui/radio-group'
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "~/components/ui/select";
-import { Label } from "~/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "~/components/ui/radio-group";
+} from '~/components/ui/select'
+import AutoFormLabel from './AutoFormLabel.vue'
+import { beautifyObjectName } from './utils'
 
 defineProps({
   fieldName: { type: String, required: true },
@@ -25,7 +25,7 @@ defineProps({
   config: { type: Object, required: false },
   disabled: { type: Boolean, required: false },
   options: { type: Array, required: false },
-});
+})
 </script>
 
 <template>
@@ -39,7 +39,7 @@ defineProps({
           <RadioGroup
             v-if="config?.component === 'radio'"
             :disabled="disabled"
-            :orientation="'vertical'"
+            orientation="vertical"
             v-bind="{ ...slotProps.componentField }"
           >
             <div

@@ -12,10 +12,14 @@ const count = ref(0)
 
 <template>
   <div class="container">
-    <h1  class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">{{ msg }}</h1>
+    <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+      {{ msg }}
+    </h1>
 
     <div class="mt-6">
-      <Button @click="count++">count is {{ count }}</Button>
+      <Button @click="count++">
+        count is {{ count }}
+      </Button>
 
       <p class="mt-2">
         Edit
@@ -25,9 +29,7 @@ const count = ref(0)
 
     <p class="mt-4">
       Check out
-      <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-        >create-vue</a
-      >, the official Vue + Vite starter
+      <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>, the official Vue + Vite starter
     </p>
 
     <p class="mt-2">
@@ -35,10 +37,10 @@ const count = ref(0)
       <a
         href="https://vuejs.org/guide/scaling-up/tooling.html#ide-support"
         target="_blank"
-        >Vue Docs Scaling up Guide</a
-      >.
+      >Vue Docs Scaling up Guide</a>.
     </p>
-    <p class="text-sm text-muted-foreground">Click on the Vite and Vue logos to learn more</p>
+    <p class="text-sm text-muted-foreground">
+      Click on the Vite and Vue logos to learn more
+    </p>
   </div>
 </template>
-

@@ -1,27 +1,27 @@
 <script setup>
-import { computed } from "vue";
-import { DEFAULT_ZOD_HANDLERS, INPUT_COMPONENTS } from "./constant";
-import useDependencies from "./dependencies";
+import { computed } from 'vue'
+import { DEFAULT_ZOD_HANDLERS, INPUT_COMPONENTS } from './constant'
+import useDependencies from './dependencies'
 
 const props = defineProps({
   fieldName: { type: String, required: true },
   shape: { type: Object, required: true },
   config: { type: null, required: false },
-});
+})
 
 function isValidConfig(config) {
-  return !!config?.component;
+  return !!config?.component
 }
 
 const delegatedProps = computed(() => {
-  if (["ZodObject", "ZodArray"].includes(props.shape?.type))
-    return { schema: props.shape?.schema };
-  return undefined;
-});
+  if (['ZodObject', 'ZodArray'].includes(props.shape?.type))
+    return { schema: props.shape?.schema }
+  return undefined
+})
 
 const { isDisabled, isHidden, isRequired, overrideOptions } = useDependencies(
   props.fieldName,
-);
+)
 </script>
 
 <template>

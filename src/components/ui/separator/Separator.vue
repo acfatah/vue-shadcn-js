@@ -1,7 +1,7 @@
 <script setup>
-import { computed } from "vue";
-import { Separator } from "radix-vue";
-import { cn } from "~/lib/utils";
+import { Separator } from 'radix-vue'
+import { computed } from 'vue'
+import { cn } from '~/lib/utils'
 
 const props = defineProps({
   orientation: { type: String, required: false },
@@ -10,13 +10,13 @@ const props = defineProps({
   as: { type: null, required: false },
   class: { type: null, required: false },
   label: { type: String, required: false },
-});
+})
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
+  const { class: _, ...delegated } = props
 
-  return delegated;
-});
+  return delegated
+})
 </script>
 
 <template>
@@ -39,7 +39,6 @@ cn(
             : 'h-[1px] py-1 px-2',
         )
       "
-      >{{ props.label }}</span
-    >
+    >{{ props.label }}</span>
   </Separator>
 </template>

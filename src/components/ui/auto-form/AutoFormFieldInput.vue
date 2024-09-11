@@ -1,16 +1,16 @@
 <script setup>
-import { computed } from "vue";
-import AutoFormLabel from "./AutoFormLabel.vue";
-import { beautifyObjectName } from "./utils";
+import { computed } from 'vue'
 import {
   FormControl,
   FormDescription,
   FormField,
   FormItem,
   FormMessage,
-} from "~/components/ui/form";
-import { Input } from "~/components/ui/input";
-import { Textarea } from "~/components/ui/textarea";
+} from '~/components/ui/form'
+import { Input } from '~/components/ui/input'
+import { Textarea } from '~/components/ui/textarea'
+import AutoFormLabel from './AutoFormLabel.vue'
+import { beautifyObjectName } from './utils'
 
 const props = defineProps({
   fieldName: { type: String, required: true },
@@ -18,10 +18,10 @@ const props = defineProps({
   required: { type: Boolean, required: false },
   config: { type: Object, required: false },
   disabled: { type: Boolean, required: false },
-});
+})
 const inputComponent = computed(() =>
-  props.config?.component === "textarea" ? Textarea : Input,
-);
+  props.config?.component === 'textarea' ? Textarea : Input,
+)
 </script>
 
 <template>

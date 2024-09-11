@@ -1,16 +1,16 @@
 <script setup>
-import { useFormField } from "./useFormField";
-import { cn } from "~/lib/utils";
-import { Label } from "~/components/ui/label";
+import { Label } from '~/components/ui/label'
+import { cn } from '~/lib/utils'
+import { useFormField } from './useFormField'
 
 const props = defineProps({
   for: { type: String, required: false },
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
   class: { type: null, required: false },
-});
+})
 
-const { error, formItemId } = useFormField();
+const { error, formItemId } = useFormField()
 </script>
 
 <template>

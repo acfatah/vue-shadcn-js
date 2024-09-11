@@ -1,9 +1,9 @@
 <script setup>
-import { computed } from "vue";
-import { CalendarNext, useForwardProps } from "radix-vue";
-import { ChevronRight } from "lucide-vue-next";
-import { cn } from "~/lib/utils";
-import { buttonVariants } from "~/components/ui/button";
+import { ChevronRight } from 'lucide-vue-next'
+import { CalendarNext, useForwardProps } from 'radix-vue'
+import { computed } from 'vue'
+import { buttonVariants } from '~/components/ui/button'
+import { cn } from '~/lib/utils'
 
 const props = defineProps({
   step: { type: String, required: false },
@@ -11,15 +11,15 @@ const props = defineProps({
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
   class: { type: null, required: false },
-});
+})
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
+  const { class: _, ...delegated } = props
 
-  return delegated;
-});
+  return delegated
+})
 
-const forwardedProps = useForwardProps(delegatedProps);
+const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -34,7 +34,7 @@ const forwardedProps = useForwardProps(delegatedProps);
     v-bind="forwardedProps"
   >
     <slot>
-      <ChevronRight class="h-4 w-4" />
+      <ChevronRight class="size-4" />
     </slot>
   </CalendarNext>
 </template>

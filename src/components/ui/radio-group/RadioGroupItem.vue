@@ -1,12 +1,11 @@
 <script setup>
-import { computed } from "vue";
+import { Circle } from 'lucide-vue-next'
 import {
   RadioGroupIndicator,
   RadioGroupItem,
   useForwardProps,
-} from "radix-vue";
-import { Circle } from "lucide-vue-next";
-import { cn } from "~/lib/utils";
+} from 'radix-vue'
+import { computed } from 'vue'
 
 const props = defineProps({
   id: { type: String, required: false },
@@ -17,15 +16,15 @@ const props = defineProps({
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
   class: { type: null, required: false },
-});
+})
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
+  const { class: _, ...delegated } = props
 
-  return delegated;
-});
+  return delegated
+})
 
-const forwardedProps = useForwardProps(delegatedProps);
+const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -38,7 +37,7 @@ cn(
 )]"
   >
     <RadioGroupIndicator class="flex items-center justify-center">
-      <Circle class="h-2.5 w-2.5 fill-current text-current" />
+      <Circle class="size-2.5 fill-current text-current" />
     </RadioGroupIndicator>
   </RadioGroupItem>
 </template>

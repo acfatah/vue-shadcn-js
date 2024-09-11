@@ -1,20 +1,19 @@
 <script setup>
-import { computed } from "vue";
-import { AccordionHeader, AccordionTrigger } from "radix-vue";
-import { ChevronDown } from "lucide-vue-next";
-import { cn } from "~/lib/utils";
+import { ChevronDown } from 'lucide-vue-next'
+import { AccordionHeader, AccordionTrigger } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = defineProps({
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
   class: { type: null, required: false },
-});
+})
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
+  const { class: _, ...delegated } = props
 
-  return delegated;
-});
+  return delegated
+})
 </script>
 
 <template>
@@ -30,7 +29,7 @@ cn(
       <slot />
       <slot name="icon">
         <ChevronDown
-          class="h-4 w-4 shrink-0 transition-transform duration-200"
+          class="size-4 shrink-0 transition-transform duration-200"
         />
       </slot>
     </AccordionTrigger>

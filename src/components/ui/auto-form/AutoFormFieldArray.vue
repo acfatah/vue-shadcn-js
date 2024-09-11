@@ -1,20 +1,20 @@
 <script setup>
-import * as z from "zod";
-import { computed, provide } from "vue";
-import { PlusIcon, TrashIcon } from "lucide-vue-next";
-import { FieldArray, FieldContextKey, useField } from "vee-validate";
-import { beautifyObjectName, getBaseType } from "./utils";
-import AutoFormField from "./AutoFormField.vue";
-import AutoFormLabel from "./AutoFormLabel.vue";
+import { PlusIcon, TrashIcon } from 'lucide-vue-next'
+import { FieldArray, FieldContextKey, useField } from 'vee-validate'
+import { computed, provide } from 'vue'
+import * as z from 'zod'
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "~/components/ui/accordion";
-import { Button } from "~/components/ui/button";
-import { Separator } from "~/components/ui/separator";
-import { FormItem, FormMessage } from "~/components/ui/form";
+} from '~/components/ui/accordion'
+import { Button } from '~/components/ui/button'
+import { FormItem, FormMessage } from '~/components/ui/form'
+import { Separator } from '~/components/ui/separator'
+import AutoFormField from './AutoFormField.vue'
+import AutoFormLabel from './AutoFormLabel.vue'
+import { beautifyObjectName, getBaseType } from './utils'
 
 const props = defineProps({
   fieldName: { type: String, required: true },
@@ -22,33 +22,34 @@ const props = defineProps({
   config: { type: null, required: false },
   schema: { type: null, required: false },
   disabled: { type: Boolean, required: false },
-});
+})
 
 function isZodArray(item) {
-  return item instanceof z.ZodArray;
+  return item instanceof z.ZodArray
 }
 
 function isZodDefault(item) {
-  return item instanceof z.ZodDefault;
+  return item instanceof z.ZodDefault
 }
 
 const itemShape = computed(() => {
-  if (!props.schema) return;
+  if (!props.schema)
+    return
 
   const schema = isZodArray(props.schema)
     ? props.schema._def.type
     : isZodDefault(props.schema)
       ? props.schema._def.innerType._def.type
-      : null;
+      : null
 
   return {
     type: getBaseType(schema),
     schema,
-  };
-});
+  }
+})
 
-const fieldContext = useField(props.fieldName);
-provide(FieldContextKey, fieldContext);
+const fieldContext = useField(props.fieldName)
+provide(FieldContextKey, fieldContext)
 </script>
 
 <template>
