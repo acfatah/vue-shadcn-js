@@ -1,5 +1,5 @@
 {
-  "name": "vue-scadcn-app",
+  "name": "vue-scadcn-spa",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,13 +9,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vee-validate/zod": "^4.13.2",
+    "@vueuse/core": "^11.0.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "embla-carousel-vue": "^8.2.1",
     "lucide-vue-next": "^0.439.0",
     "radix-vue": "^1.9.5",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
-    "vue": "^3.4.37"
+    "vee-validate": "^4.13.2",
+    "vue": "^3.4.37",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
