@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
+import { useTheme } from '~/components/composables/use-theme.js'
 import { Button } from '~/components/ui/button'
 
 defineProps({
@@ -8,9 +9,16 @@ defineProps({
 })
 
 const count = ref(0)
+const { colorMode, toggleTheme } = useTheme()
 </script>
 
 <template>
+  <!-- Dark mode switcher example -->
+  <Teleport to="body">
+    <button class="fixed right-4 top-4 rounded-full border bg-background p-2" @click="toggleTheme">
+      {{ colorMode === 'dark' ? '🌞' : '🌙' }}
+    </button>
+  </Teleport>
   <div class="container">
     <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
       {{ msg }}
