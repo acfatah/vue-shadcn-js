@@ -33,11 +33,14 @@ export default function useDependencies(fieldName) {
     const source = dep.sourceField
     const index = getIndexIfArray(fieldName) ?? -1
     const [sourceLast, ...sourceInitial] = source.split('.').toReversed()
+
+    // eslint-disable-next-line no-unused-vars
     const [_targetLast, ...targetInitial] = dep.targetField
       .split('.')
       .toReversed()
 
     if (index >= 0 && sourceInitial.join(',') === targetInitial.join(',')) {
+      // eslint-disable-next-line no-unused-vars
       const [_currentLast, ...currentInitial] = fieldName
         .split('.')
         .toReversed()

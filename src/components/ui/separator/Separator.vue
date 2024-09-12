@@ -23,11 +23,11 @@ const delegatedProps = computed(() => {
   <Separator
     v-bind="delegatedProps"
     :class="
-cn(
-  'shrink-0 bg-border relative',
-  props.orientation === 'vertical' ? 'w-px h-full' : 'h-px w-full',
-  props.class
-)]"
+      cn(
+        'shrink-0 bg-border relative',
+        props.orientation === 'vertical' ? 'w-px h-full' : 'h-px w-full',
+        props.class,
+      )"
   >
     <span
       v-if="props.label"
