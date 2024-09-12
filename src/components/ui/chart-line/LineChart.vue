@@ -1,15 +1,14 @@
 <script setup>
-import { CurveType } from "@unovis/ts";
-import { VisAxis, VisLine, VisXYContainer } from "@unovis/vue";
-import { Axis, Line } from "@unovis/ts";
-import { computed, ref } from "vue";
-import { useMounted } from "@vueuse/core";
+import { Axis, CurveType, Line } from '@unovis/ts'
+import { VisAxis, VisLine, VisXYContainer } from '@unovis/vue'
+import { useMounted } from '@vueuse/core'
+import { computed, ref } from 'vue'
 import {
   ChartCrosshair,
   ChartLegend,
   defaultColors,
-} from "~/components/ui/chart";
-import { cn } from "~/lib/utils";
+} from '~/components/ui/chart'
+import { cn } from '~/lib/utils'
 
 const props = defineProps({
   data: { type: Array, required: true },
@@ -31,14 +30,14 @@ const props = defineProps({
   showGridLine: { type: Boolean, required: false, default: true },
   customTooltip: { type: null, required: false },
   curveType: { type: String, required: false, default: CurveType.MonotoneX },
-});
+})
 
-const emits = defineEmits(["legendItemClick"]);
+const emits = defineEmits(['legendItemClick'])
 
-const index = computed(() => props.index);
+const index = computed(() => props.index)
 const colors = computed(() =>
   props.colors?.length ? props.colors : defaultColors(props.categories.length),
-);
+)
 
 const legendItems = ref(
   props.categories.map((category, i) => ({
@@ -46,12 +45,12 @@ const legendItems = ref(
     color: colors.value[i],
     inactive: false,
   })),
-);
+)
 
-const isMounted = useMounted();
+const isMounted = useMounted()
 
 function handleLegendItemClick(d, i) {
-  emits("legendItemClick", d, i);
+  emits('legendItemClick', d, i)
 }
 </script>
 

@@ -1,7 +1,7 @@
 <script setup>
-import { computed, provide } from "vue";
-import { ToggleGroupRoot, useForwardPropsEmits } from "radix-vue";
-import { cn } from "~/lib/utils";
+import { ToggleGroupRoot, useForwardPropsEmits } from 'radix-vue'
+import { computed, provide } from 'vue'
+import { cn } from '~/lib/utils'
 
 const props = defineProps({
   rovingFocus: { type: Boolean, required: false },
@@ -17,20 +17,20 @@ const props = defineProps({
   class: { type: null, required: false },
   variant: { type: null, required: false },
   size: { type: null, required: false },
-});
-const emits = defineEmits(["update:modelValue"]);
+})
+const emits = defineEmits(['update:modelValue'])
 
-provide("toggleGroup", {
+provide('toggleGroup', {
   variant: props.variant,
   size: props.size,
-});
+})
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
-  return delegated;
-});
+  const { class: _, ...delegated } = props
+  return delegated
+})
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits);
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>

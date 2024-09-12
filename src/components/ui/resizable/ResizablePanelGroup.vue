@@ -1,7 +1,7 @@
 <script setup>
-import { computed } from "vue";
-import { SplitterGroup, useForwardPropsEmits } from "radix-vue";
-import { cn } from "~/lib/utils";
+import { SplitterGroup, useForwardPropsEmits } from 'radix-vue'
+import { computed } from 'vue'
+import { cn } from '~/lib/utils'
 
 const props = defineProps({
   id: { type: [String, null], required: false },
@@ -12,15 +12,15 @@ const props = defineProps({
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
   class: { type: null, required: false },
-});
-const emits = defineEmits(["layout"]);
+})
+const emits = defineEmits(['layout'])
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
-  return delegated;
-});
+  const { class: _, ...delegated } = props
+  return delegated
+})
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits);
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>

@@ -1,22 +1,22 @@
 <script setup>
-import { computed } from "vue";
-import { NavigationMenuIndicator, useForwardProps } from "radix-vue";
-import { cn } from "~/lib/utils";
+import { NavigationMenuIndicator, useForwardProps } from 'radix-vue'
+import { computed } from 'vue'
+import { cn } from '~/lib/utils'
 
 const props = defineProps({
   forceMount: { type: Boolean, required: false },
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
   class: { type: null, required: false },
-});
+})
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
+  const { class: _, ...delegated } = props
 
-  return delegated;
-});
+  return delegated
+})
 
-const forwardedProps = useForwardProps(delegatedProps);
+const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
@@ -30,7 +30,7 @@ const forwardedProps = useForwardProps(delegatedProps);
     "
   >
     <div
-      class="relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border shadow-md"
+      class="relative top-[60%] size-2 rotate-45 rounded-tl-sm bg-border shadow-md"
     />
   </NavigationMenuIndicator>
 </template>

@@ -1,42 +1,41 @@
 <script setup>
-import { VisDonut, VisSingleContainer } from '@unovis/vue';
-import { Donut } from '@unovis/ts';
-import { computed, ref } from 'vue';
-import { useMounted } from '@vueuse/core';
-import { ChartSingleTooltip, defaultColors } from '~/components/ui/chart';
-import { cn } from '~/lib/utils';
+import { Donut } from '@unovis/ts'
+import { VisDonut, VisSingleContainer } from '@unovis/vue'
+import { useMounted } from '@vueuse/core'
+import { computed, ref } from 'vue'
+import { ChartSingleTooltip, defaultColors } from '~/components/ui/chart'
+import { cn } from '~/lib/utils'
 
 const props = defineProps({
-    data: { type: Array, required: true },
-    colors: { type: Array, required: false },
-    index: { type: null, required: true },
-    margin: { type: null, required: false, default: () => ({ top: 0, bottom: 0, left: 0, right: 0 }) },
-    showLegend: { type: Boolean, required: false, default: true },
-    showTooltip: { type: Boolean, required: false, default: true },
-    filterOpacity: { type: Number, required: false, default: 0.2 },
-    category: { type: String, required: true },
-    type: { type: String, required: false, default: 'donut' },
-    sortFunction: { type: Function, required: false, default: () => undefined },
-    valueFormatter: { type: Function, required: false, default: (tick: number) => `${tick}` },
-    customTooltip: { type: null, required: false }
-  }
-);
+  data: { type: Array, required: true },
+  colors: { type: Array, required: false },
+  index: { type: null, required: true },
+  margin: { type: null, required: false, default: () => ({ top: 0, bottom: 0, left: 0, right: 0 }) },
+  showLegend: { type: Boolean, required: false, default: true },
+  showTooltip: { type: Boolean, required: false, default: true },
+  filterOpacity: { type: Number, required: false, default: 0.2 },
+  category: { type: String, required: true },
+  type: { type: String, required: false, default: 'donut' },
+  sortFunction: { type: Function, required: false, default: () => undefined },
+  valueFormatter: { type: Function, required: false, default: (tick: number) => `${tick}` },
+  customTooltip: { type: null, required: false },
+},
+)
 
+const category = computed(() => props.category)
+const index = computed(() => props.index)
 
-const category = computed(() => props.category);
-const index = computed(() => props.index);
-
-const isMounted = useMounted();
-const activeSegmentKey = ref();
-const colors = computed(() => props.colors?.length ? props.colors : defaultColors(props.data.filter((d) => d[props.category]).filter(Boolean).length));
+const isMounted = useMounted()
+const activeSegmentKey = ref()
+const colors = computed(() => props.colors?.length ? props.colors : defaultColors(props.data.filter(d => d[props.category]).filter(Boolean).length))
 const legendItems = computed(() => props.data.map((item, i) => ({
   name: item[props.index],
   color: colors.value[i],
-  inactive: false
-})));
+  inactive: false,
+})))
 
 const totalValue = computed(() => props.data.reduce((prev, curr) => {
-  return prev + curr[props.category];
+  return prev + curr[props.category]
 }, 0))
 </script>
 
@@ -68,7 +67,8 @@ const totalValue = computed(() => props.data.reduce((prev, curr) => {
               if (d?.data?.[index] === activeSegmentKey) {
                 activeSegmentKey = undefined;
                 elements.forEach((el) => (el.style.opacity = '1'));
-              } else {
+              }
+              else {
                 activeSegmentKey = d?.data?.[index];
                 elements.forEach(
                   (el) => (el.style.opacity = `${filterOpacity}`),

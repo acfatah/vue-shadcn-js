@@ -1,5 +1,5 @@
 <script setup>
-import { TooltipRoot, useForwardPropsEmits } from "radix-vue";
+import { TooltipRoot, useForwardPropsEmits } from 'radix-vue'
 
 const props = defineProps({
   defaultOpen: { type: Boolean, required: false },
@@ -9,10 +9,10 @@ const props = defineProps({
   disableClosingTrigger: { type: Boolean, required: false },
   disabled: { type: Boolean, required: false },
   ignoreNonKeyboardFocus: { type: Boolean, required: false },
-});
-const emits = defineEmits(["update:open"]);
+})
+const emits = defineEmits(['update:open'])
 
-const forwarded = useForwardPropsEmits(props, emits);
+const forwarded = useForwardPropsEmits(props, emits)
 </script>
 
 <template>

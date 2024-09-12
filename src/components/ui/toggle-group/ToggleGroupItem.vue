@@ -1,8 +1,8 @@
 <script setup>
-import { computed, inject } from "vue";
-import { ToggleGroupItem, useForwardProps } from "radix-vue";
-import { toggleVariants } from "~/components/ui/toggle";
-import { cn } from "~/lib/utils";
+import { ToggleGroupItem, useForwardProps } from 'radix-vue'
+import { computed, inject } from 'vue'
+import { toggleVariants } from '~/components/ui/toggle'
+import { cn } from '~/lib/utils'
 
 const props = defineProps({
   value: { type: String, required: true },
@@ -14,16 +14,16 @@ const props = defineProps({
   class: { type: null, required: false },
   variant: { type: null, required: false },
   size: { type: null, required: false },
-});
+})
 
-const context = inject("toggleGroup");
+const context = inject('toggleGroup')
 
 const delegatedProps = computed(() => {
-  const { class: _, variant, size, ...delegated } = props;
-  return delegated;
-});
+  const { class: _, variant, size, ...delegated } = props
+  return delegated
+})
 
-const forwardedProps = useForwardProps(delegatedProps);
+const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>

@@ -1,9 +1,9 @@
 <script setup>
-import { MenubarMenu } from "radix-vue";
+import { MenubarMenu } from 'radix-vue'
 
 const props = defineProps({
   value: { type: String, required: false },
-});
+})
 </script>
 
 <template>

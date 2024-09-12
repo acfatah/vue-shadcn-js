@@ -1,7 +1,7 @@
 <script setup>
-import { cn } from "~/lib/utils";
+import { cn } from '~/lib/utils'
 
-const props = defineProps();
+const props = defineProps()
 </script>
 
 <template>

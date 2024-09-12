@@ -1,15 +1,15 @@
 <script setup>
-import { MenubarRadioGroup, useForwardPropsEmits } from "radix-vue";
+import { MenubarRadioGroup, useForwardPropsEmits } from 'radix-vue'
 
 const props = defineProps({
   modelValue: { type: String, required: false },
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
-});
+})
 
-const emits = defineEmits(["update:modelValue"]);
+const emits = defineEmits(['update:modelValue'])
 
-const forwarded = useForwardPropsEmits(props, emits);
+const forwarded = useForwardPropsEmits(props, emits)
 </script>
 
 <template>

@@ -1,8 +1,8 @@
 <script setup>
-import { computed } from "vue";
-import { SplitterResizeHandle, useForwardPropsEmits } from "radix-vue";
-import { GripVertical } from "lucide-vue-next";
-import { cn } from "~/lib/utils";
+import { GripVertical } from 'lucide-vue-next'
+import { SplitterResizeHandle, useForwardPropsEmits } from 'radix-vue'
+import { computed } from 'vue'
+import { cn } from '~/lib/utils'
 
 const props = defineProps({
   id: { type: String, required: false },
@@ -13,15 +13,15 @@ const props = defineProps({
   as: { type: null, required: false },
   class: { type: null, required: false },
   withHandle: { type: Boolean, required: false },
-});
-const emits = defineEmits(["dragging"]);
+})
+const emits = defineEmits(['dragging'])
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
-  return delegated;
-});
+  const { class: _, ...delegated } = props
+  return delegated
+})
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits);
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
@@ -38,7 +38,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
       <div
         class="z-10 flex h-4 w-3 items-center justify-center rounded-sm border bg-border"
       >
-        <GripVertical class="h-2.5 w-2.5" />
+        <GripVertical class="size-2.5" />
       </div>
     </template>
   </SplitterResizeHandle>

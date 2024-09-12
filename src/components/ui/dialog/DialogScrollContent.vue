@@ -1,14 +1,13 @@
 <script setup>
-import { computed } from "vue";
+import { X } from 'lucide-vue-next'
 import {
   DialogClose,
   DialogContent,
   DialogOverlay,
   DialogPortal,
   useForwardPropsEmits,
-} from "radix-vue";
-import { X } from "lucide-vue-next";
-import { cn } from "~/lib/utils";
+} from 'radix-vue'
+import { computed } from 'vue'
 
 const props = defineProps({
   forceMount: { type: Boolean, required: false },
@@ -17,23 +16,23 @@ const props = defineProps({
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
   class: { type: null, required: false },
-});
+})
 const emits = defineEmits([
-  "escapeKeyDown",
-  "pointerDownOutside",
-  "focusOutside",
-  "interactOutside",
-  "openAutoFocus",
-  "closeAutoFocus",
-]);
+  'escapeKeyDown',
+  'pointerDownOutside',
+  'focusOutside',
+  'interactOutside',
+  'openAutoFocus',
+  'closeAutoFocus',
+])
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
+  const { class: _, ...delegated } = props
 
-  return delegated;
-});
+  return delegated
+})
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits);
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
@@ -53,8 +52,8 @@ cn(
             const originalEvent = event.detail.originalEvent;
             const target = originalEvent.target;
             if (
-              originalEvent.offsetX > target.clientWidth ||
-              originalEvent.offsetY > target.clientHeight
+              originalEvent.offsetX > target.clientWidth
+              || originalEvent.offsetY > target.clientHeight
             ) {
               event.preventDefault();
             }
@@ -64,9 +63,9 @@ cn(
         <slot />
 
         <DialogClose
-          class="absolute top-3 right-3 p-0.5 transition-colors rounded-md hover:bg-secondary"
+          class="absolute right-3 top-3 rounded-md p-0.5 transition-colors hover:bg-secondary"
         >
-          <X class="w-4 h-4" />
+          <X class="size-4" />
           <span class="sr-only">Close</span>
         </DialogClose>
       </DialogContent>

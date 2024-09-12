@@ -1,6 +1,7 @@
 <script setup>
-import { computed } from "vue";
-import { RangeCalendarRoot, useForwardPropsEmits } from "radix-vue";
+import { RangeCalendarRoot, useForwardPropsEmits } from 'radix-vue'
+import { computed } from 'vue'
+import { cn } from '~/lib/utils'
 import {
   RangeCalendarCell,
   RangeCalendarCellTrigger,
@@ -13,8 +14,7 @@ import {
   RangeCalendarHeading,
   RangeCalendarNextButton,
   RangeCalendarPrevButton,
-} from ".";
-import { cn } from "~/lib/utils";
+} from '.'
 
 const props = defineProps({
   defaultPlaceholder: { type: null, required: false },
@@ -42,21 +42,21 @@ const props = defineProps({
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
   class: { type: null, required: false },
-});
+})
 
 const emits = defineEmits([
-  "update:modelValue",
-  "update:placeholder",
-  "update:startValue",
-]);
+  'update:modelValue',
+  'update:placeholder',
+  'update:startValue',
+])
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props;
+  const { class: _, ...delegated } = props
 
-  return delegated;
-});
+  return delegated
+})
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits);
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
@@ -71,7 +71,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
       <RangeCalendarNextButton />
     </RangeCalendarHeader>
 
-    <div class="flex flex-col gap-y-4 mt-4 sm:flex-row sm:gap-x-4 sm:gap-y-0">
+    <div class="mt-4 flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 sm:gap-y-0">
       <RangeCalendarGrid v-for="month in grid" :key="month.value.toString()">
         <RangeCalendarGridHead>
           <RangeCalendarGridRow>

@@ -1,19 +1,19 @@
 <script setup>
+import { Axis, GroupedBar, StackedBar } from '@unovis/ts'
 import {
   VisAxis,
   VisGroupedBar,
   VisStackedBar,
   VisXYContainer,
-} from "@unovis/vue";
-import { Axis, GroupedBar, StackedBar } from "@unovis/ts";
-import { computed, ref } from "vue";
-import { useMounted } from "@vueuse/core";
+} from '@unovis/vue'
+import { useMounted } from '@vueuse/core'
+import { computed, ref } from 'vue'
 import {
   ChartCrosshair,
   ChartLegend,
   defaultColors,
-} from "~/components/ui/chart";
-import { cn } from "~/lib/utils";
+} from '~/components/ui/chart'
+import { cn } from '~/lib/utils'
 
 const props = defineProps({
   data: { type: Array, required: true },
@@ -34,37 +34,37 @@ const props = defineProps({
   showLegend: { type: Boolean, required: false, default: true },
   showGridLine: { type: Boolean, required: false, default: true },
   customTooltip: { type: null, required: false },
-  type: { type: String, required: false, default: "grouped" },
+  type: { type: String, required: false, default: 'grouped' },
   roundedCorners: { type: Number, required: false, default: 0 },
-});
-const emits = defineEmits(["legendItemClick"]);
+})
+const emits = defineEmits(['legendItemClick'])
 
-const index = computed(() => props.index);
+const index = computed(() => props.index)
 const colors = computed(() =>
   props.colors?.length ? props.colors : defaultColors(props.categories.length),
-);
+)
 const legendItems = ref(
   props.categories.map((category, i) => ({
     name: category,
     color: colors.value[i],
     inactive: false,
   })),
-);
+)
 
-const isMounted = useMounted();
+const isMounted = useMounted()
 
 function handleLegendItemClick(d, i) {
-  emits("legendItemClick", d, i);
+  emits('legendItemClick', d, i)
 }
 
 const VisBarComponent = computed(() =>
-  props.type === "grouped" ? VisGroupedBar : VisStackedBar,
-);
+  props.type === 'grouped' ? VisGroupedBar : VisStackedBar,
+)
 const selectorsBar = computed(() =>
-  props.type === "grouped"
+  props.type === 'grouped'
     ? GroupedBar.selectors.bar
     : StackedBar.selectors.bar,
-);
+)
 </script>
 
 <template>

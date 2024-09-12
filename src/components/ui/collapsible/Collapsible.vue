@@ -1,5 +1,5 @@
 <script setup>
-import { CollapsibleRoot, useForwardPropsEmits } from "radix-vue";
+import { CollapsibleRoot, useForwardPropsEmits } from 'radix-vue'
 
 const props = defineProps({
   defaultOpen: { type: Boolean, required: false },
@@ -7,10 +7,10 @@ const props = defineProps({
   disabled: { type: Boolean, required: false },
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
-});
-const emits = defineEmits(["update:open"]);
+})
+const emits = defineEmits(['update:open'])
 
-const forwarded = useForwardPropsEmits(props, emits);
+const forwarded = useForwardPropsEmits(props, emits)
 </script>
 
 <template>
