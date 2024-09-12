@@ -10,9 +10,11 @@ export function defaultColors(count = 3) {
   const primaryCount = quotient + remainder
   const secondaryCount = quotient
   return [
+    // eslint-disable-next-line unicorn/no-new-array
     ...Array.from(new Array(primaryCount).keys()).map(
       i => `hsl(var(--vis-primary-color) / ${1 - (1 / primaryCount) * i})`,
     ),
+    // eslint-disable-next-line unicorn/no-new-array
     ...Array.from(new Array(secondaryCount).keys()).map(
       i =>
         `hsl(var(--vis-secondary-color) / ${1 - (1 / secondaryCount) * i})`,
