@@ -26,3 +26,5 @@ tmp
 *.sln
 *.suo
 *.sw?
+
+*storybook.log
