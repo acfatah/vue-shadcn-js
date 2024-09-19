@@ -12,7 +12,11 @@ const preview = {
     },
     options: {
       storySort: {
-        order: ['Readme'],
+        order: [
+          'Readme',
+          'Foundation',
+          ['Design Tokens', 'Colors'],
+        ],
         locales: 'en-US',
       },
     },
