@@ -7,6 +7,12 @@ const preview = {
         date: /Date$/i,
       },
     },
+    options: {
+      storySort: {
+        order: ['Readme'],
+        locales: 'en-US',
+      },
+    },
   },
 }
 
