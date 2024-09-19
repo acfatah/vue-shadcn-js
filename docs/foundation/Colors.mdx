@@ -1,0 +1,294 @@
+import { useState, useEffect } from "react";
+import { Meta } from "@storybook/blocks"
+import { ColorPalette, ColorItem } from "@storybook/addon-docs"
+
+import { parseCss } from './design-tokens.js'
+
+<Meta title="Foundation/Colors" />
+
+# Colors
+
+The color tokens are defined in `src/style/app.css`.
+By default, [Tailwindcss Colors](https://tailwindcss.com/docs/customizing-colors)
+are available.
+
+## Primary
+
+Define the brand and are used to highlight key actions or elements.
+
+- Primary: The main brand color used for primary actions (e.g., buttons, links).
+- Primary Variant: A lighter or darker version of the primary color, used for hover states or other interactive elements.    
+
+export function PrimaryColorPallete() {
+  const [tokens, setTokens] = useState({})
+  const [themes, setThemes] = useState([])
+
+  useEffect(() => {
+    const run = async () => {
+      const tokens = await parseCss()
+      const themes = Object.keys(tokens)
+
+      setTokens(tokens) 
+      setThemes(themes)
+    }
+
+    run()
+  }) 
+
+  return (
+    themes.map(theme => 
+      <ColorItem
+        key={theme}
+        title={theme}
+        colors={{
+          '--primary': `hsl(${tokens[theme]['--primary']})`,
+          '--primary-foreground': `hsl(${tokens[theme]['--primary-foreground']})`,
+        }}
+      />
+    )
+  )
+}
+
+<PrimaryColorPallete />
+
+### Secondary
+
+Used for secondary actions or to add contrast to your design.
+
+- Secondary: A secondary color used for less prominent actions.
+- Secondary Variant: A lighter or darker version of the secondary color.
+
+export function SecondaryColorPallete() {
+  const [tokens, setTokens] = useState({})
+  const [themes, setThemes] = useState([])
+
+  useEffect(() => {
+    const run = async () => {
+      const tokens = await parseCss()
+      const themes = Object.keys(tokens)
+
+      setTokens(tokens) 
+      setThemes(themes)
+    }
+
+    run()
+  }) 
+
+  return (
+    themes.map(theme => 
+      <ColorItem
+        key={theme}
+        title={theme}
+        colors={{
+          '--secondary': `hsl(${tokens[theme]['--secondary']})`,
+          '--secondary-foreground': `hsl(${tokens[theme]['--secondary-foreground']})`,
+        }}
+      />
+    )
+  )
+}
+
+<SecondaryColorPallete />
+
+### Accent
+
+Used sparingly to draw attention to specific UI elements or to indicate state.
+
+- Accent: A color used to highlight certain elements like links, notifications, or special offers.
+- Accent Variant: A variant for hover states or more subtle accents.
+
+export function AccentColorPallete() {
+  const [tokens, setTokens] = useState({})
+  const [themes, setThemes] = useState([])
+
+  useEffect(() => {
+    const run = async () => {
+      const tokens = await parseCss()
+      const themes = Object.keys(tokens)
+
+      setTokens(tokens) 
+      setThemes(themes)
+    }
+
+    run()
+  }) 
+
+  return (
+    themes.map(theme => 
+      <ColorItem
+        key={theme}
+        title={theme}
+        colors={{
+          '--accent': `hsl(${tokens[theme]['--accent']})`,
+          '--accent-foreground': `hsl(${tokens[theme]['--accent-foreground']})`,
+        }}
+      />
+    )
+  )
+}
+
+<AccentColorPallete />
+
+### Muted / Gray
+
+Used for text, backgrounds, and subtle UI elements.
+
+export function MutedColorPallete() {
+  const [tokens, setTokens] = useState({})
+  const [themes, setThemes] = useState([])
+
+  useEffect(() => {
+    const run = async () => {
+      const tokens = await parseCss()
+      const themes = Object.keys(tokens)
+
+      setTokens(tokens) 
+      setThemes(themes)
+    }
+
+    run()
+  }) 
+
+  return (
+    themes.map(theme => 
+      <ColorItem
+        key={theme}
+        title={theme}
+        colors={{
+          '--muted': `hsl(${tokens[theme]['--muted']})`,
+          '--muted-foreground': `hsl(${tokens[theme]['--muted-foreground']})`,
+        }}
+      />
+    )
+  )
+}
+
+<MutedColorPallete />
+
+### Status
+
+Colors that communicate the status of an element, like success, warning, or error states.
+
+- Success: A color used to indicate success (e.g., green).
+- Warning: A color used to signal caution (e.g., yellow).
+- Error: A color used to indicate an error or destructive action (e.g., red).
+- Info: A color used for informational messages (e.g., blue).
+
+
+export function StatusColorPallete() {
+  const [tokens, setTokens] = useState({})
+  const [themes, setThemes] = useState([])
+
+  useEffect(() => {
+    const run = async () => {
+      const tokens = await parseCss()
+      const themes = Object.keys(tokens)
+
+      setTokens(tokens) 
+      setThemes(themes)
+    }
+
+    run()
+  }) 
+
+  return (
+    themes.map(theme => <div key={theme}> 
+      <hr className="my-4" />
+
+      <ColorItem
+        title="success"
+        subtitle={theme}
+        colors={{
+          '--success': `hsl(${tokens[theme]['--success']})`,
+          '--success-foreground': `hsl(${tokens[theme]['--success-foreground']})`,
+        }}
+      />
+
+      <ColorItem
+        title="info"
+        subtitle={theme}
+        colors={{
+          '--info': `hsl(${tokens[theme]['--info']})`,
+          '--info-foreground': `hsl(${tokens[theme]['--info-foreground']})`,
+        }}
+      />
+
+      <ColorItem
+        title="warning"
+        subtitle={theme}
+        colors={{
+          '--warning': `hsl(${tokens[theme]['--warning']})`,
+          '--warning-foreground': `hsl(${tokens[theme]['--warning-foreground']})`,
+        }}
+      />
+
+      <ColorItem
+        title="error"
+        subtitle={theme}
+        colors={{
+          '--error': `hsl(${tokens[theme]['--error']})`,
+          '--error-foreground': `hsl(${tokens[theme]['--error-foreground']})`,
+        }}
+      />
+    </div>)
+  )
+}
+
+<StatusColorPallete />
+
+### Neutral
+
+Essential for creating a balanced UI, focusing on backgrounds, text, and borders.
+
+- Background: The main background color, often a light or dark neutral.
+- Surface: A color for cards, modals, and other UI surfaces that need to stand out against the background.
+- Border: A neutral color used for borders, dividers, or outlines.
+
+export function NeutralColorPallete() {
+  const [tokens, setTokens] = useState({})
+  const [themes, setThemes] = useState([])
+
+  useEffect(() => {
+    const run = async () => {
+      const tokens = await parseCss()
+      const themes = Object.keys(tokens)
+
+      setTokens(tokens) 
+      setThemes(themes)
+    }
+
+    run()
+  }) 
+
+  return (
+    themes.map(theme => <div key={theme}> 
+      <hr className="my-4" />
+
+      <ColorItem
+        title="background / foreground"
+        subtitle={theme}
+        colors={{
+          '--background': `hsl(${tokens[theme]['--background']})`,
+          '--foreground': `hsl(${tokens[theme]['--foreground']})`,
+          '--border': `hsl(${tokens[theme]['--border']})`,
+          '--input': `hsl(${tokens[theme]['--input']})`,
+          '--ring': `hsl(${tokens[theme]['--ring']})`,
+        }}
+      />
+
+      <ColorItem
+        title="card / popover"
+        subtitle={theme}
+        colors={{
+          '--card': `hsl(${tokens[theme]['--card']})`,
+          '--card-foreground': `hsl(${tokens[theme]['--card-foreground']})`,
+          '--popover': `hsl(${tokens[theme]['--popover']})`,
+          '--popover-foreground': `hsl(${tokens[theme]['--popover-foreground']})`,
+        }}
+      />
+
+    </div>)
+  )
+}
+
+<NeutralColorPallete />

@@ -31,8 +31,17 @@
     --accent: 0 0% 96.1%;
     --accent-foreground: 0 0% 9%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --success: 152.95 100% 37.84%;
+    --success-foreground: 120 9.1% 97.8%;
+
+    --info: 210 84.2% 60.2%;
+    --info-foreground: 210 9.1% 97.8%;
+
+    --warning: 45.4 93.39% 47.45%;
+    --warning-foreground: 50 9.1% 97.8%;
+
+    --error: 0 84.2% 60.2%;
+    --error-foreground: 0 9.1% 97.8%;
 
     --ring: 0 0% 3.9%;
 
@@ -64,8 +73,21 @@
     --accent: 0 0% 14.9%;
     --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    /* Colors for <Button variant="success" /> */
+    --success: 152.95 100% 37.84%;
+    --success-foreground: 220 14% 96%;
+
+    /* Colors for <Button variant="info" /> */
+    --info: 210 84.2% 60.2%;
+    --info-foreground: 220 14% 96%;
+
+    /* Colors for <Button variant="warning" /> */
+    --warning: 45.4 93.39% 47.45%;
+    --warning-foreground: 220 14% 96%;
+
+    /* Colors for <Button variant="error" /> */
+    --error: 0 66% 47%; /* Source: Figma | rgb(106, 93, 249) | #6A5DF9 */
+    --error-foreground: 220 14% 96%; /* Source: neutral 800 | #F3F4F6 */
 
     --ring: 0 0% 83.1%;
   }
