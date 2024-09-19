@@ -1,14 +1,12 @@
 <script setup>
-import { ref } from 'vue'
-
 import { useTheme } from '~/components/composables/use-theme.js'
-import { Button } from '~/components/ui/button'
+import { useCounterStore } from '~/stores/counter'
 
 defineProps({
   msg: String,
 })
 
-const count = ref(0)
+const counterStore = useCounterStore()
 const { colorMode, toggleTheme } = useTheme()
 </script>
 
@@ -25,8 +23,8 @@ const { colorMode, toggleTheme } = useTheme()
     </h1>
 
     <div class="mt-6">
-      <Button @click="count++">
-        count is {{ count }}
+      <Button @click="counterStore.increment()">
+        count is {{ counterStore.count }}
       </Button>
 
       <p class="mt-2">
