@@ -11,6 +11,7 @@ module.exports = {
     './components/**/*.{js,jsx,vue}',
     './app/**/*.{js,jsx,vue}',
     './src/**/*.{js,jsx,vue}',
+    './docs/**/*.{js,jsx,vue}',
   ],
 
   theme: {
