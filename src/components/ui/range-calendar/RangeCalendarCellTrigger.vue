@@ -37,7 +37,7 @@ const forwardedProps = useForwardProps(delegatedProps)
         // Disabled
         'data-[disabled]:text-muted-foreground data-[disabled]:opacity-50',
         // Unavailable
-        'data-[unavailable]:text-destructive-foreground data-[unavailable]:line-through',
+        'data-[unavailable]:text-error-foreground data-[unavailable]:line-through',
         props.class,
       )
     "

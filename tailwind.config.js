@@ -61,6 +61,11 @@ module.exports = {
           DEFAULT: 'hsl(var(--error))',
           foreground: 'hsl(var(--error-foreground))',
         },
+        // Hotfix for certain components that added using npm library
+        destructive: {
+          DEFAULT: 'hsl(var(--error))',
+          foreground: 'hsl(var(--error-foreground))',
+        },
         popover: {
           DEFAULT: 'hsl(var(--popover))',
           foreground: 'hsl(var(--popover-foreground))',
