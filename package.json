@@ -28,9 +28,12 @@
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
     "unplugin-vue-components": "^0.27.4",
+    "v-calendar": "^3.1.2",
+    "vaul-vue": "^0.2.0",
     "vee-validate": "^4.13.2",
     "vue": "^3.5.6",
     "vue-router": "^4.4.5",
+    "vue-sonner": "^1.1.5",
     "zod": "^3.23.8"
   },
   "devDependencies": {
