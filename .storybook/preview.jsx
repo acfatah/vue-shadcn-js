@@ -25,6 +25,8 @@ const preview = {
           'Readme',
           'Foundation',
           ['Design Tokens', 'Colors'],
+          'Graphic Elements',
+          'Examples',
         ],
         locales: 'en-US',
       },
