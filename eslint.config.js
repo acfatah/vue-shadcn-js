@@ -9,6 +9,11 @@ export default antfu(
       markdown: 'prettier',
     },
   },
+  {
+    rules: {
+      'eslint-comments/no-unlimited-disable': 'off',
+    },
+  },
   // @ts-ignore
   ...tailwindcss.configs['flat/recommended'],
 )

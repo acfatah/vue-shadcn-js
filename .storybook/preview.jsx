@@ -1,10 +1,9 @@
 import { withThemeByClassName } from '@storybook/addon-themes'
 
-// eslint-disable-next-line no-unused-vars
+/* eslint-disable */
 import { Controls, Description, Primary, Stories, Subtitle, Title } from '@storybook/blocks'
-
-// eslint-disable-next-line no-unused-vars
 import React from 'react'
+/* eslint-enable */
 
 import '../src/styles/app.css'
 
