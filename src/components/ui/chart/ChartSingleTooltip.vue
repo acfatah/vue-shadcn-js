@@ -8,7 +8,7 @@ const props = defineProps({
   selector: { type: String, required: true },
   index: { type: String, required: true },
   items: { type: Array, required: false },
-  valueFormatter: { type: Function, required: false, default: (tick: number) => `${tick}` },
+  valueFormatter: { type: Function, required: false, default: tick => `${tick}` },
   customTooltip: { type: null, required: false },
 },
 )
