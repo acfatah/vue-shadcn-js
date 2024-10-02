@@ -26,6 +26,8 @@ const preview = {
           'Foundation',
           ['Design Tokens', 'Colors'],
           'Graphic Elements',
+          'Overlays',
+          'Blocks',
           'Examples',
         ],
         locales: 'en-US',
