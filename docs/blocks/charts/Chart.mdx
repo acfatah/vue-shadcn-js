@@ -24,3 +24,67 @@ data visualization framework), and inspired by [tremor](https://www.tremor.so).
     --vis-text-color: var(--muted-foreground);
   }
 ```
+
+## Custom tooltip 
+
+If you want to customize the Tooltip for the chart, you can pass customTooltip prop 
+with a custom Vue component. The custom component would receive title and data props, 
+check out ChartTooltip.vue component for example.
+
+The `CustomChartTooltip.vue` component:
+
+```vue
+<script setup>
+const props = defineProps({
+  title: String,
+  data: Array
+})
+</script>
+
+<template>
+  <Card class="text-sm">
+    <CardHeader v-if="title" class="p-3 border-b">
+      <CardTitle>
+        {{ title }}
+      </CardTitle>
+    </CardHeader>
+    <CardContent class="p-3 min-w-[180px] flex flex-col gap-1">
+      <div v-for="(item, key) in data" :key="key" class="flex justify-between">
+        <div class="flex items-center">
+          <span class="w-2.5 h-2.5 mr-2">
+            <svg width="100%" height="100%" viewBox="0 0 30 30">
+              <path
+                d=" M 15 15 m -14, 0 a 14,14 0 1,1 28,0 a 14,14 0 1,1 -28,0"
+                :stroke="item.color"
+                :fill="item.color"
+                stroke-width="1"
+              />
+            </svg>
+          </span>
+          <span>{{ item.name }}</span>
+        </div>
+        <span class="font-semibold ml-4">{{ item.value }}</span>
+      </div>
+    </CardContent>
+  </Card>
+</template>
+
+```
+
+And the usage,
+
+```vue
+<template>
+  <LineChart
+    :data="data"
+    index="year"
+    :categories="['Export Growth Rate', 'Import Growth Rate']"
+    :y-formatter="(tick, i) => {
+      return typeof tick === 'number'
+        ? `$ ${new Intl.NumberFormat('us').format(tick).toString()}`
+        : ''
+    }"
+    :custom-tooltip="CustomChartTooltip"
+  />
+</template>
+```
