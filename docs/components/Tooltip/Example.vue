@@ -1,3 +1,9 @@
+<script setup>
+const props = defineProps({
+  side: { type: String, required: false },
+})
+</script>
+
 <template>
   <TooltipProvider>
     <Tooltip>
@@ -6,8 +12,9 @@
           Hover
         </Button>
       </TooltipTrigger>
-      <TooltipContent>
+      <TooltipContent :side="props.side">
         <p>Add to library</p>
+        <TooltipArrow />
       </TooltipContent>
     </Tooltip>
   </TooltipProvider>
