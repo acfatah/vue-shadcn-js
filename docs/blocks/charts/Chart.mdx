@@ -9,10 +9,11 @@ data visualization framework), and inspired by [tremor](https://www.tremor.so).
 
 ## Style Customization
 
+To update styles, modify the css variables in `src/styles/chart.css`.
+
 ```css
 @layer base {
   :root {
-    /* ... */
     --vis-tooltip-background-color: none !important;
     --vis-tooltip-border-color: none !important;
     --vis-tooltip-text-color: none !important;
@@ -21,8 +22,7 @@ data visualization framework), and inspired by [tremor](https://www.tremor.so).
     --vis-tooltip-padding: none !important;
 
     --vis-primary-color: var(--primary);
-    /* change to any hsl value you want */
-    --vis-secondary-color: 160 81% 40%;
+    --vis-secondary-color: var(--secondary);
     --vis-text-color: var(--muted-foreground);
   }
 ```
