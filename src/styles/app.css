@@ -1,4 +1,4 @@
-@import url('src/styles/chart.css');
+@import url('~/styles/chart.css');
 
 @tailwind base;
 @tailwind components;
