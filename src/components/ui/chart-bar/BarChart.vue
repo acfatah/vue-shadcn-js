@@ -19,7 +19,7 @@ const props = defineProps({
   data: { type: Array, required: true },
   categories: { type: Array, required: true },
   index: { type: null, required: true },
-  colors: { type: Array, required: false },
+  colors: { type: Array, required: false, default: () => [] },
   margin: {
     type: null,
     required: false,
