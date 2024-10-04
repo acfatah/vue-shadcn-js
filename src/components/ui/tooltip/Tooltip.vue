@@ -1,6 +1,7 @@
 <script setup>
 const props = defineProps({
-  side: { type: String, required: false },
+  side: { type: String, required: false, default: 'top' },
+  text: { type: String, required: false },
 })
 </script>
 
@@ -8,12 +9,11 @@ const props = defineProps({
   <TooltipProvider>
     <TooltipRoot>
       <TooltipTrigger as-child>
-        <Button variant="outline">
-          Hover
-        </Button>
+        <slot />
       </TooltipTrigger>
       <TooltipContent :side="props.side">
-        <p>Add to library</p>
+        <slot name="content" />
+        {{ props.text }}
         <TooltipArrow />
       </TooltipContent>
     </TooltipRoot>

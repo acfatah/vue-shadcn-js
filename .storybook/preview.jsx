@@ -27,6 +27,10 @@ const preview = {
           ['Design Tokens', 'Colors'],
           'Graphic Elements',
           'Overlays',
+          [
+            'Tooltip',
+            ['Default', 'Primitive'],
+          ],
           'Blocks',
           'Examples',
         ],
