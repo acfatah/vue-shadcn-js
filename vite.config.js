@@ -2,6 +2,7 @@ import path from 'node:path'
 import vue from '@vitejs/plugin-vue'
 import autoprefixer from 'autoprefixer'
 import tailwind from 'tailwindcss'
+import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import svgLoader from 'vite-svg-loader'
@@ -12,11 +13,6 @@ const unpluginsComponents = [
   { name: 'FieldArray', from: 'vee-validate' },
 ]
 
-// TODO:
-// const unpluginImports = [
-//   { name: 'useForm', from: 'vee-validate' },
-// ]
-
 export default defineConfig({
   css: {
     postcss: {
@@ -24,6 +20,18 @@ export default defineConfig({
     },
   },
   plugins: [
+    AutoImport({
+      dts: false,
+      imports: [
+        'vue',
+        'vue-router',
+        {
+          'vee-validate': [
+            'useForm',
+          ],
+        },
+      ],
+    }),
     Components({
       dts: false,
       resolvers: [
