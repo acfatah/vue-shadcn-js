@@ -1,9 +1,6 @@
 <script setup>
 import { cn } from '~/lib/utils'
 import routes from '../routes.js'
-
-const router = useRouter()
-const route = useRoute()
 </script>
 
 <template>
@@ -15,9 +12,9 @@ const route = useRoute()
       variant="ghost"
       :class="cn(
         'w-full text-left justify-start',
-        route.path === item.path && 'bg-muted hover:bg-muted',
+        $route.path === item.path && 'bg-muted hover:bg-muted',
       )"
-      @click.stop.prevent="router.push(item.path)"
+      @click.stop.prevent="$router.push(item.path)"
     >
       {{ item.name }}
     </Button>
