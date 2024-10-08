@@ -1,9 +1,10 @@
-<script setup lang="ts">
-import { cn } from '@/lib/utils'
-import { ToastAction, type ToastActionProps } from 'radix-vue'
-import { computed, type HTMLAttributes } from 'vue'
+<script setup>
+import { ToastAction } from 'radix-vue'
+import { cn } from '~/lib/utils'
 
-const props = defineProps<ToastActionProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps({
+  class: { type: String, default: '' },
+})
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props

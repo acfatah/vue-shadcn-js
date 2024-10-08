@@ -1,12 +1,11 @@
-<script setup lang="ts">
-import { cn } from '@/lib/utils'
+<script setup>
 import { X } from 'lucide-vue-next'
-import { ToastClose, type ToastCloseProps } from 'radix-vue'
-import { computed, type HTMLAttributes } from 'vue'
+import { ToastClose } from 'radix-vue'
+import { cn } from '~/lib/utils'
 
-const props = defineProps<ToastCloseProps & {
-  class?: HTMLAttributes['class']
-}>()
+const props = defineProps({
+  class: { type: String, default: '' },
+})
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props

@@ -1,7 +1,4 @@
 <script setup>
-import { onMounted } from 'vue'
-import { useRoute } from 'vue-router'
-
 import { useTheme } from '~/components/composables/use-theme.js'
 import BlankLayout from '~/components/layouts/BlankLayout.vue'
 
@@ -13,6 +10,9 @@ onMounted(() => {
 </script>
 
 <template>
+  <Teleport to="body">
+    <Toaster />
+  </Teleport>
   <component :is="route.meta.layout || BlankLayout">
     <router-view />
   </component>

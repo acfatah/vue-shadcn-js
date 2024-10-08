@@ -1,12 +1,15 @@
-<script setup lang="ts">
-import { cn } from '@/lib/utils'
-import { ToastRoot, type ToastRootEmits, useForwardPropsEmits } from 'radix-vue'
-import { computed } from 'vue'
-import { type ToastProps, toastVariants } from '.'
+<script setup>
+import { ToastRoot, useForwardPropsEmits } from 'radix-vue'
+import { cn } from '~/lib/utils'
+import { toastVariants } from '.'
 
-const props = defineProps<ToastProps>()
+const props = defineProps({
+  class: { type: String, default: '' },
+  variant: { type: String, default: '' },
+  onOpenChange: { type: Function, default: () => {} },
+})
 
-const emits = defineEmits<ToastRootEmits>()
+const emits = defineEmits(['update:open'])
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
@@ -20,7 +23,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <ToastRoot
     v-bind="forwarded"
-    :class="cn(toastVariants({ variant }), props.class)"
+    :class="cn(toastVariants({ variant: props.variant }), props.class)"
     @update:open="onOpenChange"
   >
     <slot />

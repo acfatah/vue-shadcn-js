@@ -1,7 +1,4 @@
-import type { ToastRootProps } from 'radix-vue'
-import type { HTMLAttributes } from 'vue'
-
-import { cva, type VariantProps } from 'class-variance-authority'
+import { cva } from 'class-variance-authority'
 
 export { default as Toast } from './Toast.vue'
 export { default as ToastAction } from './ToastAction.vue'
@@ -20,19 +17,12 @@ export const toastVariants = cva(
       variant: {
         default: 'border bg-background text-foreground',
         destructive:
-                    'destructive group border-destructive bg-destructive text-destructive-foreground',
+          'destructive group border-destructive bg-destructive text-destructive-foreground',
       },
     },
+
     defaultVariants: {
       variant: 'default',
     },
   },
 )
-
-type ToastVariants = VariantProps<typeof toastVariants>
-
-export interface ToastProps extends ToastRootProps {
-  class?: HTMLAttributes['class']
-  variant?: ToastVariants['variant']
-  onOpenChange?: ((value: boolean) => void) | undefined
-}

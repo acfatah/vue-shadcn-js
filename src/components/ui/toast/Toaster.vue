@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { isVNode } from 'vue'
 import { Toast, ToastClose, ToastDescription, ToastProvider, ToastTitle, ToastViewport } from '.'
 import { useToast } from './use-toast'

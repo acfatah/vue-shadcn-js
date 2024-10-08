@@ -1,28 +1,12 @@
-import type { Component, VNode } from 'vue'
-import type { ToastProps } from '.'
-import { computed, ref } from 'vue'
-
 const TOAST_LIMIT = 1
 const TOAST_REMOVE_DELAY = 1000000
-
-export type StringOrVNode =
-  | string
-  | VNode
-  | (() => VNode)
-
-type ToasterToast = ToastProps & {
-  id: string
-  title?: string
-  description?: StringOrVNode
-  action?: Component
-}
 
 const actionTypes = {
   ADD_TOAST: 'ADD_TOAST',
   UPDATE_TOAST: 'UPDATE_TOAST',
   DISMISS_TOAST: 'DISMISS_TOAST',
   REMOVE_TOAST: 'REMOVE_TOAST',
-} as const
+}
 
 let count = 0
 
@@ -31,33 +15,9 @@ function genId() {
   return count.toString()
 }
 
-type ActionType = typeof actionTypes
+const toastTimeouts = new Map()
 
-type Action =
-  | {
-    type: ActionType['ADD_TOAST']
-    toast: ToasterToast
-  }
-  | {
-    type: ActionType['UPDATE_TOAST']
-    toast: Partial<ToasterToast>
-  }
-  | {
-    type: ActionType['DISMISS_TOAST']
-    toastId?: ToasterToast['id']
-  }
-  | {
-    type: ActionType['REMOVE_TOAST']
-    toastId?: ToasterToast['id']
-  }
-
-interface State {
-  toasts: ToasterToast[]
-}
-
-const toastTimeouts = new Map<string, ReturnType<typeof setTimeout>>()
-
-function addToRemoveQueue(toastId: string) {
+function addToRemoveQueue(toastId) {
   if (toastTimeouts.has(toastId))
     return
 
@@ -72,11 +32,11 @@ function addToRemoveQueue(toastId: string) {
   toastTimeouts.set(toastId, timeout)
 }
 
-const state = ref<State>({
+const state = ref({
   toasts: [],
 })
 
-function dispatch(action: Action) {
+function dispatch(action) {
   switch (action.type) {
     case actionTypes.ADD_TOAST:
       state.value.toasts = [action.toast, ...state.value.toasts].slice(0, TOAST_LIMIT)
@@ -121,20 +81,18 @@ function dispatch(action: Action) {
   }
 }
 
-function useToast() {
+export function useToast() {
   return {
     toasts: computed(() => state.value.toasts),
     toast,
-    dismiss: (toastId?: string) => dispatch({ type: actionTypes.DISMISS_TOAST, toastId }),
+    dismiss: toastId => dispatch({ type: actionTypes.DISMISS_TOAST, toastId }),
   }
 }
 
-type Toast = Omit<ToasterToast, 'id'>
-
-function toast(props: Toast) {
+export function toast(props) {
   const id = genId()
 
-  const update = (props: ToasterToast) =>
+  const update = props =>
     dispatch({
       type: actionTypes.UPDATE_TOAST,
       toast: { ...props, id },
@@ -148,7 +106,7 @@ function toast(props: Toast) {
       ...props,
       id,
       open: true,
-      onOpenChange: (open: boolean) => {
+      onOpenChange: (open) => {
         if (!open)
           dismiss()
       },
@@ -161,5 +119,3 @@ function toast(props: Toast) {
     update,
   }
 }
-
-export { toast, useToast }
