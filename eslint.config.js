@@ -12,6 +12,14 @@ export default antfu(
   {
     rules: {
       'eslint-comments/no-unlimited-disable': 'off',
+      'tailwindcss/no-custom-classname': [
+        'warn',
+        {
+          whitelist: [
+            'destructive',
+          ],
+        },
+      ],
     },
   },
   // @ts-ignore
