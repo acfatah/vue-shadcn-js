@@ -7,6 +7,7 @@ import {
   useForwardProps,
 } from 'radix-vue'
 import { computed } from 'vue'
+import { cn } from '~/lib/utils'
 
 const props = defineProps({
   value: { type: String, required: true },
