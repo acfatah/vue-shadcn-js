@@ -1,6 +1,6 @@
 <script setup>
 import { toTypedSchema } from '@vee-validate/zod'
-import { Field as FormField, useForm } from 'vee-validate'
+import { useForm } from 'vee-validate'
 import { h } from 'vue'
 import * as z from 'zod'
 

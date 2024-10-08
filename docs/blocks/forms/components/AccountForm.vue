@@ -3,7 +3,6 @@ import { CalendarDate, DateFormatter, getLocalTimeZone, today } from '@internati
 import { toTypedSchema } from '@vee-validate/zod'
 import { Check, ChevronsUpDown, Calendar as RadixIconsCalendar } from 'lucide-vue-next'
 import { toDate } from 'radix-vue/date'
-import { Form, Field as FormField } from 'vee-validate'
 import { h, ref } from 'vue'
 import * as z from 'zod'
 import { cn } from '~/lib/utils'

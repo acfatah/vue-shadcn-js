@@ -6,6 +6,17 @@ import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import svgLoader from 'vite-svg-loader'
 
+const unpluginsComponents = [
+  { name: 'Form', from: 'vee-validate' },
+  { name: 'Field', as: 'FormField', from: 'vee-validate' },
+  { name: 'FieldArray', from: 'vee-validate' },
+]
+
+// TODO:
+// const unpluginImports = [
+//   { name: 'useForm', from: 'vee-validate' },
+// ]
+
 export default defineConfig({
   css: {
     postcss: {
@@ -15,6 +26,13 @@ export default defineConfig({
   plugins: [
     Components({
       dts: false,
+      resolvers: [
+        (componentName) => {
+          return unpluginsComponents.find(
+            component => component.as === componentName || component.name === componentName,
+          )
+        },
+      ],
     }),
     vue(),
     svgLoader({
