@@ -4,4 +4,7 @@ import FormsLayout from './layouts/FormsLayout.vue'
 
 <template>
   <FormsLayout />
+  <Teleport to="body">
+    <Toaster />
+  </Teleport>
 </template>

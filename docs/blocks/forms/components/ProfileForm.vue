@@ -1,10 +1,8 @@
 <script setup>
 import { toTypedSchema } from '@vee-validate/zod'
 import * as z from 'zod'
+import { toast } from '~/components/ui/toast'
 import { cn } from '~/lib/utils'
-
-// FIXME: toast
-// import { toast } from '@/lib/registry/new-york/ui/toast'
 
 const verifiedEmails = ref(['m@example.com', 'm@google.com', 'm@support.com'])
 

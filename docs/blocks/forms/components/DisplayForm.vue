@@ -1,9 +1,7 @@
 <script setup>
 import { toTypedSchema } from '@vee-validate/zod'
 import * as z from 'zod'
-
-// FIXME: toast
-// import { toast } from '@/lib/registry/new-york/ui/toast'
+import { toast } from '~/components/ui/toast'
 
 const items = [
   {
