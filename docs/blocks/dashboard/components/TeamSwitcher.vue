@@ -1,5 +1,4 @@
 <script setup>
-import { ChevronsUpDown as CaretSortIcon, Check as CheckIcon, CirclePlus as PlusCircledIcon } from 'lucide-vue-next'
 import { cn } from '~/lib/utils'
 
 const groups = [
@@ -51,7 +50,7 @@ const selectedTeam = ref(groups[0].teams[0])
             <AvatarFallback>SC</AvatarFallback>
           </Avatar>
           {{ selectedTeam.label }}
-          <CaretSortIcon class="ml-auto size-4 shrink-0 opacity-50" />
+          <ChevronsUpDownIcon class="ml-auto size-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent class="w-[200px] p-0">
@@ -101,7 +100,7 @@ const selectedTeam = ref(groups[0].teams[0])
                     showNewTeamDialog = true
                   }"
                 >
-                  <PlusCircledIcon class="mr-2 size-5" />
+                  <CirclePlusIcon class="mr-2 size-5" />
                   Create Team
                 </CommandItem>
               </DialogTrigger>

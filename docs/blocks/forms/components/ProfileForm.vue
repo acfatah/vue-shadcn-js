@@ -1,6 +1,5 @@
 <script setup>
 import { toTypedSchema } from '@vee-validate/zod'
-import { Cross as Cross1Icon } from 'lucide-vue-next'
 import * as z from 'zod'
 import { cn } from '~/lib/utils'
 
@@ -130,7 +129,7 @@ const onSubmit = handleSubmit((values) => {
                   <Input type="url" v-bind="componentField" />
                 </FormControl>
                 <button type="button" class="absolute end-0 py-2 pe-3 text-muted-foreground" @click="remove(index)">
-                  <Cross1Icon class="w-3" />
+                  <CrossIcon class="w-3" />
                 </button>
               </div>
               <FormMessage />

@@ -1,5 +1,4 @@
 <script setup>
-import { Loader as LoaderIcon } from 'lucide-vue-next'
 import { ref } from 'vue'
 import { buttonVariants } from '~/components/ui/button'
 import { cn } from '~/lib/utils'

@@ -29,6 +29,7 @@ export default defineConfig({
     Components({
       dts: false,
       resolvers: [
+        // vee-validate
         (componentName) => {
           const components = [
             { name: 'Form', from: 'vee-validate' },
@@ -39,6 +40,13 @@ export default defineConfig({
           return components.find(
             component => component.as === componentName || component.name === componentName,
           )
+        },
+        // lucide-vue-next
+        (componentName) => {
+          const [, name] = componentName.match(/([a-zA-Z0-9]+)Icon/) || []
+
+          if (name)
+            return { name, from: 'lucide-vue-next' }
         },
       ],
     }),
