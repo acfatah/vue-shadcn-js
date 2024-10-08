@@ -1,7 +1,5 @@
 <script setup>
 import { ChevronsUpDown as CaretSortIcon, Check as CheckIcon, CirclePlus as PlusCircledIcon } from 'lucide-vue-next'
-import { ref } from 'vue'
-
 import { cn } from '~/lib/utils'
 
 const groups = [

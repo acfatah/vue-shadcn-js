@@ -1,7 +1,4 @@
 <script setup>
-import { onMounted } from 'vue'
-import { useRouter } from 'vue-router'
-
 import SidebarNav from '../components/SidebarNav.vue'
 
 const router = useRouter()

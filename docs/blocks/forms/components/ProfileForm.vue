@@ -1,8 +1,6 @@
 <script setup>
 import { toTypedSchema } from '@vee-validate/zod'
 import { Cross as Cross1Icon } from 'lucide-vue-next'
-import { useForm } from 'vee-validate'
-import { h, ref } from 'vue'
 import * as z from 'zod'
 import { cn } from '~/lib/utils'
 

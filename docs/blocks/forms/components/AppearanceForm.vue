@@ -1,8 +1,6 @@
 <script setup>
 import { toTypedSchema } from '@vee-validate/zod'
 import { ChevronDown as ChevronDownIcon } from 'lucide-vue-next'
-import { useForm } from 'vee-validate'
-import { h } from 'vue'
 import * as z from 'zod'
 import { buttonVariants } from '~/components/ui/button'
 import { cn } from '~/lib/utils'

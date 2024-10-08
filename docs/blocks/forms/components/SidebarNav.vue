@@ -1,5 +1,4 @@
 <script setup>
-import { useRoute, useRouter } from 'vue-router'
 import { cn } from '~/lib/utils'
 import routes from '../routes.js'
 
