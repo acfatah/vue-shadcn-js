@@ -8,92 +8,87 @@
   :root {
     --font-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
       'Noto Color Emoji';
+  }
+}
 
+/**
+ * You can use tool at https://customizer.railly.dev to genereate the following style
+ */
+@layer base {
+  :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
-
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
-
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
     --primary: 0 0% 9%;
     --primary-foreground: 0 0% 98%;
-
-    --secondary: 220 13% 91%;
+    --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
-
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
     --accent: 0 0% 96.1%;
     --accent-foreground: 0 0% 9%;
-
-    --success: 152.95 100% 37.84%;
-    --success-foreground: 120 9.1% 97.8%;
-
-    --info: 210 84.2% 60.2%;
-    --info-foreground: 210 9.1% 97.8%;
-
-    --warning: 45.4 93.39% 47.45%;
-    --warning-foreground: 50 9.1% 97.8%;
-
-    --error: 0 84.2% 60.2%;
-    --error-foreground: 0 9.1% 97.8%;
-
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
-
-    --radius: 0.5rem;
+    --radius: 0.3rem;
   }
 
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
-
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
-
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
     --primary-foreground: 0 0% 9%;
-
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
-
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
     --accent: 0 0% 14.9%;
     --accent-foreground: 0 0% 98%;
-
-    /* Colors for <Button variant="success" /> */
-    --success: 152.95 100% 37.84%;
-    --success-foreground: 220 14% 96%;
-
-    /* Colors for <Button variant="info" /> */
-    --info: 210 84.2% 60.2%;
-    --info-foreground: 220 14% 96%;
-
-    /* Colors for <Button variant="warning" /> */
-    --warning: 45.4 93.39% 47.45%;
-    --warning-foreground: 220 14% 96%;
-
-    /* Colors for <Button variant="error" /> */
-    --error: 0 66% 47%; /* Source: Figma | rgb(106, 93, 249) | #6A5DF9 */
-    --error-foreground: 220 14% 96%; /* Source: neutral 800 | #F3F4F6 */
-
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
   }
 }
+/* End generated style */
+
+/**
+ * Extended status colors
+ */
+@layer base {
+  :root {
+    --success: 152.95 100% 37.84%;
+    --success-foreground: 120 9.1% 97.8%;
+    --info: 210 84.2% 60.2%;
+    --info-foreground: 210 9.1% 97.8%;
+    --warning: 45.4 93.39% 47.45%;
+    --warning-foreground: 50 9.1% 97.8%;
+    --error: var(--destructive);
+    --error-foreground: var(--destructive-foreground);
+  }
+
+  .dark {
+    --success: 152.95 100% 37.84%;
+    --success-foreground: 220 14% 96%;
+    --info: 210 84.2% 60.2%;
+    --info-foreground: 220 14% 96%;
+    --warning: 45.4 93.39% 47.45%;
+    --warning-foreground: 220 14% 96%;
+    --error: var(--destructive);
+    --error-foreground: var(--destructive-foreground);
+  }
+}
+/* End generated style */
 
 @layer base {
   * {

@@ -8,14 +8,72 @@ import { parseCss } from './design-tokens.js'
 
 # Colors
 
-The color tokens are defined in `src/style/app.css`.
-By default, [Tailwindcss Colors](https://tailwindcss.com/docs/customizing-colors)
+The color tokens are defined in `src/style/app.css` using hsl format.
+You can use [scadcn customizer](https://customizer.railly.dev) to generate style.
+
+By default, all [Tailwindcss Colors](https://tailwindcss.com/docs/customizing-colors)
 are available.
+You may also use [this tool](https://redpixelthemes.com/blog/tailwindcss-colors-different-formats/)
+to get hsl value from Tailwindcss colors.
 
-You may use [this](https://redpixelthemes.com/blog/tailwindcss-colors-different-formats/)
-tool to get hsl value from Tailwindcss colors.
+### Neutral
 
-## Primary
+Essential for creating a balanced UI, focusing on backgrounds, text, and borders.
+
+- Background: The main background color, often a light or dark neutral.
+- Surface: A color for cards, modals, and other UI surfaces that need to stand out against the background.
+- Border: A neutral color used for borders, dividers, or outlines.
+
+export function NeutralColorPallete() {
+  const [tokens, setTokens] = useState({})
+  const [themes, setThemes] = useState([])
+
+  useEffect(() => {
+    const run = async () => {
+      const tokens = await parseCss()
+      const themes = Object.keys(tokens)
+
+      setTokens(tokens) 
+      setThemes(themes)
+    }
+
+    run()
+  }) 
+
+  return (
+    themes.map(theme => <div key={theme}> 
+      <hr className="my-4" />
+
+      <ColorItem
+        title="background / foreground"
+        subtitle={theme}
+        colors={{
+          '--background': `hsl(${tokens[theme]['--background']})`,
+          '--foreground': `hsl(${tokens[theme]['--foreground']})`,
+          '--border': `hsl(${tokens[theme]['--border']})`,
+          '--input': `hsl(${tokens[theme]['--input']})`,
+          '--ring': `hsl(${tokens[theme]['--ring']})`,
+        }}
+      />
+
+      <ColorItem
+        title="card / popover"
+        subtitle={theme}
+        colors={{
+          '--card': `hsl(${tokens[theme]['--card']})`,
+          '--card-foreground': `hsl(${tokens[theme]['--card-foreground']})`,
+          '--popover': `hsl(${tokens[theme]['--popover']})`,
+          '--popover-foreground': `hsl(${tokens[theme]['--popover-foreground']})`,
+        }}
+      />
+
+    </div>)
+  )
+}
+
+<NeutralColorPallete />
+
+### Primary
 
 Define the brand and are used to highlight key actions or elements.
 
@@ -239,59 +297,3 @@ export function StatusColorPallete() {
 
 <StatusColorPallete />
 
-### Neutral
-
-Essential for creating a balanced UI, focusing on backgrounds, text, and borders.
-
-- Background: The main background color, often a light or dark neutral.
-- Surface: A color for cards, modals, and other UI surfaces that need to stand out against the background.
-- Border: A neutral color used for borders, dividers, or outlines.
-
-export function NeutralColorPallete() {
-  const [tokens, setTokens] = useState({})
-  const [themes, setThemes] = useState([])
-
-  useEffect(() => {
-    const run = async () => {
-      const tokens = await parseCss()
-      const themes = Object.keys(tokens)
-
-      setTokens(tokens) 
-      setThemes(themes)
-    }
-
-    run()
-  }) 
-
-  return (
-    themes.map(theme => <div key={theme}> 
-      <hr className="my-4" />
-
-      <ColorItem
-        title="background / foreground"
-        subtitle={theme}
-        colors={{
-          '--background': `hsl(${tokens[theme]['--background']})`,
-          '--foreground': `hsl(${tokens[theme]['--foreground']})`,
-          '--border': `hsl(${tokens[theme]['--border']})`,
-          '--input': `hsl(${tokens[theme]['--input']})`,
-          '--ring': `hsl(${tokens[theme]['--ring']})`,
-        }}
-      />
-
-      <ColorItem
-        title="card / popover"
-        subtitle={theme}
-        colors={{
-          '--card': `hsl(${tokens[theme]['--card']})`,
-          '--card-foreground': `hsl(${tokens[theme]['--card-foreground']})`,
-          '--popover': `hsl(${tokens[theme]['--popover']})`,
-          '--popover-foreground': `hsl(${tokens[theme]['--popover-foreground']})`,
-        }}
-      />
-
-    </div>)
-  )
-}
-
-<NeutralColorPallete />

@@ -14,6 +14,7 @@ module.exports = {
     'flex',
     'font-bold',
     'max-w-[300px]',
+    'my-4',
     'py-4',
     'text-[#C9CDCF]',
   ],
