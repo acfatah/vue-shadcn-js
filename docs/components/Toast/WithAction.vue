@@ -1,0 +1,24 @@
+<script setup>
+import { h } from 'vue'
+import { ToastAction, useToast } from '~/components/ui/toast'
+
+const { toast } = useToast()
+</script>
+
+<template>
+  <Button
+    variant="outline" @click="() => {
+      toast({
+        title: 'Uh oh! Something went wrong.',
+        description: 'There was a problem with your request.',
+        action: h(ToastAction, {
+          altText: 'Try again',
+        }, {
+          default: () => 'Try again',
+        }),
+      });
+    }"
+  >
+    Show Toast
+  </Button>
+</template>

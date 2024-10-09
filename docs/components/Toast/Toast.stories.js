@@ -1,5 +1,14 @@
 import { Toaster } from '~/components/ui/toast'
-import Example from './Example.vue'
+import DefaultComponent from './Default.vue'
+import DefaultSource from './Default.vue?raw'
+import DestructiveComponent from './Destructive.vue'
+import DestructiveSource from './Destructive.vue?raw'
+import SimpleComponent from './Simple.vue'
+import SimpleSource from './Simple.vue?raw'
+import WithActionComponent from './WithAction.vue'
+import WithActionSource from './WithAction.vue?raw'
+import WithTitleComponent from './WithTitle.vue'
+import WithTitleSource from './WithTitle.vue?raw'
 
 /**
  * Toasts are used to display short messages to the user.
@@ -9,24 +18,128 @@ import Example from './Example.vue'
  */
 export default {
   title: 'Overlays/Toast',
-  component: Example,
+  component: DefaultComponent,
   tags: ['autodocs'],
 }
 
 export const Default = {
   parameters: {
-    height: 400,
+    docs: {
+      source: {
+        code: DefaultSource,
+      },
+    },
   },
 
   render: args => ({
-    components: { Example, Toaster },
+    components: { DefaultComponent, Toaster },
 
     setup() {
       return { args }
     },
 
     template: `
-      <Example v-bind="args" />
+      <DefaultComponent v-bind="args" />
+      <Teleport to="body">
+        <Toaster />
+      </Teleport>
+    `,
+  }),
+}
+
+export const Simple = {
+  parameters: {
+    docs: {
+      source: {
+        code: SimpleSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { SimpleComponent, Toaster },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <SimpleComponent v-bind="args" />
+      <Teleport to="body">
+        <Toaster />
+      </Teleport>
+    `,
+  }),
+}
+
+export const WithTitle = {
+  parameters: {
+    docs: {
+      source: {
+        code: WithTitleSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { WithTitleComponent, Toaster },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <WithTitleComponent v-bind="args" />
+      <Teleport to="body">
+        <Toaster />
+      </Teleport>
+    `,
+  }),
+}
+
+export const WithAction = {
+  parameters: {
+    docs: {
+      source: {
+        code: WithActionSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { WithActionComponent, Toaster },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <WithActionComponent v-bind="args" />
+      <Teleport to="body">
+        <Toaster />
+      </Teleport>
+    `,
+  }),
+}
+
+export const Destructive = {
+  parameters: {
+    docs: {
+      source: {
+        code: DestructiveSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { DestructiveComponent, Toaster },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <DestructiveComponent v-bind="args" />
       <Teleport to="body">
         <Toaster />
       </Teleport>
