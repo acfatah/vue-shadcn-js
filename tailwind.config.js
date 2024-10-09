@@ -4,8 +4,19 @@ const animate = require('tailwindcss-animate')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
-  safelist: ['dark'],
   prefix: '',
+
+  safelist: [
+    'basis-1/3',
+    'basis-2/3',
+    'dark',
+    'flex-row',
+    'flex',
+    'font-bold',
+    'max-w-[300px]',
+    'py-4',
+    'text-[#C9CDCF]',
+  ],
 
   content: [
     './pages/**/*.{js,jsx,vue}',
@@ -23,6 +34,7 @@ module.exports = {
         '2xl': '1400px',
       },
     },
+
     extend: {
       colors: {
         border: 'hsl(var(--border))',
@@ -76,12 +88,14 @@ module.exports = {
           foreground: 'hsl(var(--card-foreground))',
         },
       },
+
       borderRadius: {
         xl: 'calc(var(--radius) + 4px)',
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+
       keyframes: {
         'accordion-down': {
           from: { height: 0 },
@@ -100,6 +114,7 @@ module.exports = {
           to: { height: 0 },
         },
       },
+
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
