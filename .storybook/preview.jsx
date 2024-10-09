@@ -34,6 +34,7 @@ const preview = {
             'Tooltip',
             ['Default', 'Primitive'],
           ],
+          'Data Display',
           'Blocks',
           'Examples',
         ],
