@@ -29,6 +29,8 @@ const preview = {
           'Graphic Elements',
           'Overlays',
           [
+            'AlertDialog',
+            'Dialog',
             'Tooltip',
             ['Default', 'Primitive'],
           ],
