@@ -1,4 +1,5 @@
 import { withThemeByClassName } from '@storybook/addon-themes'
+import { themes } from '@storybook/theming'
 
 /* eslint-disable */
 import { Controls, Description, Primary, Stories, Subtitle, Title } from '@storybook/blocks'
@@ -43,6 +44,7 @@ const preview = {
     },
 
     docs: {
+      theme: themes.dark,
       page: () => (
         <>
           <Title />
