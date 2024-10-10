@@ -1,5 +1,5 @@
 <template>
-  <div class="prose prose-neutral">
+  <div class="prose prose-neutral max-w-none">
     <h1>
       The Joke Tax Chronicles
     </h1>
