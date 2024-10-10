@@ -1,0 +1,32 @@
+import { useState, useEffect } from "react"
+import { Meta } from "@storybook/blocks"
+import { ColorPalette, ColorItem } from "@storybook/addon-docs"
+
+<Meta title="Foundation/Border Radii" />
+
+# Border Radii
+
+Simply update the `--radius` variable in `src/styles/app.css` to the desired value.
+
+export function BoxesWithBorderRadius() {
+  return (
+    <>
+      <div className="flex flex-col gap-4 text-[#C9CDCF]">
+        <div className="p-2 flex justify-center" style={ { borderRadius: '0rem', border: '1px solid' } }>
+          <pre>0rem</pre>
+        </div>
+        <div className="p-2 flex justify-center" style={{ borderRadius: '0.3rem', border: '1px solid' }}>
+          <pre>0.3rem</pre>
+        </div>
+        <div className="p-2 flex justify-center" style={ { borderRadius: '0.75rem', border: '1px solid' } }>
+          <pre>0.75rem</pre>
+        </div>
+        <div className="p-2 flex justify-center" style={ { borderRadius: '1rem', border: '1px solid' } }>
+          <pre>1.0rem</pre>
+        </div>
+      </div>
+    </>
+  )
+}
+
+<BoxesWithBorderRadius />
