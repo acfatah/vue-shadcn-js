@@ -3,8 +3,8 @@ import { defineAsyncComponent } from 'vue'
 
 const props = defineProps({
   name: { type: String, required: true },
-  width: { type: String, default: '16' },
-  height: { type: String, default: '16' },
+  width: { type: String, default: '24' },
+  height: { type: String, default: '24' },
 })
 
 const SvgIcon = defineAsyncComponent(async () =>
@@ -13,5 +13,12 @@ const SvgIcon = defineAsyncComponent(async () =>
 </script>
 
 <template>
-  <SvgIcon v-if="props.name" :width="props.width" :height="props.height" />
+  <SvgIcon
+    v-if="props.name"
+    v-bind="{
+      width: props.width,
+      height: props.height,
+      ...$attrs,
+    }"
+  />
 </template>
