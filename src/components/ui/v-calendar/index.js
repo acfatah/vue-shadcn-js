@@ -1,4 +1,4 @@
-export { default as Calendar } from './Calendar.vue'
+export { default as VCalendar } from './VCalendar.vue'
 
 export function isVCalendarSlot(slotName) {
   const validSlots = [
