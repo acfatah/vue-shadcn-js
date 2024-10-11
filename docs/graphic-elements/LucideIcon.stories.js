@@ -5,8 +5,8 @@ import ExampleSource from './Example.vue?raw'
 /**
  * Automatically import lucide icon as component. Simply postfix `Icon` to lucide icon name.
  *
- * Browse Lucide icons at [https://lucide.dev/icons](https://lucide.dev/icons).
- * Read more about Lucide icons at [https://lucide.dev](https://lucide.dev/guide/packages/lucide-vue-next).
+ * Browse Lucide icons at https://lucide.dev/icons.<br>
+ * Read more about Lucide icons at https://lucide.dev/guide/packages/lucide-vue-next.
  */
 export default {
   title: 'Graphic Elements/Lucide Icon',
