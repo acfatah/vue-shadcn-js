@@ -46,13 +46,11 @@ const df = new DateFormatter('en-US', {
               <PopoverTrigger as-child :disabled="disabled">
                 <Button
                   variant="outline"
-                  :class="
-                    cn(
-                      'w-full justify-start text-left font-normal',
-                      !slotProps.componentField.modelValue
-                        && 'text-muted-foreground',
-                    )
-                  "
+                  :class="cn(
+                    'w-full justify-start text-left font-normal',
+                    !slotProps.componentField.modelValue
+                      && 'text-muted-foreground',
+                  )"
                 >
                   <CalendarIcon class="mr-2 size-4" />
                   {{

@@ -21,11 +21,10 @@ const delegatedProps = computed(() => {
 <template>
   <ProgressRoot
     v-bind="delegatedProps"
-    :class="
-      cn(
-        'relative h-2 w-full overflow-hidden rounded-full bg-primary/20',
-        props.class,
-      )"
+    :class="cn(
+      'relative h-2 w-full overflow-hidden rounded-full bg-primary/20',
+      props.class,
+    )"
   >
     <ProgressIndicator
       class="size-full flex-1 bg-primary transition-all"

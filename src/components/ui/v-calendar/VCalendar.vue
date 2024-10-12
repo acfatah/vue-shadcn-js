@@ -58,23 +58,19 @@ const vCalendarSlots = computed(() => {
       class="absolute top-3 z-[1] flex w-full justify-between px-4"
     >
       <button
-        :class="
-          cn(
-            buttonVariants({ variant: 'outline' }),
-            'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
-          )
-        "
+        :class="cn(
+          buttonVariants({ variant: 'outline' }),
+          'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
+        )"
         @click="handleNav('prev')"
       >
         <ChevronLeftIcon class="size-4" />
       </button>
       <button
-        :class="
-          cn(
-            buttonVariants({ variant: 'outline' }),
-            'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
-          )
-        "
+        :class="cn(
+          buttonVariants({ variant: 'outline' }),
+          'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
+        )"
         @click="handleNav('next')"
       >
         <ChevronRightIcon class="size-4" />
