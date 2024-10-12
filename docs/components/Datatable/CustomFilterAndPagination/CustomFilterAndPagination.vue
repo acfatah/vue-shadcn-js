@@ -61,7 +61,7 @@ onMounted(async () => {
           :disabled="!table.getCanPreviousPage()"
           @click="table.setPageIndex(0)"
         >
-          <ChevronsLeftIcon />
+          <ChevronsLeftIcon size="18" />
         </Button>
         <Button
           class="px-1"
@@ -70,9 +70,9 @@ onMounted(async () => {
           :disabled="!table.getCanPreviousPage()"
           @click="table.previousPage()"
         >
-          <ChevronLeftIcon />
+          <ChevronLeftIcon size="18" />
         </Button>
-        <span className="flex items-center gap-1">
+        <span className="flex items-center gap-1 text-sm text-muted-foreground">
           <div>Page</div>
           <!--
           <strong>
@@ -82,7 +82,7 @@ onMounted(async () => {
           <Input
             type="number"
             min="1"
-            class="w-16 rounded border p-1 text-right"
+            class="h-8 w-16 rounded border p-1 text-right"
             :max="table.getPageCount()"
             :default-value="table.getState().pagination.pageIndex + 1"
             @change="evt => {
@@ -101,7 +101,7 @@ onMounted(async () => {
           :disabled="!table.getCanNextPage()"
           @click="table.nextPage()"
         >
-          <ChevronRightIcon />
+          <ChevronRightIcon size="18" />
         </Button>
         <Button
           class="px-1"
@@ -110,7 +110,7 @@ onMounted(async () => {
           :disabled="!table.getCanNextPage()"
           @click="table.setPageIndex(table.getPageCount() - 1)"
         >
-          <ChevronsRightIcon />
+          <ChevronsRightIcon size="18" />
         </Button>
       </div>
     </template>
