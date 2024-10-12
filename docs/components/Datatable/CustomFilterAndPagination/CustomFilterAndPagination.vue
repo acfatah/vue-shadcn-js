@@ -5,10 +5,13 @@ import payments from '../data/payments.json'
 import columns from '../PaymentDataTable/payment-columns.js'
 
 const data = ref([])
+const isLoading = ref(false)
 
 async function getData() {
+  isLoading.value = true
   // In a real implementation, the data may come from an API request.
-  await new Promise(resolve => setTimeout(resolve, 1000))
+  await new Promise(resolve => setTimeout(resolve, 1400))
+  isLoading.value = false
 
   return payments
 }
@@ -19,7 +22,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <DataTable :columns="columns" :data="data">
+  <DataTable :columns="columns" :data="data" :loading="true">
     <!-- Filter Slot -->
     <template #filter="{ table }">
       <div class="flex items-center justify-end py-4">

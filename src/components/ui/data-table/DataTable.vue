@@ -14,6 +14,7 @@ const props = defineProps({
   data: Array,
   filterable: { type: Boolean, default: true },
   pagination: { type: Boolean, default: true },
+  loading: { type: Boolean, default: false },
 })
 
 const sorting = ref([])
@@ -97,7 +98,12 @@ const table = useVueTable({
           <template v-else>
             <TableRow>
               <TableCell :colspan="columns.length" class="h-24 text-center">
-                No results.
+                <template v-if="props.loading">
+                  <LoaderIcon class="m-auto size-4 animate-spin" />
+                </template>
+                <template v-else>
+                  No results
+                </template>
               </TableCell>
             </TableRow>
           </template>
