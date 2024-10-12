@@ -1,5 +1,7 @@
 import DefaultComponent from './Default/Default.vue'
 import DefaultSource from './Default/Default.vue?raw'
+import SimplifiedComponent from './PaymentDataTable/PaymentDataTable.vue'
+import SimplifiedSource from './PaymentDataTable/PaymentDataTable.vue?raw'
 
 /**
  * Table and datagrids built using TanStack Table.
@@ -31,6 +33,28 @@ export const Default = {
 
     template: `
       <DefaultComponent v-bind="args" />
+    `,
+  }),
+}
+
+export const Simplified = {
+  parameters: {
+    docs: {
+      source: {
+        code: SimplifiedSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { SimplifiedComponent },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <SimplifiedComponent v-bind="args" />
     `,
   }),
 }
