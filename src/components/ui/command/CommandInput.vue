@@ -1,7 +1,5 @@
 <script setup>
-import { Search } from 'lucide-vue-next'
 import { ComboboxInput, useForwardProps } from 'radix-vue'
-import { computed } from 'vue'
 import { cn } from '~/lib/utils'
 
 defineOptions({
@@ -28,13 +26,13 @@ const forwardedProps = useForwardProps(delegatedProps)
 
 <template>
   <div class="flex items-center border-b px-3" cmdk-input-wrapper>
-    <Search class="mr-2 size-4 shrink-0 opacity-50" />
+    <SearchIcon class="mr-2 size-4 shrink-0 opacity-50" />
     <ComboboxInput
       v-bind="{ ...forwardedProps, ...$attrs }"
       auto-focus
       :class="
         cn(
-          'flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50',
+          'flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50',
           props.class,
         )
       "

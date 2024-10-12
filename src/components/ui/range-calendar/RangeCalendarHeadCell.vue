@@ -22,7 +22,7 @@ const forwardedProps = useForwardProps(delegatedProps)
   <RangeCalendarHeadCell
     :class="
       cn(
-        'w-9 rounded-md text-[0.8rem] font-normal text-muted-foreground',
+        'w-8 rounded-md text-[0.8rem] font-normal text-muted-foreground',
         props.class,
       )
     "

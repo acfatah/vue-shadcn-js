@@ -1,15 +1,4 @@
 <script setup>
-import { TrashIcon } from 'lucide-vue-next'
-import { ref } from 'vue'
-import { Button } from '~/components/ui/button'
-import {
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormMessage,
-} from '~/components/ui/form'
-import { Input } from '~/components/ui/input'
 import AutoFormLabel from './AutoFormLabel.vue'
 import { beautifyObjectName } from './utils'
 
@@ -62,7 +51,7 @@ async function parseFileAsString(file) {
           />
           <div
             v-else
-            class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-transparent py-1 pl-3 pr-1 text-sm shadow-sm transition-colors"
+            class="flex h-9 w-full items-center justify-between rounded-md border border-input bg-transparent py-1 pl-3 pr-1 text-sm shadow-sm transition-colors"
           >
             <p>{{ inputFile?.name }}</p>
             <Button
@@ -78,7 +67,7 @@ async function parseFileAsString(file) {
                 }
               "
             >
-              <TrashIcon :size="16" />
+              <TrashIcon />
             </Button>
           </div>
         </slot>

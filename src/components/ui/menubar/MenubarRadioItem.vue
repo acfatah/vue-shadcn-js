@@ -1,5 +1,4 @@
 <script setup>
-import { Circle } from 'lucide-vue-next'
 import {
   MenubarItemIndicator,
   MenubarRadioItem,
@@ -39,7 +38,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   >
     <span class="absolute left-2 flex size-3.5 items-center justify-center">
       <MenubarItemIndicator>
-        <Circle class="size-2 fill-current" />
+        <CircleIcon class="size-4 fill-current" />
       </MenubarItemIndicator>
     </span>
     <slot />

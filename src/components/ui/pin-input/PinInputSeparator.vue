@@ -1,5 +1,4 @@
 <script setup>
-import { Dot } from 'lucide-vue-next'
 import { Primitive, useForwardProps } from 'radix-vue'
 
 const props = defineProps({
@@ -12,7 +11,7 @@ const forwardedProps = useForwardProps(props)
 <template>
   <Primitive v-bind="forwardedProps">
     <slot>
-      <Dot />
+      <MinusIcon />
     </slot>
   </Primitive>
 </template>

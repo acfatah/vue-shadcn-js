@@ -1,8 +1,5 @@
 <script setup>
-import { ChevronRight } from 'lucide-vue-next'
 import { PaginationNext } from 'radix-vue'
-import { computed } from 'vue'
-import { Button } from '~/components/ui/button'
 import { cn } from '~/lib/utils'
 
 const props = defineProps({
@@ -20,9 +17,9 @@ const delegatedProps = computed(() => {
 
 <template>
   <PaginationNext v-bind="delegatedProps">
-    <Button :class="cn('w-10 h-10 p-0', props.class)" variant="outline">
+    <Button :class="cn('w-9 h-9 p-0', props.class)" variant="outline">
       <slot>
-        <ChevronRight class="size-4" />
+        <ChevronRightIcon />
       </slot>
     </Button>
   </PaginationNext>

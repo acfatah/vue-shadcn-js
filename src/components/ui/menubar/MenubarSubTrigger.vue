@@ -1,5 +1,4 @@
 <script setup>
-import { ChevronRight } from 'lucide-vue-next'
 import { MenubarSubTrigger, useForwardProps } from 'radix-vue'
 import { computed } from 'vue'
 import { cn } from '~/lib/utils'
@@ -34,6 +33,6 @@ const forwardedProps = useForwardProps(delegatedProps)
     "
   >
     <slot />
-    <ChevronRight class="ml-auto size-4" />
+    <ChevronRightIcon class="ml-auto size-4" />
   </MenubarSubTrigger>
 </template>

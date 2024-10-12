@@ -4,6 +4,8 @@ import { cn } from '~/lib/utils'
 import { toastVariants } from '.'
 
 const props = defineProps({
+  asChild: { type: Boolean, required: false },
+  as: { type: null, required: false },
   class: { type: String, default: '' },
   variant: { type: String, default: '' },
   onOpenChange: { type: Function, default: () => {} },

@@ -47,7 +47,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     v-bind="forwarded"
   >
     <SliderTrack
-      class="relative h-2 w-full grow overflow-hidden rounded-full bg-secondary"
+      class="relative h-1.5 w-full grow overflow-hidden rounded-full bg-primary/20"
     >
       <SliderRange class="absolute h-full bg-primary" />
     </SliderTrack>

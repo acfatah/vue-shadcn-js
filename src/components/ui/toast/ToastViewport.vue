@@ -3,7 +3,14 @@ import { ToastViewport } from 'radix-vue'
 import { cn } from '~/lib/utils'
 
 const props = defineProps({
-  class: { type: String, default: '' },
+  asChild: { type: Boolean, required: false },
+  as: { type: null, required: false },
+  hotkey: { type: Array, default: () => ['F8'] },
+
+  label: {
+    type: [String, Function],
+    default: hotkey => `Notifications (${hotkey})`,
+  },
 })
 
 const delegatedProps = computed(() => {

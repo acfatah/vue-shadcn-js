@@ -7,6 +7,6 @@ import { cn } from '~/lib/utils'
   <component
     :is="TooltipArrow"
     v-bind="$attrs"
-    :class="cn('fill-border', $attrs.class)"
+    :class="cn('fill-border-primary', $attrs.class)"
   />
 </template>

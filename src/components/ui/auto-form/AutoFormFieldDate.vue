@@ -54,7 +54,7 @@ const df = new DateFormatter('en-US', {
                     )
                   "
                 >
-                  <CalendarIcon class="mr-2 size-4" :size="16" />
+                  <CalendarIcon class="mr-2 size-4" />
                   {{
                     slotProps.componentField.modelValue
                       ? df.format(

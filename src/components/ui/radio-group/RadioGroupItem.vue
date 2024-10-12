@@ -1,5 +1,4 @@
 <script setup>
-import { Circle } from 'lucide-vue-next'
 import {
   RadioGroupIndicator,
   RadioGroupItem,
@@ -31,14 +30,13 @@ const forwardedProps = useForwardProps(delegatedProps)
 <template>
   <RadioGroupItem
     v-bind="forwardedProps"
-    :class="
-      cn(
-        'aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
-        props.class,
-      )"
+    :class="cn(
+      'aspect-square h-4 w-4 rounded-full border border-primary text-primary shadow focus:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50',
+      props.class,
+    )"
   >
     <RadioGroupIndicator class="flex items-center justify-center">
-      <Circle class="size-2.5 fill-current text-current" />
+      <CheckIcon class="size-3.5 fill-primary" />
     </RadioGroupIndicator>
   </RadioGroupItem>
 </template>

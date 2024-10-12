@@ -1,7 +1,5 @@
 <script setup>
-import { X } from 'lucide-vue-next'
 import { TagsInputItemDelete, useForwardProps } from 'radix-vue'
-import { computed } from 'vue'
 import { cn } from '~/lib/utils'
 
 const props = defineProps({
@@ -25,7 +23,7 @@ const forwardedProps = useForwardProps(delegatedProps)
     :class="cn('flex rounded bg-transparent mr-1', props.class)"
   >
     <slot>
-      <X class="size-4" />
+      <XIcon class="size-4" />
     </slot>
   </TagsInputItemDelete>
 </template>

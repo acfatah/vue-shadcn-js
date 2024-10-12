@@ -1,6 +1,5 @@
 <script setup>
 import { TagsInputItemText, useForwardProps } from 'radix-vue'
-import { computed } from 'vue'
 import { cn } from '~/lib/utils'
 
 const props = defineProps({
@@ -21,6 +20,6 @@ const forwardedProps = useForwardProps(delegatedProps)
 <template>
   <TagsInputItemText
     v-bind="forwardedProps"
-    :class="cn('py-1 px-2 text-sm rounded bg-transparent', props.class)"
+    :class="cn('py-0.5 px-2 text-sm rounded bg-transparent', props.class)"
   />
 </template>

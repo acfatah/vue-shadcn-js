@@ -1,5 +1,4 @@
 <script setup>
-import { Check } from 'lucide-vue-next'
 import {
   MenubarCheckboxItem,
   MenubarItemIndicator,
@@ -39,7 +38,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   >
     <span class="absolute left-2 flex size-3.5 items-center justify-center">
       <MenubarItemIndicator>
-        <Check class="size-4" />
+        <CheckIcon class="size-4" />
       </MenubarItemIndicator>
     </span>
     <slot />

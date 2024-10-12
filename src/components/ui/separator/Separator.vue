@@ -1,6 +1,5 @@
 <script setup>
 import { Separator } from 'radix-vue'
-import { computed } from 'vue'
 import { cn } from '~/lib/utils'
 
 const props = defineProps({
@@ -37,8 +36,7 @@ const delegatedProps = computed(() => {
           props.orientation === 'vertical'
             ? 'w-[1px] px-1 py-2'
             : 'h-[1px] py-1 px-2',
-        )
-      "
+        )"
     >{{ props.label }}</span>
   </Separator>
 </template>

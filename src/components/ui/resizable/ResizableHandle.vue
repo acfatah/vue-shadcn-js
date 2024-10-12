@@ -1,5 +1,4 @@
 <script setup>
-import { GripVertical } from 'lucide-vue-next'
 import { SplitterResizeHandle, useForwardPropsEmits } from 'radix-vue'
 import { computed } from 'vue'
 import { cn } from '~/lib/utils'
@@ -38,7 +37,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       <div
         class="z-10 flex h-4 w-3 items-center justify-center rounded-sm border bg-border"
       >
-        <GripVertical class="size-2.5" />
+        <GripVerticalIcon class="size-2.5" />
       </div>
     </template>
   </SplitterResizeHandle>

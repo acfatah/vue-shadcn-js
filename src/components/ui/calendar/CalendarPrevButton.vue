@@ -1,5 +1,4 @@
 <script setup>
-import { ChevronLeft } from 'lucide-vue-next'
 import { CalendarPrev, useForwardProps } from 'radix-vue'
 import { computed } from 'vue'
 import { buttonVariants } from '~/components/ui/button'
@@ -34,7 +33,7 @@ const forwardedProps = useForwardProps(delegatedProps)
     v-bind="forwardedProps"
   >
     <slot>
-      <ChevronLeft class="size-4" />
+      <ChevronLeftIcon class="size-4" />
     </slot>
   </CalendarPrev>
 </template>
