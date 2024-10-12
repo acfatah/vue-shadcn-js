@@ -1,3 +1,5 @@
+import CustomFilterAndPaginationComponent from './CustomFilterAndPagination/CustomFilterAndPagination.vue'
+import CustomFilterAndPaginationSource from './CustomFilterAndPagination/CustomFilterAndPagination.vue?raw'
 import DefaultComponent from './Default/Default.vue'
 import DefaultSource from './Default/Default.vue?raw'
 import SimplifiedComponent from './PaymentDataTable/PaymentDataTable.vue'
@@ -57,4 +59,27 @@ export const Simplified = {
       <SimplifiedComponent v-bind="args" />
     `,
   }),
+}
+
+export const CustomFilterAndPagination = {
+  parameters: {
+    docs: {
+      source: {
+        code: CustomFilterAndPaginationSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { CustomFilterAndPaginationComponent },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <CustomFilterAndPaginationComponent v-bind="args" />
+    `,
+  }),
+
 }

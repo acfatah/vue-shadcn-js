@@ -12,6 +12,8 @@ import { valueUpdater } from '~/lib/utils'
 const props = defineProps({
   columns: Array,
   data: Array,
+  filterable: { type: Boolean, default: true },
+  pagination: { type: Boolean, default: true },
 })
 
 const sorting = ref([])
@@ -42,31 +44,33 @@ const table = useVueTable({
 
 <template>
   <div>
-    <div class="flex items-center py-4">
-      <Input
-        class="max-w-sm" placeholder="Filter emails..."
-        :model-value="table.getColumn('email')?.getFilterValue()"
-        @update:model-value=" table.getColumn('email')?.setFilterValue($event)"
-      />
-      <DropdownMenu>
-        <DropdownMenuTrigger as-child>
-          <Button variant="outline" class="ml-auto">
-            Columns
-            <ChevronDown class="ml-2 size-4" />
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-          <DropdownMenuCheckboxItem
-            v-for="column in table.getAllColumns().filter((column) => column.getCanHide())" :key="column.id"
-            class="capitalize" :checked="column.getIsVisible()" @update:checked="(value) => {
-              column.toggleVisibility(!!value)
-            }"
-          >
-            {{ column.id }}
-          </DropdownMenuCheckboxItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-    </div>
+    <slot name="filter" :table="table">
+      <div v-if="filterable" class="flex items-center py-4">
+        <Input
+          class="max-w-sm" placeholder="Filter emails..."
+          :model-value="table.getColumn('email')?.getFilterValue()"
+          @update:model-value=" table.getColumn('email')?.setFilterValue($event)"
+        />
+        <DropdownMenu>
+          <DropdownMenuTrigger as-child>
+            <Button variant="outline" class="ml-auto">
+              Columns
+              <ChevronDownIcon class="ml-2 size-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <DropdownMenuCheckboxItem
+              v-for="column in table.getAllColumns().filter((column) => column.getCanHide())" :key="column.id"
+              class="capitalize" :checked="column.getIsVisible()" @update:checked="(value) => {
+                column.toggleVisibility(!!value)
+              }"
+            >
+              {{ column.id }}
+            </DropdownMenuCheckboxItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
+    </slot>
     <div class="rounded-md border">
       <Table>
         <TableHeader>
@@ -100,27 +104,29 @@ const table = useVueTable({
         </TableBody>
       </Table>
     </div>
-    <div class="flex items-center justify-end space-x-2 py-4">
-      <div class="flex-1 text-sm text-muted-foreground">
-        {{ table.getFilteredSelectedRowModel().rows.length }} of
-        {{ table.getFilteredRowModel().rows.length }} row(s) selected.
+    <slot name="pagination" :table="table">
+      <div v-if="pagination" class="flex items-center justify-end space-x-2 py-4">
+        <div class="flex-1 text-sm text-muted-foreground">
+          {{ table.getFilteredSelectedRowModel().rows.length }} of
+          {{ table.getFilteredRowModel().rows.length }} row(s) selected.
+        </div>
+        <Button
+          variant="outline"
+          size="sm"
+          :disabled="!table.getCanPreviousPage()"
+          @click="table.previousPage()"
+        >
+          Previous
+        </Button>
+        <Button
+          variant="outline"
+          size="sm"
+          :disabled="!table.getCanNextPage()"
+          @click="table.nextPage()"
+        >
+          Next
+        </Button>
       </div>
-      <Button
-        variant="outline"
-        size="sm"
-        :disabled="!table.getCanPreviousPage()"
-        @click="table.previousPage()"
-      >
-        Previous
-      </Button>
-      <Button
-        variant="outline"
-        size="sm"
-        :disabled="!table.getCanNextPage()"
-        @click="table.nextPage()"
-      >
-        Next
-      </Button>
-    </div>
+    </slot>
   </div>
 </template>
