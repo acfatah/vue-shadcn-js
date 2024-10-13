@@ -12,6 +12,7 @@ const props = defineProps({
   as: { type: null, required: false },
   class: { type: null, required: false },
 })
+
 const emits = defineEmits([
   'escapeKeyDown',
   'pointerDownOutside',
