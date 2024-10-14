@@ -1,6 +1,6 @@
 <script setup>
 import { useTheme } from '~/components/composables/use-theme.js'
-import BlankLayout from '~/components/layouts/BlankLayout.vue'
+import BlankLayout from '~/layouts/BlankLayout.vue'
 
 const route = useRoute()
 
