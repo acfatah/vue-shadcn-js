@@ -8,12 +8,12 @@ export default {
   title: 'Blocks/Forms',
   component: FormsComponent,
   tags: ['autodocs'],
-  layout: 'fullscreen',
   decorators: [vueRouter(routes)],
 }
 
 export const Default = {
   parameters: {
+    layout: 'fullscreen',
     docs: {
       source: {
         code: FormsSource,

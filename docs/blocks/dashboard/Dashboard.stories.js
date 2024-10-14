@@ -21,11 +21,11 @@ export default {
   title: 'Blocks/Dashboard',
   component: Dashboard,
   tags: ['autodocs'],
-  layout: 'fullscreen',
 }
 
 export const Default = {
   parameters: {
+    layout: 'fullscreen',
     docs: {
       source: {
         code: DashboardSource,
