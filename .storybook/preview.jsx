@@ -1,5 +1,7 @@
 import { withThemeByClassName } from '@storybook/addon-themes'
 import { themes } from '@storybook/theming'
+import { setup } from '@storybook/vue3'
+import { createPinia } from 'pinia'
 
 /* eslint-disable */
 import { Controls, Description, Primary, Stories, Subtitle, Title } from '@storybook/blocks'
@@ -7,6 +9,12 @@ import React from 'react'
 /* eslint-enable */
 
 import '../src/styles/app.css'
+
+const pinia = createPinia()
+
+setup((app) => {
+  app.use(pinia)
+})
 
 /** @type { import('@storybook/vue3').Preview } */
 const preview = {
