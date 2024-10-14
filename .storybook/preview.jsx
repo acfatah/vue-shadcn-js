@@ -1,4 +1,5 @@
 import { withThemeByClassName } from '@storybook/addon-themes'
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { themes } from '@storybook/theming'
 import { setup } from '@storybook/vue3'
 import { createPinia } from 'pinia'
@@ -20,6 +21,10 @@ setup((app) => {
 const preview = {
   parameters: {
     backgrounds: { disable: true },
+
+    viewport: {
+      viewports: INITIAL_VIEWPORTS,
+    },
 
     controls: {
       matchers: {
