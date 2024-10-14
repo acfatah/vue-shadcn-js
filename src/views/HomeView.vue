@@ -1,5 +1,5 @@
 <template>
-  <slot name="header">
+  <Teleport defer to="#header">
     <div class="flex items-center justify-center">
       <a href="https://vitejs.dev" target="_blank">
         <img src="/vite.svg" class="logo" alt="Vite logo">
@@ -8,7 +8,7 @@
         <img src="../assets/vue.svg" class="logo vue" alt="Vue logo">
       </a>
     </div>
-  </slot>
+  </Teleport>
   <main class="flex grow justify-center">
     <HelloWorld msg="Vite + Vue" />
   </main>

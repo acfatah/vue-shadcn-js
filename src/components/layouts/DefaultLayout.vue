@@ -1,5 +1,5 @@
 <template>
-  <slot name="header" />
+  <div id="header" />
   <router-view />
-  <slot name="footer" />
+  <div id="footer" />
 </template>
