@@ -13,7 +13,5 @@ onMounted(() => {
   <Teleport to="body">
     <Toaster />
   </Teleport>
-  <component :is="route.meta.layout || BlankLayout">
-    <router-view />
-  </component>
+  <component :is="route.meta.layout || BlankLayout" />
 </template>
