@@ -4,7 +4,7 @@ import DefaultSource from './Dashboard.vue?raw'
 import routes from './routes.js'
 
 export default {
-  title: 'Blocks/Dashboard With Sidebar',
+  title: 'shadcn/Blocks/Dashboard With Sidebar',
   component: App,
   tags: ['autodocs'],
   decorators: [vueRouter(routes)],

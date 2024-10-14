@@ -18,7 +18,7 @@ import Dashboard from './Dashboard.vue'
 import DashboardSource from './Dashboard.vue?raw'
 
 export default {
-  title: 'Blocks/Dashboard',
+  title: 'shadcn/Examples/Dashboard',
   component: Dashboard,
   tags: ['autodocs'],
 }

@@ -1,9 +1,9 @@
-import Authentication04 from './Authentication04.vue'
-import Authentication04Source from './Authentication04.vue?raw'
+import Authentication05 from './Authentication05.vue'
+import Authentication05Source from './Authentication05.vue?raw'
 
 export default {
-  title: 'Blocks/Authentication/Sign Up Full Layout',
-  component: Authentication04,
+  title: 'shadcn/Blocks/Authentication/Sign Up Full Layout 2',
+  component: Authentication05,
   tags: ['autodocs'],
 
   parameters: {
@@ -11,7 +11,7 @@ export default {
 
     docs: {
       source: {
-        code: Authentication04Source,
+        code: Authentication05Source,
       },
     },
   },

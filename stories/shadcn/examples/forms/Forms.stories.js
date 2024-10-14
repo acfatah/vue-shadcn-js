@@ -5,7 +5,7 @@ import FormsSource from './Forms.vue?raw'
 import routes from './routes.js'
 
 export default {
-  title: 'Blocks/Forms',
+  title: 'shadcn/Examples/Forms',
   component: FormsComponent,
   tags: ['autodocs'],
   decorators: [vueRouter(routes)],
