@@ -17,7 +17,7 @@ const delegatedProps = computed(() => {
 
 <template>
   <PaginationPrev v-bind="delegatedProps">
-    <Button :class="cn('w-9 h-9 p-0', props.class)" variant="outline">
+    <Button :class="cn('w-9 h-9 p-1', props.class)" variant="outline">
       <slot>
         <ChevronLeftIcon />
       </slot>
