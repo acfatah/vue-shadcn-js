@@ -16,7 +16,7 @@ const data = [
 ]
 
 export default {
-  title: 'Blocks/Charts/Bar Chart',
+  title: 'Data Display/Charts/Bar Chart',
   component: BarChart,
   tags: ['autodocs'],
   parameters: {

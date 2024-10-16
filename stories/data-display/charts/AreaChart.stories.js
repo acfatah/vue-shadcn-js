@@ -3,7 +3,7 @@ import { AreaChart } from '~/components/ui/chart-area'
 import data from './data/area-chart-01.js'
 
 export default {
-  title: 'Blocks/Charts/Area Chart',
+  title: 'Data Display/Charts/Area Chart',
   component: AreaChart,
   tags: ['autodocs'],
 }

@@ -2,7 +2,7 @@ import { DonutChart } from '~/components/ui/chart-donut'
 import data from './data/area-chart-01.js'
 
 export default {
-  title: 'Blocks/Charts/Donut Chart',
+  title: 'Data Display/Charts/Donut Chart',
   component: DonutChart,
   tags: ['autodocs'],
 }

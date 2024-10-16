@@ -49,6 +49,7 @@ const preview = {
           ],
           'Forms',
           'Data Display',
+          ['Charts'],
           'Blocks',
           'shadcn',
           'Examples',

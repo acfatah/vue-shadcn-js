@@ -2,7 +2,7 @@ import { LineChart } from '~/components/ui/chart-line'
 import data from './data/line-chart-01.json'
 
 export default {
-  title: 'Blocks/Charts/Line Chart',
+  title: 'Data Display/Charts/Line Chart',
   component: LineChart,
   tags: ['autodocs'],
 }

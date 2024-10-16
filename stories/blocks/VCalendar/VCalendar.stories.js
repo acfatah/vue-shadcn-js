@@ -8,7 +8,7 @@ import DefaultSource from './Default.vue?raw'
  * There is a risk that the project is abandoned. Read issue [#1503](https://github.com/nathanreyes/v-calendar/issues/1503)
  */
 export default {
-  title: 'Forms/VCalendar',
+  title: 'Blocks/VCalendar',
   component: DefaultComponent,
   tags: ['autodocs'],
 }
