@@ -1,5 +1,11 @@
-# Vue 3 + Vite
+# Vite, Vue 3 and shadcn/ui Single Page Application Starter Template
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<p>
+  <a href="./LICENSE">
+  <img alt="GitHub" src="https://img.shields.io/github/license/acfatah/vue-shadcn-spa?style=flat-square"></a>
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+  <a href="https://github.com/acfatah/vue-shadcn-spa/commits/main">
+  <img alt="GitHub last commit (by committer)" src="https://img.shields.io/github/last-commit/acfatah/vue-shadcn-spa?display_timestamp=committer&style=flat-square"></a>
+</p>
+
+Opinionated Vite, Vue 3, [TailwindCSS](https://tailwindcss.com/), and [shadcn/ui](https://ui.shadcn.com/) single page application starter template.
