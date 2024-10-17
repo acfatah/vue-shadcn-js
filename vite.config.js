@@ -28,6 +28,11 @@ export default defineConfig({
     }),
     Components({
       dts: false,
+      dirs: [
+        'src/components/ui/**',
+        'src/components/*',
+        'src/layouts/*',
+      ],
       resolvers: [
         // vee-validate
         (componentName) => {
