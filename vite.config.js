@@ -16,6 +16,10 @@ export default defineConfig({
   plugins: [
     AutoImport({
       dts: false,
+      vueTemplate: true,
+      dirs: [
+        'src/components/helpers',
+      ],
       imports: [
         'vue',
         'vue-router',
