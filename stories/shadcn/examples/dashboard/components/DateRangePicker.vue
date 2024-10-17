@@ -1,6 +1,5 @@
 <script setup>
 import { CalendarDate, DateFormatter, getLocalTimeZone } from '@internationalized/date'
-import { cn } from '~/lib/utils'
 
 const df = new DateFormatter('en-US', {
   dateStyle: 'medium',

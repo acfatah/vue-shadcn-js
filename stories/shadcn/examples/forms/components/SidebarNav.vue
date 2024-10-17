@@ -1,5 +1,4 @@
 <script setup>
-import { cn } from '~/lib/utils'
 import routes from '../routes.js'
 </script>
 

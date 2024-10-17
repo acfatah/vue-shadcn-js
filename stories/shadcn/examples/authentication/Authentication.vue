@@ -1,7 +1,5 @@
 <script setup>
-import { ref } from 'vue'
 import { buttonVariants } from '~/components/ui/button'
-import { cn } from '~/lib/utils'
 
 const isLoading = ref(false)
 async function onSubmit(event) {

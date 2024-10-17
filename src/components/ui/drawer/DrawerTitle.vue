@@ -1,8 +1,6 @@
 <script  setup>
 import { DrawerTitle } from 'vaul-vue'
-import { cn } from '~/lib/utils'
 
-// const props = defineProps<DrawerTitleProps & { class?: HtmlHTMLAttributes['class'] }>()
 const props = defineProps({
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },

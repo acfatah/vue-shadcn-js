@@ -1,6 +1,5 @@
 <script setup>
 import { DrawerDescription } from 'vaul-vue'
-import { cn } from '~/lib/utils'
 
 const props = defineProps({
   asChild: { type: Boolean, required: false },

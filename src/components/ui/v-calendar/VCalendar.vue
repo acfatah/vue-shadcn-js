@@ -1,9 +1,7 @@
 <script setup>
 import { useVModel } from '@vueuse/core'
 import { DatePicker } from 'v-calendar'
-import { computed, nextTick, onMounted, ref, useSlots } from 'vue'
 import { buttonVariants } from '~/components/ui/button'
-import { cn } from '~/lib/utils'
 import { isVCalendarSlot } from '.'
 
 defineOptions({

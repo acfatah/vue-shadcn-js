@@ -1,7 +1,6 @@
 <script setup>
 import { useForwardPropsEmits } from 'radix-vue'
 import { DrawerContent, DrawerPortal } from 'vaul-vue'
-import { cn } from '~/lib/utils'
 import DrawerOverlay from './DrawerOverlay.vue'
 
 const props = defineProps({

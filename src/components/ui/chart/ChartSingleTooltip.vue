@@ -1,7 +1,6 @@
 <script setup>
 import { omit } from '@unovis/ts'
 import { VisTooltip } from '@unovis/vue'
-import { createApp } from 'vue'
 import { ChartTooltip } from '.'
 
 const props = defineProps({

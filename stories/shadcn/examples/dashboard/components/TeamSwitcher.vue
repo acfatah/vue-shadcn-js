@@ -1,6 +1,4 @@
 <script setup>
-import { cn } from '~/lib/utils'
-
 const groups = [
   {
     label: 'Personal Account',

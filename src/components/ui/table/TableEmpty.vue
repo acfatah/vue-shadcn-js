@@ -1,5 +1,4 @@
 <script setup>
-import { computed } from 'vue'
 import TableCell from './TableCell.vue'
 import TableRow from './TableRow.vue'
 

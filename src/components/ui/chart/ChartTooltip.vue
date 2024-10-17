@@ -1,6 +1,4 @@
 <script setup>
-import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/card'
-
 defineProps({
   title: { type: String, required: false },
   data: { type: Array, required: true },

@@ -1,7 +1,6 @@
 <script setup>
 import { BulletLegend } from '@unovis/ts'
 import { VisBulletLegend } from '@unovis/vue'
-import { nextTick, onMounted, ref } from 'vue'
 import { buttonVariants } from '~/components/ui/button'
 
 const props = defineProps({
