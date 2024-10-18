@@ -15,7 +15,6 @@ export default defineConfig({
   },
   plugins: [
     AutoImport({
-      dts: false,
       vueTemplate: true,
       dirs: [
         'src/components/helpers',
@@ -31,7 +30,6 @@ export default defineConfig({
       ],
     }),
     Components({
-      dts: false,
       dirs: [
         'src/components/ui/**',
         'src/components/*',

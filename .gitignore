@@ -28,3 +28,5 @@ tmp
 *.sw?
 
 *storybook.log
+auto-imports.d.ts
+components.d.ts
