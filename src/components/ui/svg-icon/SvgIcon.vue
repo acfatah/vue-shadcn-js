@@ -1,24 +1,30 @@
 <script setup>
-import { defineAsyncComponent } from 'vue'
-
 const props = defineProps({
   name: { type: String, required: true },
-  width: { type: String, default: '24' },
-  height: { type: String, default: '24' },
 })
 
-const SvgIcon = defineAsyncComponent(async () =>
-  import(`~/assets/icons/${props.name}.svg?component`),
-)
+const fileExists = ref(true)
+
+const SvgIcon = defineAsyncComponent(async () => {
+  try {
+    return await import(`~/assets/icons/${props.name}.svg?component`)
+  }
+  catch (error) {
+    if (!error.message.match(/^Unknown variable dynamic import: (.*)/))
+      throw error
+
+    fileExists.value = false
+    console.error(`Icon ${props.name}.svg not found`)
+  }
+})
 </script>
 
 <template>
   <SvgIcon
-    v-if="props.name"
+    v-if="props.name && fileExists"
     v-bind="{
-      width: props.width,
-      height: props.height,
       ...$attrs,
+      class: cn('size-6', $attrs.class),
     }"
   />
 </template>
