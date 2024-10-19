@@ -1,16 +1,3 @@
-<script setup lang="ts">
-import { Button } from '~/components/ui/button'
-import {
-  Dialog,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogScrollContent,
-  DialogTitle,
-  DialogTrigger,
-} from '~/components/ui/dialog'
-</script>
-
 <template>
   <Dialog>
     <DialogTrigger as-child>
