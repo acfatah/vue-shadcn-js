@@ -40,6 +40,7 @@ const preview = {
           'Foundation',
           ['Design Tokens', 'Colors'],
           'Graphic Elements',
+          'Navigation',
           'Overlays',
           [
             'AlertDialog',
