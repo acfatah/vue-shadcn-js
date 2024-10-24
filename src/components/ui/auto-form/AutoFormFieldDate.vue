@@ -1,22 +1,5 @@
 <script setup>
 import { DateFormatter, getLocalTimeZone } from '@internationalized/date'
-import { CalendarIcon } from 'lucide-vue-next'
-import { Button } from '~/components/ui/button'
-import { Calendar } from '~/components/ui/calendar'
-import {
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormMessage,
-} from '~/components/ui/form'
-
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '~/components/ui/popover'
-import { cn } from '~/lib/utils'
 import AutoFormLabel from './AutoFormLabel.vue'
 import { beautifyObjectName } from './utils'
 
@@ -46,11 +29,13 @@ const df = new DateFormatter('en-US', {
               <PopoverTrigger as-child :disabled="disabled">
                 <Button
                   variant="outline"
-                  :class="cn(
-                    'w-full justify-start text-left font-normal',
-                    !slotProps.componentField.modelValue
-                      && 'text-muted-foreground',
-                  )"
+                  :class="
+                    cn(
+                      'w-full justify-start text-left font-normal',
+                      !slotProps.componentField.modelValue
+                        && 'text-muted-foreground',
+                    )
+                  "
                 >
                   <CalendarIcon class="mr-2 size-4" />
                   {{

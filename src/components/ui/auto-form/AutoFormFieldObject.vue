@@ -1,13 +1,5 @@
 <script setup>
 import { FieldContextKey, useField } from 'vee-validate'
-import { computed, provide } from 'vue'
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '~/components/ui/accordion'
-import { FormItem } from '~/components/ui/form'
 import AutoFormField from './AutoFormField.vue'
 import AutoFormLabel from './AutoFormLabel.vue'
 import {

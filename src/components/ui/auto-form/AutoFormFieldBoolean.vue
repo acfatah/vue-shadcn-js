@@ -1,13 +1,5 @@
 <script setup>
-import { computed } from 'vue'
 import { Checkbox } from '~/components/ui/checkbox'
-import {
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormMessage,
-} from '~/components/ui/form'
 import { Switch } from '~/components/ui/switch'
 import AutoFormLabel from './AutoFormLabel.vue'
 import { beautifyObjectName } from './utils'
