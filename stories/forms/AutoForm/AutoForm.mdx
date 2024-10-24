@@ -1,0 +1,51 @@
+import { Meta, Canvas, Source, Story } from "@storybook/blocks"
+import * as AutoFormStories from './AutoForm.stories'
+import fieldConfigSource from './data/field-config.js?raw'
+import schemaSource from './data/user.js?raw'
+
+<Meta title="Forms/AutoForm/Docs" />
+
+# AutoForm
+
+Automatically generate a form from Zod schema.
+
+{/* BUG: link texts won't rendered as clickable link */}
+Read more at: [https://www.shadcn-vue.com/docs/components/auto-form.html](https://www.shadcn-vue.com/docs/components/auto-form.html)<br />
+Primitive API Reference: [https://vee-validate.logaretm.com/v4/guide/overview](https://vee-validate.logaretm.com/v4/guide/overview)<br />
+Zod API Reference: [https://zod.dev/?id=basic-usage](https://zod.dev/?id=basic-usage)
+
+<Canvas of={AutoFormStories.Default} />
+
+### Field Config
+
+To hide a label, simply add `hideLabel` property as `false` to the field config.
+
+<Source code={fieldConfigSource} />
+
+### Zod Schema
+
+<Source code={schemaSource} />
+
+## Sub Object
+
+<Canvas of={AutoFormStories.SubObject} />
+
+## Controlled
+
+<Canvas of={AutoFormStories.Controlled} />
+
+## Confirm Password
+
+<Canvas of={ AutoFormStories.ConfirmPassword } />
+
+## API Example
+
+<Canvas of={ AutoFormStories.APIExample } />
+
+## Array Support
+
+<Canvas of={ AutoFormStories.ArraySupport } />
+
+## Dependencies
+
+<Canvas of={ AutoFormStories.Dependencies } />
