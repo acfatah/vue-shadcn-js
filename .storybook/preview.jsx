@@ -50,6 +50,7 @@ const preview = {
           ],
           'Forms',
           'Data Display',
+          'Misc',
           ['Charts'],
           'Blocks',
           'shadcn',
