@@ -77,6 +77,25 @@ export const H3 = {
   }),
 }
 
+const H4Source = `
+<h4 class="scroll-m-20 text-xl font-semibold tracking-tight">
+  People stopped telling jokes
+</h4>
+`
+export const H4 = {
+  parameters: {
+    docs: {
+      source: {
+        code: H4Source,
+      },
+    },
+  },
+
+  render: () => ({
+    template: H4Source,
+  }),
+}
+
 const PSource = `
 <p class="leading-7 [&:not(:first-child)]:mt-6">
   Once upon a time, in a far-off land, there was a very lazy king who
