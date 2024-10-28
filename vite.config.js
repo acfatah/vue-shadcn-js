@@ -32,6 +32,7 @@ export default defineConfig({
     Components({
       dirs: [
         'src/components/ui/**',
+        'src/components/misc/*',
         'src/components/*',
         'src/layouts/*',
       ],
