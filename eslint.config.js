@@ -21,6 +21,10 @@ export default antfu(
         },
       ],
     },
+    ignores: [
+      'package.json',
+      'package-lock.json',
+    ],
   },
   // @ts-ignore
   ...tailwindcss.configs['flat/recommended'],
