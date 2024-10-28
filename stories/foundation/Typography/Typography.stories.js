@@ -38,7 +38,7 @@ export const H1 = {
 
 const H2Source = `
 <h2
-  class="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
+  class="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
 >
   The King's Plan
 </h2>
@@ -59,7 +59,7 @@ export const H2 = {
 }
 
 const H3Source = `
-<h3 class="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
+<h3 class="scroll-m-20 text-2xl font-semibold tracking-tight">
   The Joke Tax
 </h3>
 `
@@ -99,7 +99,7 @@ export const P = {
 }
 
 const BlockquoteSource = `
-<blockquote class="mt-6 border-l-2 pl-6 italic">
+<blockquote class="border-l-2 pl-6 italic">
   "After all," he said, "everyone enjoys a good joke, so it's only fair
   that they should pay for the privilege."
 </blockquote>
@@ -119,7 +119,7 @@ export const Blockquote = {
 }
 
 const UnorderedListSource = `
-<ul class="my-6 ml-6 list-disc [&>li]:mt-2">
+<ul class="ml-6 list-disc [&>li]:mt-2">
   <li>1st level of puns: 5 gold coins</li>
   <li>2nd level of jokes: 10 gold coins</li>
   <li>3rd level of one-liners : 20 gold coins</li>
@@ -140,7 +140,7 @@ export const UnorderedList = {
 }
 
 const TableSource = `
-<div class="my-6 w-full overflow-y-auto">
+<div class="w-full overflow-y-auto">
   <table class="w-full">
     <thead>
       <tr class="m-0 border-t p-0 even:bg-muted">
