@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint $(git diff --name-only HEAD)",
+    "lint": "eslint --no-warn-ignored $(git diff --name-only HEAD)",
     "lint:all": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "lint:inspect": "npx eslint --inspect-config",
