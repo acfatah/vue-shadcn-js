@@ -74,7 +74,7 @@ function setSelectedVersion(version) {
         <SidebarMenu>
           <SidebarMenuItem>
             <DropdownMenu>
-              <DropdownMenuTrigger>
+              <DropdownMenuTrigger class="w-full">
                 <!-- eslint-disable tailwindcss/no-custom-classname -->
                 <SidebarMenuButton
                   size="lg"
