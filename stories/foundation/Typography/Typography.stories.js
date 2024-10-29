@@ -36,6 +36,8 @@ export const H1 = {
   }),
 }
 
+H1.storyName = 'h1'
+
 const H2Source = `
 <h2
   class="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
@@ -58,6 +60,8 @@ export const H2 = {
   }),
 }
 
+H2.storyName = 'h2'
+
 const H3Source = `
 <h3 class="scroll-m-20 text-2xl font-semibold tracking-tight">
   The Joke Tax
@@ -77,6 +81,8 @@ export const H3 = {
   }),
 }
 
+H3.storyName = 'h3'
+
 const H4Source = `
 <h4 class="scroll-m-20 text-xl font-semibold tracking-tight">
   People stopped telling jokes
@@ -95,6 +101,8 @@ export const H4 = {
     template: H4Source,
   }),
 }
+
+H4.storyName = 'h4'
 
 const PSource = `
 <p class="leading-7 [&:not(:first-child)]:mt-6">
@@ -117,6 +125,8 @@ export const P = {
   }),
 }
 
+P.storyName = 'p'
+
 const BlockquoteSource = `
 <blockquote class="border-l-2 pl-6 italic">
   "After all," he said, "everyone enjoys a good joke, so it's only fair
@@ -134,6 +144,104 @@ export const Blockquote = {
 
   render: () => ({
     template: BlockquoteSource,
+  }),
+}
+
+const InlineCodeSource = `
+<code
+  class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold"
+>
+  radix-vue
+</code>
+`
+export const InlineCode = {
+  parameters: {
+    docs: {
+      source: {
+        code: InlineCodeSource,
+      },
+    },
+  },
+
+  render: () => ({
+    template: InlineCodeSource,
+  }),
+}
+
+const LeadSource = `
+<p class="text-xl text-muted-foreground">
+  A modal dialog that interrupts the user with important content and expects a
+  response.
+</p>
+`
+export const Lead = {
+  parameters: {
+    docs: {
+      source: {
+        code: LeadSource,
+      },
+    },
+  },
+
+  render: () => ({
+    template: LeadSource,
+  }),
+}
+
+const LargeSource = `
+<div class="text-lg font-semibold">
+  Are you absolutely sure?
+</div>
+`
+export const Large = {
+  parameters: {
+    docs: {
+      source: {
+        code: LargeSource,
+      },
+    },
+  },
+
+  render: () => ({
+    template: LargeSource,
+  }),
+}
+
+const SmallSource = `
+<small class="text-sm font-medium leading-none">
+  Email address
+</small>
+`
+export const Small = {
+  parameters: {
+    docs: {
+      source: {
+        code: SmallSource,
+      },
+    },
+  },
+
+  render: () => ({
+    template: SmallSource,
+  }),
+}
+
+const MutedSource = `
+<p class="text-sm text-muted-foreground">
+  Enter your email address.
+</p>
+`
+export const Muted = {
+  parameters: {
+    docs: {
+      source: {
+        code: MutedSource,
+      },
+    },
+  },
+
+  render: () => ({
+    template: MutedSource,
   }),
 }
 
