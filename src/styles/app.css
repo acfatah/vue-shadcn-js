@@ -1,4 +1,5 @@
 @import url('~/styles/chart.css');
+@import url('~/styles/sidebar.css');
 
 @tailwind base;
 @tailwind components;

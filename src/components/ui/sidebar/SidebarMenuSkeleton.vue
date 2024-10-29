@@ -1,0 +1,29 @@
+<script setup>
+const props = defineProps({
+  showIcon: { type: Boolean, required: false, default: true },
+  class: { type: null, required: false },
+})
+
+const width = computed(() => {
+  return `${Math.floor(Math.random() * 40) + 50}%`
+})
+</script>
+
+<template>
+  <div
+    data-sidebar="menu-skeleton"
+    :class="cn('rounded-md h-8 flex gap-2 px-2 items-center', props.class)"
+  >
+    <Skeleton
+      v-if="props.showIcon"
+      class="size-4 rounded-md"
+      data-sidebar="menu-skeleton-icon"
+    />
+
+    <Skeleton
+      class="h-4 max-w-[--skeleton-width] flex-1"
+      data-sidebar="menu-skeleton-text"
+      :style="{ '--skeleton-width': width }"
+    />
+  </div>
+</template>
