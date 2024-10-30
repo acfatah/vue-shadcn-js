@@ -46,6 +46,7 @@ const delegatedProps = computed(() => {
       :hidden="state !== 'collapsed' || isMobile"
     >
       <template v-if="typeof props.tooltip === 'string'">
+        <TooltipArrow />
         {{ props.tooltip }}
       </template>
       <component :is="props.tooltip" v-else />

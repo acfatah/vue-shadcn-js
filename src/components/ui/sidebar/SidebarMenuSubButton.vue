@@ -2,13 +2,13 @@
 import { Primitive } from 'radix-vue'
 
 const props = defineProps({
-  as: { type: null, required: false, default: 'a' },
-  asChild: { type: Boolean, required: false, default: false },
+  isActive: { type: Boolean, required: false, default: false },
 
   /** @type { 'sm' | 'md' } size */
   size: { type: String, required: false, default: 'md' },
 
-  isActive: { type: Boolean, required: false, default: false },
+  as: { type: null, required: false, default: 'a' },
+  asChild: { type: Boolean, required: false, default: false },
   class: { type: null, required: false },
 })
 </script>

@@ -4,8 +4,7 @@ import { sidebarMenuButtonVariants } from '.'
 
 const props = defineProps({
   tooltip: { type: null, required: false },
-  as: { type: null, required: false, default: 'button' },
-  asChild: { type: Boolean, required: false, default: false },
+  isActive: { type: Boolean, required: false, default: false },
 
   /** @type { 'default' | 'outline' } variant */
   variant: { type: String, required: false, default: 'default' },
@@ -13,7 +12,8 @@ const props = defineProps({
   /** @type { 'default' | 'sm' | 'lg' } size */
   size: { type: String, required: false, default: 'default' },
 
-  isActive: { type: Boolean, required: false, default: false },
+  as: { type: null, required: false, default: 'button' },
+  asChild: { type: Boolean, required: false, default: false },
   class: { type: null, required: false },
 })
 </script>

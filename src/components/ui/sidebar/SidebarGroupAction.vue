@@ -2,9 +2,9 @@
 import { Primitive } from 'radix-vue'
 
 const props = defineProps({
-  class: { type: null, required: false },
   as: { type: null, required: false, default: 'div' },
   asChild: { type: Boolean, required: false, default: false },
+  class: { type: null, required: false },
 })
 </script>
 
