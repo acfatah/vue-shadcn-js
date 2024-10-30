@@ -1,8 +1,8 @@
 import { withThemeByClassName } from '@storybook/addon-themes'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
-import { themes } from '@storybook/theming'
 import { setup } from '@storybook/vue3'
 import { createPinia } from 'pinia'
+import theme from './theme.js'
 
 /* eslint-disable */
 import { Controls, Description, Primary, Stories, Subtitle, Title } from '@storybook/blocks'
@@ -40,6 +40,7 @@ const preview = {
           'Foundation',
           ['Design Tokens', 'Colors'],
           'Graphic Elements',
+          ['Lucide Icon'],
           'Navigation',
           'Overlays',
           [
@@ -65,7 +66,7 @@ const preview = {
     },
 
     docs: {
-      theme: themes.dark,
+      theme,
       page: () => (
         <>
           <Title />
