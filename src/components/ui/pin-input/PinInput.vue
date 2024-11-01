@@ -1,7 +1,5 @@
 <script setup>
 import { PinInputRoot, useForwardPropsEmits } from 'radix-vue'
-import { computed } from 'vue'
-import { cn } from '~/lib/utils'
 
 const props = defineProps({
   modelValue: { type: Array, required: false, default: () => [] },
