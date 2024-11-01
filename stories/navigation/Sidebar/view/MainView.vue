@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-1 flex-col gap-4 p-4 pt-0">
+  <main class="flex flex-1 flex-col gap-4 px-2 py-4 pt-0">
     <div class="grid auto-rows-min gap-4 md:grid-cols-4">
       <Placeholder v-for="i in 4" :key="i" class="aspect-video rounded-xl" />
     </div>

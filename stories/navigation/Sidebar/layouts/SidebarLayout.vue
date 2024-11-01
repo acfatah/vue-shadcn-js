@@ -6,7 +6,7 @@ import LeftSidebar from './LeftSidebar.vue'
 <template>
   <SidebarProvider>
     <LeftSidebar />
-    <SidebarInset>
+    <SidebarInset class="px-2">
       <Header />
       <RouterView />
     </SidebarInset>
