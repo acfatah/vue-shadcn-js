@@ -1,3 +1,5 @@
+import { vueRouter } from 'storybook-vue3-router'
+import App from '~/App.vue'
 import {
   Sidebar,
   SidebarContent,
@@ -23,16 +25,15 @@ import {
   SidebarSeparator,
   SidebarTrigger,
 } from '~/components/ui/sidebar'
-
-import DefaultComponent from './Default.vue'
-import DefaultSource from './Default.vue?raw'
+import LeftSidebarSource from './layouts/LeftSidebar.vue?raw'
+import routes from './routes.js'
 
 /**
- * A composable, themeable and customizable sidebar component.
+ * Application sidebar example.
  */
 export default {
   title: 'Navigation/Sidebar',
-  component: DefaultComponent,
+  component: App,
   subcomponents: {
     Sidebar,
     SidebarContent,
@@ -58,28 +59,18 @@ export default {
     SidebarSeparator,
     SidebarTrigger,
   },
-  tags: ['autodocs'],
+  decorators: [vueRouter(routes)],
+  parameters: {
+    layout: 'fullscreen',
+  },
 }
 
 export const Default = {
   parameters: {
-    layout: 'fullscreen',
     docs: {
       source: {
-        code: DefaultSource,
+        code: LeftSidebarSource,
       },
     },
   },
-
-  render: args => ({
-    components: { DefaultComponent },
-
-    setup() {
-      return { args }
-    },
-
-    template: `
-      <DefaultComponent v-bind="args" />
-    `,
-  }),
 }
