@@ -1,0 +1,26 @@
+import { Meta, Canvas, Controls, Source, Story } from "@storybook/blocks"
+import * as SidebarStories from './Sidebar.stories.js'
+
+import LeftSidebarComponent from './layouts/LeftSidebar.vue'
+import SidebarLayoutSource from './layouts/SidebarLayout.vue?raw'
+import HeaderSource from './layouts/Header.vue?raw'
+
+<Meta title="Navigation/Sidebar/Docs" of={SidebarStories} />
+
+# Sidebar
+
+A composable, themeable and customizable sidebar component.
+
+<Canvas of={SidebarStories.Default} />
+
+<Controls />
+
+<br />
+
+## Layout File
+
+<Source code={SidebarLayoutSource} />
+
+## Header
+
+<Source code={HeaderSource} />
