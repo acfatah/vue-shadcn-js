@@ -18,6 +18,7 @@ export const buttonVariants = cva(
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
       },
+
       size: {
         default: 'h-9 px-4 py-2',
         xs: 'h-7 rounded px-2',
@@ -26,6 +27,7 @@ export const buttonVariants = cva(
         icon: 'size-9',
       },
     },
+
     defaultVariants: {
       variant: 'default',
       size: 'default',
