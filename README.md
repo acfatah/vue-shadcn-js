@@ -1,4 +1,4 @@
-# Vite, Vue 3 and shadcn/ui Single Page Application Starter Template
+# Vite, Vue 3 and shadcn/ui Single Page Application Boilerplate
 
 <p>
   <a href="./LICENSE">
@@ -14,7 +14,7 @@ Streamlining Front-end Development with Modern Tools.
 
 ## Introduction
 
-This template is built using the [shadcn/ui](https://ui.shadcn.com) design system
+This template is built using the [Shadcn UI](https://ui.shadcn.com) design system
 and integrates seamlessly with our front-end stack of Vite, Vue, and [TailwindCSS](https://tailwindcss.com)
 to build a single page application.
 
@@ -40,8 +40,8 @@ The Stacks:
 - [Vite](https://vite.dev)
 - [Vue](https://vuejs.org)
 - [Tailwindcss](https://vuejs.org)
-- [shadcn/ui](https://ui.shadcn.com)
-- [storybook](https://storybook.js.org)
+- [Shadcn UI](https://ui.shadcn.com)
+- [Storybook](https://storybook.js.org)
 
 Recommended Figma Components Library / File:
 
@@ -52,23 +52,29 @@ Recommended Figma Components Library / File:
 
 ### Efficiency:
 
-- **Reusable Components**: Most components will be created once and reusable, reducing repetitive work.
-- **Faster Development**: Significantly reduces boilerplate code, allowing developers to quickly implement new features and functionalities instead of starting from scratch.
+- **Reusable Components**: Most components will be created once and reusable, reducing
+  repetitive work.
+- **Faster Development**: Significantly reduces boilerplate code, allowing developers
+  to quickly implement new features and functionalities instead of starting from scratch.
 - **Streamlined Collaboration**: The alignment between Figma components and Vue components
-  ensures a smooth workflow between design and development teams, reducing the back-and-forth between departments.
+  ensures a smooth workflow between design and development teams, reducing the back-and-forth
+  between departments.
 - **Rapid Prototyping**: With pre-built, ready-made components, developers can focus
   on core functionality, accelerating the development process.
 
 ### Maintainability:
 
-- **Consistent Updates**: The design system and components will be updated and added
-  over time, ensuring that the system evolves with the company's needs while maintaining consistency.
-- **Component Structure**: Modular components ensure that updates are localized, making
-  it easier to apply fixes or enhancements without disrupting the entire codebase.
+- **Component Structure**: It is NOT a component library. It's a collection of reusable
+  components that can be copied and pasted to compose more complex components or an application.
+- **No Design Library**: The design of the components is separated from their implementation.
+  There is no dependencies to any design library.
+- **Consistent Updates**: The design system and components are updated and added
+  over time, ensuring that the system evolves with the company's needs while maintaining
+  consistency.
 
 ### Scalability:
 
-- **Library-Agnostic Components**: Provides the flexibility to integrate them into
+- **Library-agnostic Components**: Provides the flexibility to integrate them into
   any project without being tied to a particular
   framework, ensuring greater adaptability.
 - **Scalable Architecture**: As new features or components are required, they can
@@ -81,20 +87,27 @@ Recommended Figma Components Library / File:
 
 - **Automatic Code Review with ESLint**: The template includes ESLint, which performs
   automatic code review, ensuring that code quality remains high throughout development.
-- **Enforces Best Practices**: ESLint helps the team follow consistent coding standards, reducing potential errors and improving maintainability.
-- **Continuous Improvement**: As the project evolves, ESLint can be configured to enforce new rules, ensuring that the codebase stays modern and clean.
+- **Enforces Best Practices**: ESLint helps the team follow consistent coding standards,
+  reducing potential errors and improving maintainability.
+- **Continuous Improvement**: As the project evolves, ESLint can be configured to
+  enforce new rules, ensuring that the codebase stays modern and clean.
 
 ## Technical Details
 
 Key Features:
 
-- Leverage the **Headless Component** architecture from [radix-vue](https://www.radix-vue.com) to implement essential
-  UI components such as Modal, Dialog, Alert, Toast, and more. This allows for greater
-  flexibility and customization.
+- Leverage the **Headless Component** architecture from [radix-vue](https://www.radix-vue.com)
+  to implement essential UI components such as Modal, Dialog, Alert, Toast, and more.
+  This allows for greater flexibility and customization.
 - Consider the benefits of using **Code Snippets** versus a fully-featured Component
   Library for quick reuse, and libraries for complete, consistent solutions.
-- Utilize Vue **unplugin libraries** to automatically import components and helpers, significantly reducing boilerplate code and improving development speed.
-- Ensure automatic code formatting and linting are in place using **ESLint**, maintaining code quality and consistency across your project.
-- Implement icons using Iconify, LucideIcon, RadixIcon, and SvgIcon, offering a wide range of options for iconography that enhances your application's UI.
-- Use the **AutoForm** component for dynamically generated forms, reducing repetitive form-building tasks and ensuring consistency.
-- Simplify complex data representation with streamlined **DataTable** components, making data management and display more efficient.
+- Utilize Vue **unplugin libraries** to automatically import components and helpers,
+  significantly reducing boilerplate code and improving development speed.
+- Ensure automatic code formatting and linting are in place using **ESLint**, maintaining
+  code quality and consistency across your project.
+- Implement icons using Iconify, LucideIcon, RadixIcon, and SvgIcon, offering a wide
+  range of options for iconography that enhances your application's UI.
+- Use the **AutoForm** component for dynamically generated forms, reducing repetitive
+  form-building tasks and ensuring consistency.
+- Simplify complex data representation with streamlined **DataTable** components,
+  making data management and display more efficient.
