@@ -6,6 +6,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import svgLoader from 'vite-svg-loader'
+import { lucideIconResolver, veeValidateResolver } from './src/components/resolvers'
 
 export default defineConfig({
   css: {
@@ -37,25 +38,8 @@ export default defineConfig({
         'src/layouts/*',
       ],
       resolvers: [
-        // vee-validate
-        (componentName) => {
-          const components = [
-            { name: 'Form', from: 'vee-validate' },
-            { name: 'Field', as: 'FormField', from: 'vee-validate' },
-            { name: 'FieldArray', from: 'vee-validate' },
-          ]
-
-          return components.find(
-            component => component.as === componentName || component.name === componentName,
-          )
-        },
-        // lucide-vue-next
-        (componentName) => {
-          const [, name] = componentName.match(/([a-zA-Z0-9]+)Icon/) || []
-
-          if (name)
-            return { name, from: 'lucide-vue-next' }
-        },
+        lucideIconResolver,
+        veeValidateResolver,
       ],
     }),
     vue(),
