@@ -1,4 +1,16 @@
-import { Menu as IconMenu } from 'lucide-vue-next'
+import {
+  Menu as IconMenu,
+  ListRestart,
+  Loader,
+  LoaderCircle,
+  LoaderPinwheel,
+  RefreshCcw,
+  RefreshCcwDot,
+  RefreshCw,
+  RefreshCwOff,
+  RotateCcw,
+  RotateCw,
+} from 'lucide-vue-next'
 import DefaultComponent from './Default.vue'
 import DefaultSource from './Default.vue?raw'
 
@@ -67,7 +79,6 @@ export default {
 export const Default = {
   component: IconMenu,
   parameters: {
-
     docs: {
       source: {
         code: DefaultSource,
@@ -83,5 +94,65 @@ export const Default = {
     },
 
     template: '<DefaultComponent v-bind="args" />',
+  }),
+}
+
+const LoadingIconsTemplate = `
+<div class="flex space-x-4">
+  <Loader class="animate-spin" />
+  <LoaderCircle class="animate-spin" />
+  <LoaderPinwheel class="animate-spin" />
+</div>
+`
+
+export const LoadingIcon = {
+  parameters: {
+    docs: {
+      source: {
+        code: LoadingIconsTemplate,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { Loader, LoaderCircle, LoaderPinwheel },
+
+    setup() {
+      return { args }
+    },
+
+    template: LoadingIconsTemplate,
+  }),
+}
+
+const ReloadIconsTemplate = `
+<div class="flex space-x-4">
+  <ListRestart />
+  <RefreshCwOff />
+  <RefreshCcw class="animate-spin" />
+  <RefreshCcwDot class="animate-spin" />
+  <RefreshCw class="animate-spin" />
+  <RotateCcw class="animate-spin" />
+  <RotateCw class="animate-spin" />
+</div>
+`
+
+export const ReloadIcon = {
+  parameters: {
+    docs: {
+      source: {
+        code: ReloadIconsTemplate,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { ListRestart, RefreshCcw, RefreshCcwDot, RefreshCw, RefreshCwOff, RotateCcw, RotateCw },
+
+    setup() {
+      return { args }
+    },
+
+    template: ReloadIconsTemplate,
   }),
 }
