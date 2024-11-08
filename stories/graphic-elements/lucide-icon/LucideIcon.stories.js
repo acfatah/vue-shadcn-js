@@ -1,6 +1,6 @@
 import { Menu as IconMenu } from 'lucide-vue-next'
-import ExampleComponent from './Example.vue'
-import ExampleSource from './Example.vue?raw'
+import DefaultComponent from './Default.vue'
+import DefaultSource from './Default.vue?raw'
 
 /**
  * Automatically import lucide icon as component. Simply postfix `Icon` to lucide icon name.
@@ -13,7 +13,7 @@ import ExampleSource from './Example.vue?raw'
  */
 export default {
   title: 'Graphic Elements/Lucide Icon',
-  component: ExampleComponent,
+  component: DefaultComponent,
   tags: ['autodocs'],
 
   argTypes: {
@@ -70,18 +70,18 @@ export const Default = {
 
     docs: {
       source: {
-        code: ExampleSource,
+        code: DefaultSource,
       },
     },
   },
 
   render: args => ({
-    components: { ExampleComponent },
+    components: { DefaultComponent },
 
     setup() {
       return { args }
     },
 
-    template: '<ExampleComponent v-bind="args" />',
+    template: '<DefaultComponent v-bind="args" />',
   }),
 }

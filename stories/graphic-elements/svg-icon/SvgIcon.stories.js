@@ -1,5 +1,4 @@
 import { SvgIcon } from '~/components/ui/svg-icon'
-import '~/styles/app.css'
 
 /**
  * Dynamically load svg icon from `src/assets/icons`.
