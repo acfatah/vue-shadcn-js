@@ -1,6 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '~/components/ui/tabs'
-import ExampleComponent from './Example.vue'
-import ExampleSource from './ExampleSource.vue?raw'
+import DefaultComponent from './Default.vue'
+import Snippet from './Snippet.vue?raw'
 
 /**
  * A set of layered sections of content—known as tab panels—that are displayed one at a time.
@@ -23,20 +23,20 @@ export const Default = {
   parameters: {
     docs: {
       source: {
-        code: ExampleSource,
+        code: Snippet,
       },
     },
   },
 
   render: args => ({
-    components: { ExampleComponent },
+    components: { DefaultComponent },
 
     setup() {
       return { args }
     },
 
     template: `
-      <ExampleComponent v-bind="args" />
+      <DefaultComponent v-bind="args" />
     `,
   }),
 }
