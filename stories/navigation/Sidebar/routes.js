@@ -1,5 +1,5 @@
 import SidebarLayout from './layouts/SidebarLayout.vue'
-import MainView from './view/MainView.vue'
+import MainView from './views/MainView.vue'
 
 export default [
   {
