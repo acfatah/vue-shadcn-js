@@ -49,6 +49,7 @@ const preview = {
             'Tooltip',
             ['Default', 'Primitive'],
           ],
+          'Panels',
           'Forms',
           'Data Display',
           'Misc',
