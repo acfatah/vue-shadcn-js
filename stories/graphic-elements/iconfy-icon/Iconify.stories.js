@@ -1,8 +1,8 @@
-import { Icon as Iconify } from '@iconify/vue'
-import { Icon } from '~/components/ui/icon'
+import { Icon as IconifyComponent } from '@iconify/vue'
+import { Iconify } from '~/components/ui/icon'
 
 /**
- * Icon component using Iconify.
+ * Icon component using Iconify library.
  *
  * It's recommended to use `size-*` utility class to size the icon. The default
  * size is `size-6` or  `24px`.
@@ -12,7 +12,7 @@ import { Icon } from '~/components/ui/icon'
  */
 export default {
   title: 'Graphic Elements/Iconify Icon',
-  component: Iconify,
+  component: IconifyComponent,
   tags: ['autodocs'],
 
   args: {
@@ -95,18 +95,18 @@ export const Default = {
   parameters: {
     docs: {
       source: {
-        code: `<Icon icon="mdi-light:menu" />`,
+        code: `<Iconify icon="mdi-light:menu" />`,
       },
     },
   },
 
   render: args => ({
-    components: { Icon },
+    components: { Iconify },
 
     setup() {
       return { args }
     },
 
-    template: '<Icon v-bind="args" />',
+    template: '<Iconify v-bind="args" />',
   }),
 }
