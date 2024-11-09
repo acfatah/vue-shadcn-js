@@ -15,7 +15,7 @@ import DefaultComponent from './Default.vue'
 import DefaultSource from './Default.vue?raw'
 
 /**
- * Automatically import lucide icon as component. Simply postfix `Icon` to lucide icon name.
+ * Automatically import lucide icon as component by appending `Icon` to lucide icon name.
  *
  * It's recommended to use `size-*` utility class to size the icon. The default
  * size is `size-6` or  `24px`.
