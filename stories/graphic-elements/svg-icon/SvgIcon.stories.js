@@ -1,8 +1,7 @@
-import { SvgIcon } from '~/components/ui/svg-icon'
+import { SvgIcon } from '~/components/ui/icon'
 
 /**
- * Dynamically load svg icon from `src/assets/icons`.
- * We are using [`vite-svg-loader`](https://github.com/jpkleemans/vite-svg-loader)
+ * Dynamically load svg icon from `src/assets/icons` using [`vite-svg-loader`](https://github.com/jpkleemans/vite-svg-loader)
  * to load the svg file.
  *
  * It's recommended to use `size-*` utility class to size the icon. The default
@@ -25,6 +24,10 @@ export default {
         type: { summary: 'string' },
       },
       description: 'SVG icon file name in the `src/assets/icons` directory',
+    },
+
+    size: {
+      control: 'number',
     },
   },
 }
