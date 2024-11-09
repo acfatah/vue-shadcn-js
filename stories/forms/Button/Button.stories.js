@@ -1,4 +1,11 @@
+import {
+  ChevronRight as ChevronRightIcon,
+  MailOpen as MailOpenIcon,
+  RotateCw as RotateCwIcon,
+} from 'lucide-vue-next'
 import { Button } from '~/components/ui/button'
+
+const PrimitiveProps = ['as', 'asChild']
 
 /**
  * Displays a button or a component that looks like a button.
@@ -85,7 +92,7 @@ export const Default = {
 export const Secondary = {
   parameters: {
     controls: {
-      exclude: ['variant'],
+      exclude: [...PrimitiveProps, 'variant'],
     },
 
     docs: {
@@ -116,7 +123,7 @@ export const Secondary = {
 export const Destructive = {
   parameters: {
     controls: {
-      exclude: ['variant'],
+      exclude: [...PrimitiveProps, 'variant'],
     },
 
     docs: {
@@ -147,7 +154,7 @@ export const Destructive = {
 export const Outline = {
   parameters: {
     controls: {
-      exclude: ['variant'],
+      exclude: [...PrimitiveProps, 'variant'],
     },
 
     docs: {
@@ -178,7 +185,7 @@ export const Outline = {
 export const Ghost = {
   parameters: {
     controls: {
-      exclude: ['variant'],
+      exclude: [...PrimitiveProps, 'variant'],
     },
 
     docs: {
@@ -204,4 +211,110 @@ export const Ghost = {
       <Button v-bind="args">{{ args.text }}</Button>
     `,
   }),
+}
+
+export const Icon = {
+  parameters: {
+    controls: {
+      exclude: [...PrimitiveProps, 'size'],
+    },
+
+    docs: {
+      source: {
+        code: `
+<Button variant="outline" size="icon">
+  <ChevronRightIcon class="size-4" />
+</Button>
+`,
+      },
+    },
+  },
+
+  render: (args) => {
+    return {
+      components: { Button, ChevronRightIcon },
+
+      setup() {
+        return { args }
+      },
+
+      template: `
+        <Button variant="outline" size="icon" v-bind="args">
+          <ChevronRightIcon class="size-4" />
+        </Button>
+      `,
+    }
+  },
+}
+
+export const WithIcon = {
+  parameters: {
+    controls: {
+      exclude: PrimitiveProps,
+    },
+
+    docs: {
+      source: {
+        code: `
+<Button>
+  <MailOpenIcon class="size-4 mr-2" />
+  Login with Email
+</Button>
+`,
+      },
+    },
+  },
+
+  render: (args) => {
+    return {
+      components: { Button, MailOpenIcon },
+
+      setup() {
+        return { args }
+      },
+
+      template: `
+        <Button v-bind="args">
+          <MailOpenIcon class="size-4 mr-2" />
+          Login with Email
+        </Button>
+      `,
+    }
+  },
+}
+
+export const Loading = {
+  parameters: {
+    controls: {
+      exclude: PrimitiveProps,
+    },
+
+    docs: {
+      source: {
+        code: `
+<Button disabled">
+  <RotateCwIcon class="size-4 mr-2 animate-spin" />
+  Please wait
+</Button>
+      `,
+      },
+    },
+  },
+
+  render: (args) => {
+    return {
+      components: { Button, RotateCwIcon },
+
+      setup() {
+        return { args }
+      },
+
+      template: `
+        <Button disabled v-bind="args">
+          <RotateCwIcon class="size-4 mr-2 animate-spin" />
+          Please wait
+        </Button>
+      `,
+    }
+  },
 }
