@@ -1,15 +1,15 @@
 import {
-  Menu as IconMenu,
-  ListRestart,
-  Loader,
-  LoaderCircle,
-  LoaderPinwheel,
-  RefreshCcw,
-  RefreshCcwDot,
-  RefreshCw,
-  RefreshCwOff,
-  RotateCcw,
-  RotateCw,
+  ListRestart as ListRestartIcon,
+  LoaderCircle as LoaderCircleIcon,
+  Loader as LoaderIcon,
+  LoaderPinwheel as LoaderPinwheelIcon,
+  Menu as MenuIcon,
+  RefreshCcwDot as RefreshCcwDotIcon,
+  RefreshCcw as RefreshCcwIcon,
+  RefreshCw as RefreshCwIcon,
+  RefreshCwOff as RefreshCwOffIcon,
+  RotateCcw as RotateCcwIcon,
+  RotateCw as RotateCwIcon,
 } from 'lucide-vue-next'
 import DefaultComponent from './Default.vue'
 import DefaultSource from './Default.vue?raw'
@@ -77,7 +77,7 @@ export default {
 }
 
 export const Default = {
-  component: IconMenu,
+  component: MenuIcon,
   parameters: {
     docs: {
       source: {
@@ -99,9 +99,9 @@ export const Default = {
 
 const LoadingIconsTemplate = `
 <div class="flex space-x-4">
-  <Loader class="animate-spin" />
-  <LoaderCircle class="animate-spin" />
-  <LoaderPinwheel class="animate-spin" />
+  <LoaderIcon class="animate-spin" />
+  <LoaderCircleIcon class="animate-spin" />
+  <LoaderPinwheelIcon class="animate-spin" />
 </div>
 `
 
@@ -115,7 +115,7 @@ export const LoadingIcon = {
   },
 
   render: args => ({
-    components: { Loader, LoaderCircle, LoaderPinwheel },
+    components: { LoaderIcon, LoaderCircleIcon, LoaderPinwheelIcon },
 
     setup() {
       return { args }
@@ -127,13 +127,13 @@ export const LoadingIcon = {
 
 const ReloadIconsTemplate = `
 <div class="flex space-x-4">
-  <ListRestart />
-  <RefreshCwOff />
-  <RefreshCcw class="animate-spin" />
-  <RefreshCcwDot class="animate-spin" />
-  <RefreshCw class="animate-spin" />
-  <RotateCcw class="animate-spin" />
-  <RotateCw class="animate-spin" />
+  <ListRestartIcon />
+  <RefreshCwOffIcon />
+  <RefreshCcwIcon class="animate-spin" />
+  <RefreshCcwDotIcon class="animate-spin" />
+  <RefreshCwIcon class="animate-spin" />
+  <RotateCcwIcon class="animate-spin" />
+  <RotateCwIcon class="animate-spin" />
 </div>
 `
 
@@ -147,7 +147,7 @@ export const ReloadIcon = {
   },
 
   render: args => ({
-    components: { ListRestart, RefreshCcw, RefreshCcwDot, RefreshCw, RefreshCwOff, RotateCcw, RotateCw },
+    components: { ListRestartIcon, RefreshCcwIcon, RefreshCcwDotIcon, RefreshCwIcon, RefreshCwOffIcon, RotateCcwIcon, RotateCwIcon },
 
     setup() {
       return { args }
