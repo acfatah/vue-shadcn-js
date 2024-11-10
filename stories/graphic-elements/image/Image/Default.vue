@@ -1,7 +1,7 @@
 <template>
   <UseImage src="https://placehold.co/320x240">
     <template #loading>
-      <div class="dark: flex h-[240px] w-[320px] items-center justify-center bg-neutral-100 dark:bg-neutral-900">
+      <div class="flex h-[240px] w-[320px] items-center justify-center bg-neutral-100 dark:bg-neutral-900">
         <LoaderCircleIcon class="animate-spin" />
       </div>
     </template>
