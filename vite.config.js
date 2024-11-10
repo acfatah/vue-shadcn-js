@@ -6,7 +6,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import svgLoader from 'vite-svg-loader'
-import { lucideIconResolver, veeValidateResolver } from './src/components/resolvers'
+import { lucideIconResolver, veeValidateResolver, vueuseComponentsResolver } from './src/components/resolvers'
 
 export default defineConfig({
   css: {
@@ -40,6 +40,7 @@ export default defineConfig({
       resolvers: [
         lucideIconResolver,
         veeValidateResolver,
+        vueuseComponentsResolver,
       ],
     }),
     vue(),

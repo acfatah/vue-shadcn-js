@@ -1,2 +1,3 @@
-export { default as lucideIconResolver } from './lucide-icon-resolver'
-export { default as veeValidateResolver } from './vee-validate-resolver'
+export { default as lucideIconResolver } from './lucide-icon-resolver.js'
+export { default as veeValidateResolver } from './vee-validate-resolver.js'
+export { default as vueuseComponentsResolver } from './vueuse-components-resolver.js'
