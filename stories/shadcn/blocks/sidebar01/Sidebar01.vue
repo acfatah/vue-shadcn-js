@@ -55,12 +55,7 @@ const data = {
 }
 
 const selectedVersion = ref(data.versions[0])
-const dropdownOpen = ref(false)
 const search = ref('')
-
-function toggleDropdown() {
-  dropdownOpen.value = !dropdownOpen.value
-}
 
 function setSelectedVersion(version) {
   selectedVersion.value = version
@@ -74,14 +69,12 @@ function setSelectedVersion(version) {
         <SidebarMenu>
           <SidebarMenuItem>
             <DropdownMenu>
-              <DropdownMenuTrigger class="w-full">
-                <!-- eslint-disable tailwindcss/no-custom-classname -->
+              <DropdownMenuTrigger as-child class="w-full">
                 <SidebarMenuButton
                   size="lg"
-                  :class="{ 'data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground': dropdownOpen }"
-                  @click="toggleDropdown"
+                  class="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
                 >
-                  <div class="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
+                  <div class="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
                     <GalleryVerticalEndIcon class="size-4" />
                   </div>
                   <div class="flex flex-col gap-0.5 leading-none">
@@ -90,10 +83,8 @@ function setSelectedVersion(version) {
                   </div>
                   <ChevronsUpDownIcon class="ml-auto" />
                 </SidebarMenuButton>
-                <!-- eslint-enable tailwindcss/no-custom-classname -->
               </DropdownMenuTrigger>
               <DropdownMenuContent
-                v-if="dropdownOpen"
                 class="w-[--radix-dropdown-menu-trigger-width]"
                 align="start"
               >
