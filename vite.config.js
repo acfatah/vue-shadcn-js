@@ -1,3 +1,4 @@
+import fs from 'node:fs'
 import path from 'node:path'
 import vue from '@vitejs/plugin-vue'
 import autoprefixer from 'autoprefixer'
@@ -32,12 +33,17 @@ export default defineConfig({
     }),
     Components({
       dirs: [
-        'src/components/ui/**',
-        'src/components/misc/*',
-        'src/components/*',
-        'src/layouts/*',
+        'src/components/ui',
+        'src/components/misc',
+        'src/layouts',
       ],
       resolvers: [
+        (componentName) => {
+          const filePath = path.resolve(__dirname, `src/components/${componentName}.vue`)
+
+          if (fs.existsSync(filePath))
+            return { name: 'default', from: filePath }
+        },
         lucideIconResolver,
         veeValidateResolver,
         vueuseComponentsResolver,
