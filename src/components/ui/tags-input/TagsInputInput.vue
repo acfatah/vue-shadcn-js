@@ -1,7 +1,5 @@
 <script setup>
 import { TagsInputInput, useForwardProps } from 'radix-vue'
-import { computed } from 'vue'
-import { cn } from '~/lib/utils'
 
 const props = defineProps({
   placeholder: { type: String, required: false },
@@ -25,7 +23,7 @@ const forwardedProps = useForwardProps(delegatedProps)
   <TagsInputInput
     v-bind="forwardedProps"
     :class="cn(
-      'text-sm min-h-5 focus:outline-none flex-1 bg-transparent px-1',
+      'min-h-5 flex-1 bg-transparent px-1 text-sm focus:outline-none',
       props.class,
     )"
   />

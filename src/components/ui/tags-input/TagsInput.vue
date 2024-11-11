@@ -1,7 +1,5 @@
 <script setup>
 import { TagsInputRoot, useForwardPropsEmits } from 'radix-vue'
-import { computed } from 'vue'
-import { cn } from '~/lib/utils'
 
 const props = defineProps({
   modelValue: { type: Array, required: false },
@@ -23,6 +21,7 @@ const props = defineProps({
   as: { type: null, required: false },
   class: { type: null, required: false },
 })
+
 const emits = defineEmits(['update:modelValue', 'invalid'])
 
 const delegatedProps = computed(() => {
@@ -38,7 +37,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <TagsInputRoot
     v-bind="forwarded"
     :class="cn(
-      'flex flex-wrap gap-2 items-center rounded-md border border-input bg-background px-3 py-1.5 text-sm',
+      'flex flex-wrap items-center gap-2 rounded-md border border-input bg-background px-3 py-1.5 text-sm',
       props.class,
     )"
   >
