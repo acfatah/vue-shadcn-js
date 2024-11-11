@@ -1,6 +1,5 @@
 <script setup>
 import { ComboboxInput, useForwardProps } from 'radix-vue'
-import { cn } from '~/lib/utils'
 
 defineOptions({
   inheritAttrs: false,
@@ -10,8 +9,9 @@ const props = defineProps({
   type: { type: String, required: false },
   disabled: { type: Boolean, required: false },
   autoFocus: { type: Boolean, required: false },
-  asChild: { type: Boolean, required: false },
+
   as: { type: null, required: false },
+  asChild: { type: Boolean, required: false },
   class: { type: null, required: false },
 })
 

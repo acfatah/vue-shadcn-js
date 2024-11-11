@@ -1,13 +1,12 @@
 <script setup>
 import { ComboboxGroup, ComboboxLabel } from 'radix-vue'
-import { computed } from 'vue'
-import { cn } from '~/lib/utils'
 
 const props = defineProps({
-  asChild: { type: Boolean, required: false },
-  as: { type: null, required: false },
-  class: { type: null, required: false },
   heading: { type: String, required: false },
+
+  as: { type: null, required: false },
+  asChild: { type: Boolean, required: false },
+  class: { type: null, required: false },
 })
 
 const delegatedProps = computed(() => {

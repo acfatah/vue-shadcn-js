@@ -1,7 +1,5 @@
 <script setup>
 import { ComboboxRoot, useForwardPropsEmits } from 'radix-vue'
-import { computed } from 'vue'
-import { cn } from '~/lib/utils'
 
 const props = defineProps({
   modelValue: { type: null, required: false, default: '' },
@@ -17,8 +15,9 @@ const props = defineProps({
   filterFunction: { type: Function, required: false },
   displayValue: { type: Function, required: false },
   resetSearchTermOnBlur: { type: Boolean, required: false },
-  asChild: { type: Boolean, required: false },
+
   as: { type: null, required: false },
+  asChild: { type: Boolean, required: false },
   class: { type: null, required: false },
 })
 
