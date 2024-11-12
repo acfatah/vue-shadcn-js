@@ -1,3 +1,8 @@
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from '~/components/ui/avatar'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
 
@@ -9,6 +14,11 @@ import DefaultSource from './DefaultStory.vue?raw'
 export default {
   title: 'Graphic Elements/Avatar',
   component: DefaultStory,
+  subcomponents: {
+    Avatar,
+    AvatarFallback,
+    AvatarImage,
+  },
   tags: ['autodocs'],
 }
 
@@ -18,18 +28,6 @@ export const Default = {
       source: {
         code: DefaultSource,
       },
-    },
-  },
-
-  argTypes: {
-    variant: {
-      control: { type: 'select' },
-      options: ['default', 'xs', 'sm', 'lg', 'icon'],
-      table: {
-        type: { summary: 'string' },
-        defaultValue: { summary: 'default' },
-      },
-      description: 'The size variant',
     },
   },
 
