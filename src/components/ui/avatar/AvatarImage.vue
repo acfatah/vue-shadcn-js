@@ -3,8 +3,9 @@ import { AvatarImage } from 'radix-vue'
 
 const props = defineProps({
   src: { type: String, required: true },
-  asChild: { type: Boolean, required: false },
+
   as: { type: null, required: false },
+  asChild: { type: Boolean, required: false },
 })
 </script>
 
