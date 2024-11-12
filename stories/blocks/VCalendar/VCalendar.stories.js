@@ -31,9 +31,7 @@ export const Default = {
 
     // FIXME: the component fills the available space. We put some constraint
     template: `
-      <div class="max-w-[278px]">
-        <DefaultStory v-bind="args" />
-      </div>
+      <DefaultStory v-bind="args" />
     `,
   }),
 }

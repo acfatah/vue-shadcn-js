@@ -5,5 +5,5 @@ const date = ref(new Date())
 </script>
 
 <template>
-  <VCalendar v-model="date" class="rounded-md border" />
+  <VCalendar v-model="date" class="w-fit rounded-md border" />
 </template>
