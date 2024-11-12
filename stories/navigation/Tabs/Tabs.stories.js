@@ -1,5 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '~/components/ui/tabs'
-import DefaultComponent from './Default.vue'
+import DefaultStory from './DefaultStory.vue'
 import Snippet from './Snippet.vue?raw'
 
 /**
@@ -29,14 +29,14 @@ export const Default = {
   },
 
   render: args => ({
-    components: { DefaultComponent },
+    components: { DefaultStory },
 
     setup() {
       return { args }
     },
 
     template: `
-      <DefaultComponent v-bind="args" />
+      <DefaultStory v-bind="args" />
     `,
   }),
 }

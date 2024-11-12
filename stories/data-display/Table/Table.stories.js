@@ -1,9 +1,9 @@
-import DefaultComponent from './Default.vue'
-import DefaultSource from './Default.vue?raw'
+import DefaultStory from './DefaultStory.vue'
+import DefaultSource from './DefaultStory.vue?raw'
 
 export default {
   title: 'Data Display/Table',
-  component: DefaultComponent,
+  component: DefaultStory,
   tags: ['autodocs'],
 }
 
@@ -17,14 +17,14 @@ export const Default = {
   },
 
   render: args => ({
-    components: { DefaultComponent },
+    components: { DefaultStory },
 
     setup() {
       return { args }
     },
 
     template: `
-      <DefaultComponent v-bind="args" />
+      <DefaultStory v-bind="args" />
     `,
   }),
 }

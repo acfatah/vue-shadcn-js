@@ -1,7 +1,7 @@
 import CustomFilterAndPaginationComponent from './CustomFilterAndPagination/CustomFilterAndPagination.vue'
 import CustomFilterAndPaginationSource from './CustomFilterAndPagination/CustomFilterAndPagination.vue?raw'
-import DefaultComponent from './Default/Default.vue'
-import DefaultSource from './Default/Default.vue?raw'
+import DefaultStory from './DefaultDataTable/DefaultDataTable.vue'
+import DefaultSource from './DefaultDataTable/DefaultDataTable.vue?raw'
 import SimplifiedComponent from './PaymentDataTable/PaymentDataTable.vue'
 import SimplifiedSource from './PaymentDataTable/PaymentDataTable.vue?raw'
 
@@ -13,7 +13,7 @@ import SimplifiedSource from './PaymentDataTable/PaymentDataTable.vue?raw'
  */
 export default {
   title: 'Data Display/Data Table',
-  component: DefaultComponent,
+  component: DefaultStory,
   tags: ['autodocs'],
 }
 
@@ -27,14 +27,14 @@ export const Default = {
   },
 
   render: args => ({
-    components: { DefaultComponent },
+    components: { DefaultStory },
 
     setup() {
       return { args }
     },
 
     template: `
-      <DefaultComponent v-bind="args" />
+      <DefaultStory v-bind="args" />
     `,
   }),
 }

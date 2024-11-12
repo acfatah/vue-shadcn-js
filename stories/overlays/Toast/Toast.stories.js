@@ -1,6 +1,6 @@
 import { Toaster } from '~/components/ui/toast'
-import DefaultComponent from './Default.vue'
-import DefaultSource from './Default.vue?raw'
+import DefaultStory from './DefaultStory.vue'
+import DefaultSource from './DefaultStory.vue?raw'
 import DestructiveComponent from './Destructive.vue'
 import DestructiveSource from './Destructive.vue?raw'
 import SimpleComponent from './Simple.vue'
@@ -18,7 +18,7 @@ import WithTitleSource from './WithTitle.vue?raw'
  */
 export default {
   title: 'Overlays/Toast',
-  component: DefaultComponent,
+  component: DefaultStory,
   tags: ['autodocs'],
 }
 
@@ -32,14 +32,14 @@ export const Default = {
   },
 
   render: args => ({
-    components: { DefaultComponent, Toaster },
+    components: { DefaultStory, Toaster },
 
     setup() {
       return { args }
     },
 
     template: `
-      <DefaultComponent v-bind="args" />
+      <DefaultStory v-bind="args" />
       <Teleport to="body">
         <Toaster />
       </Teleport>

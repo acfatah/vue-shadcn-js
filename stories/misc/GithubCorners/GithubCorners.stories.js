@@ -1,6 +1,6 @@
 import GithubCorner from '~/components/misc/GithubCorner/GithubCorner.vue'
-import DefaultComponent from './Default.vue'
-import DefaultSource from './Default.vue?raw'
+import DefaultStory from './DefaultStory.vue'
+import DefaultSource from './DefaultStory.vue?raw'
 
 /**
  * Inspired by https://github.com/tholman/github-corners
@@ -28,14 +28,14 @@ export const Default = {
   },
 
   render: args => ({
-    components: { DefaultComponent },
+    components: { DefaultStory },
 
     setup() {
       return { args }
     },
 
     template: `
-      <DefaultComponent v-bind="args" />
+      <DefaultStory v-bind="args" />
     `,
   }),
 }

@@ -1,7 +1,7 @@
 import CustomCloseButtonComponent from './CustomCloseButton.vue'
 import CustomCloseButtonSource from './CustomCloseButton.vue?raw'
-import DefaultComponent from './Default.vue'
-import DefaultSource from './Default.vue?raw'
+import DefaultStory from './DefaultStory.vue'
+import DefaultSource from './DefaultStory.vue?raw'
 import DialogWithContextMenuTriggerComponent from './DialogWithContextMenuTrigger.vue'
 import DialogWithContextMenuTriggerSource from './DialogWithContextMenuTrigger.vue?raw'
 import FormDialogComponent from './FormDialog.vue'
@@ -16,7 +16,7 @@ import ScrollOverlaySource from './ScrollOverlay.vue?raw'
  */
 export default {
   title: 'Overlays/Dialog',
-  component: DefaultComponent,
+  component: DefaultStory,
   tags: ['autodocs'],
 }
 
@@ -30,14 +30,14 @@ export const Default = {
   },
 
   render: args => ({
-    components: { DefaultComponent },
+    components: { DefaultStory },
 
     setup() {
       return { args }
     },
 
     template: `
-      <DefaultComponent v-bind="args" />
+      <DefaultStory v-bind="args" />
     `,
   }),
 }

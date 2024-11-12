@@ -1,5 +1,5 @@
-import DefaultComponent from './Default.vue'
-import DefaultSource from './Default.vue?raw'
+import DefaultStory from './DefaultStory.vue'
+import DefaultSource from './DefaultStory.vue?raw'
 
 /**
  * The Calendar component is built on top of [VCalendar](https://vcalendar.io/getting-started/installation.html).
@@ -9,7 +9,7 @@ import DefaultSource from './Default.vue?raw'
  */
 export default {
   title: 'Blocks/VCalendar',
-  component: DefaultComponent,
+  component: DefaultStory,
   tags: ['autodocs'],
 }
 
@@ -23,7 +23,7 @@ export const Default = {
   },
 
   render: args => ({
-    components: { DefaultComponent },
+    components: { DefaultStory },
 
     setup() {
       return { args }
@@ -32,7 +32,7 @@ export const Default = {
     // FIXME: the component fills the available space. We put some constraint
     template: `
       <div class="max-w-[278px]">
-        <DefaultComponent v-bind="args" />
+        <DefaultStory v-bind="args" />
       </div>
     `,
   }),

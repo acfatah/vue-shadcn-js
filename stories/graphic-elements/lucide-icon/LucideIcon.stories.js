@@ -11,8 +11,8 @@ import {
   RotateCcw as RotateCcwIcon,
   RotateCw as RotateCwIcon,
 } from 'lucide-vue-next'
-import DefaultComponent from './Default.vue'
-import DefaultSource from './Default.vue?raw'
+import DefaultStory from './DefaultStory.vue'
+import DefaultSource from './DefaultStory.vue?raw'
 
 /**
  * Automatically import lucide icon as component by appending `Icon` to lucide icon name.
@@ -25,7 +25,7 @@ import DefaultSource from './Default.vue?raw'
  */
 export default {
   title: 'Graphic Elements/Lucide Icon',
-  component: DefaultComponent,
+  component: DefaultStory,
   tags: ['autodocs'],
 
   argTypes: {
@@ -87,13 +87,13 @@ export const Default = {
   },
 
   render: args => ({
-    components: { DefaultComponent },
+    components: { DefaultStory },
 
     setup() {
       return { args }
     },
 
-    template: '<DefaultComponent v-bind="args" />',
+    template: '<DefaultStory v-bind="args" />',
   }),
 }
 

@@ -1,6 +1,6 @@
 import { UseImage } from '@vueuse/components'
-import DefaultComponent from './Default.vue'
-import DefaultSource from './Default.vue?raw'
+import DefaultStory from './DefaultStory.vue'
+import DefaultSource from './DefaultStory.vue?raw'
 
 /**
  * We are using [UseImage][1] renderless component to load images.
@@ -11,7 +11,7 @@ import DefaultSource from './Default.vue?raw'
  */
 export default {
   title: 'Graphic Elements/Image',
-  component: DefaultComponent,
+  component: DefaultStory,
   subcomponents: { UseImage },
   tags: ['autodocs'],
 }
@@ -30,14 +30,14 @@ export const Default = {
   },
 
   render: args => ({
-    components: { DefaultComponent },
+    components: { DefaultStory },
 
     setup() {
       return { args }
     },
 
     template: `
-      <DefaultComponent v-bind="args" />
+      <DefaultStory v-bind="args" />
     `,
   }),
 }

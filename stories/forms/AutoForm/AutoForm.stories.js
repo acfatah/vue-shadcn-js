@@ -7,8 +7,8 @@ import ConfirmPasswordComponent from './ConfirmPassword.vue'
 import ConfirmPasswordSource from './ConfirmPassword.vue?raw'
 import ControlledComponent from './Controlled.vue'
 import ControlledSource from './Controlled.vue?raw'
-import DefaultComponent from './Default.vue'
-import DefaultSource from './Default.vue?raw'
+import DefaultStory from './DefaultStory.vue'
+import DefaultSource from './DefaultStory.vue?raw'
 import DependenciesComponent from './Dependencies.vue'
 import DependenciesSource from './Dependencies.vue?raw'
 import SubObjectComponent from './SubObject.vue'
@@ -23,7 +23,7 @@ import SubObjectSource from './SubObject.vue?raw'
  */
 export default {
   title: '',
-  component: DefaultComponent,
+  component: DefaultStory,
   // tags: ['autodocs'],
 }
 
@@ -37,13 +37,13 @@ export const Default = {
   },
 
   render: () => ({
-    components: { DefaultComponent, Toaster },
+    components: { DefaultStory, Toaster },
 
     template: `
       <Teleport defer to="body">
         <Toaster />
       </Teleport>
-      <DefaultComponent />
+      <DefaultStory />
     `,
   }),
 }
