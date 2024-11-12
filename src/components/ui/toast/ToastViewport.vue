@@ -1,16 +1,15 @@
 <script setup>
 import { ToastViewport } from 'radix-vue'
-import { cn } from '~/lib/utils'
 
 const props = defineProps({
-  asChild: { type: Boolean, required: false },
-  as: { type: null, required: false },
   hotkey: { type: Array, default: () => ['F8'] },
-
   label: {
     type: [String, Function],
     default: hotkey => `Notifications (${hotkey})`,
   },
+
+  as: { type: null, required: false },
+  asChild: { type: Boolean, required: false },
 })
 
 const delegatedProps = computed(() => {
