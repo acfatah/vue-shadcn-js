@@ -1,14 +1,13 @@
 <script setup>
 import { CalendarPrev, useForwardProps } from 'radix-vue'
-import { computed } from 'vue'
 import { buttonVariants } from '~/components/ui/button'
-import { cn } from '~/lib/utils'
 
 const props = defineProps({
   step: { type: String, required: false },
   prevPage: { type: Function, required: false },
-  asChild: { type: Boolean, required: false },
+
   as: { type: null, required: false },
+  asChild: { type: Boolean, required: false },
   class: { type: null, required: false },
 })
 
