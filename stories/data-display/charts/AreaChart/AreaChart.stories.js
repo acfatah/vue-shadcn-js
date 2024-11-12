@@ -1,6 +1,8 @@
 import { CurveType } from '@unovis/ts'
 import { AreaChart } from '~/components/ui/chart-area'
-import data from './data/area-chart-01.js'
+import data from '../data/montly.js'
+import AreaChartSource from './DefaultStory.vue?raw'
+import SparklineSource from './SparklineStory.vue?raw'
 
 export default {
   title: 'Data Display/Charts/Area Chart',
@@ -18,27 +20,7 @@ export const Default = {
   parameters: {
     docs: {
       source: {
-        code: `
-<script setup>
-const data = [
-  {
-    name: 'Jan',
-    total: Math.floor(Math.random() * 2000) + 500,
-    predicted: Math.floor(Math.random() * 2000) + 500
-  },
-  // ...
-]
-</script>
-
-<template>
-  <AreaChart
-    :data="data"
-    index="name"
-    :categories="['total', 'predicted']"
-  />
-</template>
-`,
-
+        code: AreaChartSource,
       },
     },
   },
@@ -60,19 +42,7 @@ export const Sparkline = {
   parameters: {
     docs: {
       source: {
-        code: `
-<AreaChart
-  class="h-[100px] w-[400px]"
-  index="name"
-  :data="data"
-  :categories="['total']"
-  :show-grid-line="false"
-  :show-legend="false"
-  :show-x-axis="false"
-  :show-y-axis="false"
-  :curve-type="CurveType.Linear"
-/>
-`,
+        code: SparklineSource,
       },
     },
   },

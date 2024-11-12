@@ -1,5 +1,8 @@
 import { DonutChart } from '~/components/ui/chart-donut'
-import data from './data/area-chart-01.js'
+import data from '../data/montly.js'
+import ColorSource from './Color.vue?raw'
+import DefaultSource from './DefaultStory.vue?raw'
+import PieChartSource from './PieChart.vue?raw'
 
 export default {
   title: 'Data Display/Charts/Donut Chart',
@@ -22,26 +25,7 @@ export const Default = {
   parameters: {
     docs: {
       source: {
-        code: `
-<script setup>
-const data = [
-  {
-    name: 'Jan',
-    total: Math.floor(Math.random() * 2000) + 500,
-    predicted: Math.floor(Math.random() * 2000) + 500
-  },
-  // ...
-]
-</script>
-
-<template>
-  <DonutChart
-    index="name"
-    :category="'total'"
-    :data="data"
-  />
-</template>
-`,
+        code: DefaultSource,
       },
     },
   },
@@ -63,21 +47,7 @@ export const PieChart = {
   parameters: {
     docs: {
       source: {
-        /* eslint-disable no-template-curly-in-string */
-        code: `
-<DonutChart
-  index="name"
-  :category="'total'"
-  :type="'pie'"
-  :data="data"
-  :value-formatter="(tick, _i) => {
-    return typeof tick === 'number'
-          ? ` + '$ ${new Intl.NumberFormat(\'us\').format(tick).toString()}' + `
-      : ''
-  }"
-/>
-`,
-      /* eslint-enable no-template-curly-in-string */
+        code: PieChartSource,
       },
     },
   },
@@ -99,21 +69,7 @@ export const Color = {
   parameters: {
     docs: {
       source: {
-        /* eslint-disable no-template-curly-in-string */
-        code: `
-<DonutChart
-  index="name"
-  :category="'total'"
-  :data="data"
-  :colors="['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple']"
-  :value-formatter="(tick, _i) => {
-    return typeof tick === 'number'
-          ? ` + '$ ${new Intl.NumberFormat(\'us\').format(tick).toString()}' + `
-      : ''
-  }"
-/>
-`,
-      /* eslint-enable no-template-curly-in-string */
+        code: ColorSource,
       },
     },
   },
