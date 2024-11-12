@@ -6,11 +6,12 @@ const props = defineProps({
   disabled: { type: Boolean, required: false },
   dir: { type: String, required: false },
   orientation: { type: String, required: false },
-  asChild: { type: Boolean, required: false },
-  as: { type: null, required: false },
   type: { type: null, required: false },
   modelValue: { type: null, required: false },
   defaultValue: { type: null, required: false },
+
+  as: { type: null, required: false },
+  asChild: { type: Boolean, required: false },
 })
 const emits = defineEmits(['update:modelValue'])
 
