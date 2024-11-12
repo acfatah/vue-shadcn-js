@@ -5,8 +5,10 @@ import {
   TagsInputItemDelete,
   TagsInputItemText,
 } from '~/components/ui/tags-input'
+import { Toaster } from '~/components/ui/toast'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
+import FormStory from './FormStory.vue'
 import WithComboboxComponent from './WithCombobox.vue'
 
 /**
@@ -59,6 +61,23 @@ export const WithCombobox = {
 
     template: `
       <WithComboboxComponent v-bind="args" />
+    `,
+  }),
+}
+
+export const Form = {
+  render: args => ({
+    components: { FormStory, Toaster },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <Teleport to="body">
+        <Toaster />
+      </Teleport>
+      <FormStory v-bind="args" />
     `,
   }),
 }
