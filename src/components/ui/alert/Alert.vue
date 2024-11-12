@@ -1,10 +1,9 @@
 <script setup>
-import { cn } from '~/lib/utils'
 import { alertVariants } from '.'
 
 const props = defineProps({
-  class: { type: null, required: false },
   variant: { type: null, required: false },
+  class: { type: null, required: false },
 })
 </script>
 

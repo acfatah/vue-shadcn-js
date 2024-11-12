@@ -52,6 +52,7 @@ const preview = {
           'Panels',
           'Forms',
           'Data Display',
+          'Common',
           'Misc',
           ['Charts'],
           'Blocks',
