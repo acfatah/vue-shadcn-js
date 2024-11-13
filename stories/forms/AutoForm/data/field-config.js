@@ -6,9 +6,11 @@ export const fieldConfig = {
       placeholder: '••••••••',
     },
   },
+
   favouriteNumber: {
     description: 'Your favourite number between 1 and 10.',
   },
+
   acceptTerms: {
     label: 'Accept terms and conditions.',
     inputProps: {

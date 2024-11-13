@@ -25,7 +25,8 @@ export const userSchema = z.object({
       message: 'Password must be at least 8 characters.',
     }),
 
-  favouriteNumber: z.coerce
+  favouriteNumber: z
+    .coerce
     .number({
       invalid_type_error: 'Favourite number must be a number.',
     })

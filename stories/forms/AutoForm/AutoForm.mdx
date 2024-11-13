@@ -1,4 +1,4 @@
-import { Meta, Canvas, Source, Story } from "@storybook/blocks"
+import { Meta, Canvas, Source, Story, Primary, ArgTypes } from "@storybook/blocks"
 import * as AutoFormStories from './AutoForm.stories'
 import fieldConfigSource from './data/field-config.js?raw'
 import schemaSource from './data/user.js?raw'
@@ -9,16 +9,61 @@ import schemaSource from './data/user.js?raw'
 
 Automatically generate a form from Zod schema.
 
+## Field Types
+
+Currently, these field types are supported out of the box:
+
+- boolean (checkbox, switch)
+- date (date picker)
+- enum (select, radio group)
+- number (input)
+- string (input, textfield)
+- file (file)
+
+We can add support for other field types by adding them to the `INPUT_COMPONENTS` 
+object in `auto-form/constants.ts`.
+
+## Field Configurations
+
+<Source code={`
+<template>
+  <AutoForm
+    :field-config="{
+      username: {
+        label: 'Custom username',
+        description: 'Enter a unique username. This will be shown to other users.',
+        inputProps: {
+          type: 'text',
+          placeholder: 'Username',
+        },
+        showLabel: true, // Set to \`false\` to hide the field. Default value is \`true\`.
+        component: 'switch',
+      },
+    }"
+  />
+</template>
+`} />
+
+Supported component types are:
+
+- checkbox (default for booleans)
+- switch
+- date (default for dates)
+- select (default for enums)
+- radio
+- textarea
+
+## References
+
 {/* BUG: link texts won't rendered as clickable link */}
 Read more at: [https://www.shadcn-vue.com/docs/components/auto-form.html](https://www.shadcn-vue.com/docs/components/auto-form.html)<br />
 Primitive API Reference: [https://vee-validate.logaretm.com/v4/guide/overview](https://vee-validate.logaretm.com/v4/guide/overview)<br />
 Zod API Reference: [https://zod.dev/?id=basic-usage](https://zod.dev/?id=basic-usage)
 
 <Canvas of={AutoFormStories.Default} />
+<ArgTypes of={AutoFormStories} />
 
-### Field Config
-
-To hide a label, simply add `hideLabel` property as `false` to the field config.
+### Field Configuration Example
 
 <Source code={fieldConfigSource} />
 
@@ -36,16 +81,16 @@ To hide a label, simply add `hideLabel` property as `false` to the field config.
 
 ## Confirm Password
 
-<Canvas of={ AutoFormStories.ConfirmPassword } />
+<Canvas of={AutoFormStories.ConfirmPassword} />
 
 ## API Example
 
-<Canvas of={ AutoFormStories.APIExample } />
+<Canvas of={AutoFormStories.APIExample} />
 
 ## Array Support
 
-<Canvas of={ AutoFormStories.ArraySupport } />
+<Canvas of={AutoFormStories.ArraySupport} />
 
 ## Dependencies
 
-<Canvas of={ AutoFormStories.Dependencies } />
+<Canvas of={AutoFormStories.Dependencies} />

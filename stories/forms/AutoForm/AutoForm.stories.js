@@ -1,3 +1,16 @@
+import {
+  AutoForm,
+  AutoFormField,
+  AutoFormFieldArray,
+  AutoFormFieldBoolean,
+  AutoFormFieldDate,
+  AutoFormFieldEnum,
+  AutoFormFieldFile,
+  AutoFormFieldInput,
+  AutoFormFieldNumber,
+  AutoFormFieldObject,
+  AutoFormLabel,
+} from '~/components/ui/auto-form'
 import { Toaster } from '~/components/ui/toast'
 import APIExampleComponent from './ApiExample.vue'
 import APIExampleSource from './ApiExample.vue?raw'
@@ -22,9 +35,22 @@ import SubObjectSource from './SubObject.vue?raw'
  * Zod API Reference: https://zod.dev/?id=basic-usage
  */
 export default {
-  title: '',
-  component: DefaultStory,
+  // title: 'Forms/AutoForm',
   // tags: ['autodocs'],
+  component: DefaultStory,
+  subcomponents: {
+    AutoForm,
+    AutoFormField,
+    AutoFormFieldArray,
+    AutoFormFieldBoolean,
+    AutoFormFieldDate,
+    AutoFormFieldEnum,
+    AutoFormFieldFile,
+    AutoFormFieldInput,
+    AutoFormFieldNumber,
+    AutoFormFieldObject,
+    AutoFormLabel,
+  },
 }
 
 export const Default = {
