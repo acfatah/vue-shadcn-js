@@ -1,3 +1,15 @@
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerPortal,
+  DrawerTitle,
+  DrawerTrigger,
+} from '~/components/ui/drawer'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
 
@@ -9,6 +21,18 @@ import DefaultSource from './DefaultStory.vue?raw'
 export default {
   title: 'Overlays/Drawer',
   component: DefaultStory,
+  subcomponents: {
+    Drawer,
+    DrawerClose,
+    DrawerContent,
+    DrawerDescription,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerOverlay,
+    DrawerPortal,
+    DrawerTitle,
+    DrawerTrigger,
+  },
   tags: ['autodocs'],
 }
 
