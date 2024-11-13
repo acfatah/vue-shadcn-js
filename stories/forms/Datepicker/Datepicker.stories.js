@@ -1,7 +1,14 @@
+import { Toaster } from '~/components/ui/toast'
 import DateRangePickerStory from './DateRangePickerStory.vue'
 import DateRangePickerSource from './DateRangePickerStory.vue?raw'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
+import FormStory from './FormStory.vue'
+import FormSource from './FormStory.vue?raw'
+import WithIndependentMonthsStory from './WithIndependentMonths.vue'
+import WithIndependentMonthsSource from './WithIndependentMonths.vue?raw'
+import WithPresetStory from './WithPresetStory.vue'
+import WithPresetSource from './WithPresetStory.vue?raw'
 
 /**
  * A date field component that allows users to enter and edit date.
@@ -59,6 +66,75 @@ export const DateRangePicker = {
 
     template: `
       <DateRangePickerStory v-bind="args" />
+    `,
+  }),
+}
+
+export const WithIndependentMonths = {
+  parameters: {
+    docs: {
+      source: {
+        code: WithIndependentMonthsSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { WithIndependentMonthsStory },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <WithIndependentMonthsStory v-bind="args" />
+    `,
+  }),
+}
+
+export const WithPreset = {
+  parameters: {
+    docs: {
+      source: {
+        code: WithPresetSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { WithPresetStory },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <WithPresetStory v-bind="args" />
+    `,
+  }),
+}
+
+export const Form = {
+  parameters: {
+    docs: {
+      source: {
+        code: FormSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { FormStory, Toaster },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <Teleport to="body">
+        <Toaster />
+      </Teleport>
+      <FormStory v-bind="args" />
     `,
   }),
 }
