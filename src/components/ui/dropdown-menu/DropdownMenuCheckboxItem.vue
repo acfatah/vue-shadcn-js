@@ -4,15 +4,14 @@ import {
   DropdownMenuItemIndicator,
   useForwardPropsEmits,
 } from 'radix-vue'
-import { computed } from 'vue'
-import { cn } from '~/lib/utils'
 
 const props = defineProps({
   checked: { type: [Boolean, String], required: false },
   disabled: { type: Boolean, required: false },
   textValue: { type: String, required: false },
-  asChild: { type: Boolean, required: false },
+
   as: { type: null, required: false },
+  asChild: { type: Boolean, required: false },
   class: { type: null, required: false },
 })
 const emits = defineEmits(['select', 'update:checked'])

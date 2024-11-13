@@ -4,8 +4,6 @@ import {
   DropdownMenuPortal,
   useForwardPropsEmits,
 } from 'radix-vue'
-import { computed } from 'vue'
-import { cn } from '~/lib/utils'
 
 const props = defineProps({
   forceMount: { type: Boolean, required: false },
@@ -22,8 +20,9 @@ const props = defineProps({
   hideWhenDetached: { type: Boolean, required: false },
   updatePositionStrategy: { type: String, required: false },
   prioritizePosition: { type: Boolean, required: false },
-  asChild: { type: Boolean, required: false },
+
   as: { type: null, required: false },
+  asChild: { type: Boolean, required: false },
   class: { type: null, required: false },
 })
 const emits = defineEmits([
