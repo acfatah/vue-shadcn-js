@@ -4,8 +4,6 @@ import {
   RadioGroupItem,
   useForwardProps,
 } from 'radix-vue'
-import { computed } from 'vue'
-import { cn } from '~/lib/utils'
 
 const props = defineProps({
   id: { type: String, required: false },
@@ -13,8 +11,9 @@ const props = defineProps({
   disabled: { type: Boolean, required: false },
   required: { type: Boolean, required: false },
   name: { type: String, required: false },
-  asChild: { type: Boolean, required: false },
+
   as: { type: null, required: false },
+  asChild: { type: Boolean, required: false },
   class: { type: null, required: false },
 })
 
@@ -36,7 +35,7 @@ const forwardedProps = useForwardProps(delegatedProps)
     )"
   >
     <RadioGroupIndicator class="flex items-center justify-center">
-      <CheckIcon class="size-3.5 fill-primary" />
+      <CheckIcon class="size-3" />
     </RadioGroupIndicator>
   </RadioGroupItem>
 </template>
