@@ -1,4 +1,13 @@
-import { Toaster } from '~/components/ui/toast'
+import {
+  Toast,
+  ToastAction,
+  ToastClose,
+  ToastDescription,
+  Toaster,
+  ToastProvider,
+  ToastTitle,
+  ToastViewport,
+} from '~/components/ui/toast'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
 import DestructiveComponent from './Destructive.vue'
@@ -19,6 +28,16 @@ import WithTitleSource from './WithTitle.vue?raw'
 export default {
   title: 'Overlays/Toast',
   component: DefaultStory,
+  subcomponents: {
+    Toast,
+    ToastAction,
+    ToastClose,
+    ToastDescription,
+    Toaster,
+    ToastProvider,
+    ToastTitle,
+    ToastViewport,
+  },
   tags: ['autodocs'],
 }
 
