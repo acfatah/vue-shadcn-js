@@ -1,3 +1,14 @@
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogScrollContent,
+  DialogTitle,
+  DialogTrigger,
+} from '~/components/ui/dialog'
 import CustomCloseButtonComponent from './CustomCloseButton.vue'
 import CustomCloseButtonSource from './CustomCloseButton.vue?raw'
 import DefaultStory from './DefaultStory.vue'
@@ -17,6 +28,17 @@ import ScrollOverlaySource from './ScrollOverlay.vue?raw'
 export default {
   title: 'Overlays/Dialog',
   component: DefaultStory,
+  subcomponents: {
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogScrollContent,
+    DialogTitle,
+    DialogTrigger,
+  },
   tags: ['autodocs'],
 }
 
