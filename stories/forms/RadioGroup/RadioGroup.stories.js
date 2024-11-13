@@ -1,3 +1,7 @@
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from '~/components/ui/radio-group'
 import { Toaster } from '~/components/ui/toast'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
@@ -13,6 +17,10 @@ import FormSource from './FormStory.vue?raw'
 export default {
   title: 'Forms/Radio Group',
   component: DefaultStory,
+  subcomponents: {
+    RadioGroup,
+    RadioGroupItem,
+  },
   tags: ['autodocs'],
 }
 
