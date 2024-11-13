@@ -10,6 +10,7 @@ const props = defineProps({
   forceMount: { type: Boolean, required: false },
   trapFocus: { type: Boolean, required: false },
   disableOutsidePointerEvents: { type: Boolean, required: false },
+
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
   class: { type: null, required: false },
