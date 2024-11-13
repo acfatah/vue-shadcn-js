@@ -1,3 +1,4 @@
+import { Badge } from '~/components/ui/badge'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
 
@@ -6,7 +7,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  */
 export default {
   title: 'Data Display/Badge',
-  component: DefaultStory,
+  component: Badge,
   tags: ['autodocs'],
 }
 
