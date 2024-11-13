@@ -1,3 +1,20 @@
+import {
+  ContextMenu,
+  ContextMenuCheckboxItem,
+  ContextMenuContent,
+  ContextMenuGroup,
+  ContextMenuItem,
+  ContextMenuLabel,
+  ContextMenuPortal,
+  ContextMenuRadioGroup,
+  ContextMenuRadioItem,
+  ContextMenuSeparator,
+  ContextMenuShortcut,
+  ContextMenuSub,
+  ContextMenuSubContent,
+  ContextMenuSubTrigger,
+  ContextMenuTrigger,
+} from '~/components/ui/context-menu'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
 
@@ -9,6 +26,23 @@ import DefaultSource from './DefaultStory.vue?raw'
 export default {
   title: 'Overlays/ContextMenu',
   component: DefaultStory,
+  subcomponents: {
+    ContextMenu,
+    ContextMenuCheckboxItem,
+    ContextMenuContent,
+    ContextMenuGroup,
+    ContextMenuItem,
+    ContextMenuLabel,
+    ContextMenuPortal,
+    ContextMenuRadioGroup,
+    ContextMenuRadioItem,
+    ContextMenuSeparator,
+    ContextMenuShortcut,
+    ContextMenuSub,
+    ContextMenuSubContent,
+    ContextMenuSubTrigger,
+    ContextMenuTrigger,
+  },
   tags: ['autodocs'],
 }
 
@@ -33,4 +67,3 @@ export const Default = {
     `,
   }),
 }
-
