@@ -1,7 +1,5 @@
 <script setup>
 import { RangeCalendarRoot, useForwardPropsEmits } from 'radix-vue'
-import { computed } from 'vue'
-import { cn } from '~/lib/utils'
 import {
   RangeCalendarCell,
   RangeCalendarCellTrigger,
@@ -39,8 +37,9 @@ const props = defineProps({
   dir: { type: String, required: false },
   nextPage: { type: Function, required: false },
   prevPage: { type: Function, required: false },
-  asChild: { type: Boolean, required: false },
+
   as: { type: null, required: false },
+  asChild: { type: Boolean, required: false },
   class: { type: null, required: false },
 })
 
