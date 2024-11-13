@@ -1,3 +1,4 @@
+import { Checkbox } from '~/components/ui/checkbox'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
 import WithTextStory from './WithTextStory.vue'
@@ -10,7 +11,7 @@ import WithTextSource from './WithTextStory.vue?raw'
  */
 export default {
   title: 'Forms/Checkbox',
-  component: DefaultStory,
+  component: Checkbox,
   tags: ['autodocs'],
 }
 
