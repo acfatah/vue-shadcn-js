@@ -8,7 +8,7 @@ import Snippet from './Snippet.vue?raw'
  * Primitive API Reference: https://www.radix-vue.com/components/tabs.html
  */
 export default {
-  title: 'Navigation/Tabs',
+  title: 'Panels/Tabs',
   component: Tabs,
   subcomponents: {
     Tabs,

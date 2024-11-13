@@ -20,7 +20,7 @@ import CommandDialogSource from './Dialog.vue?raw'
  * Primitive API Reference: https://www.radix-vue.com/components/combobox.html#command-menu
  */
 export default {
-  title: 'Forms/Command',
+  title: 'Overlays/Command',
   component: DefaultStory,
   subcomponents: {
     Command,
