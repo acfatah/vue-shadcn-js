@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/blocks"
+import { Meta, Source } from "@storybook/blocks"
 
 <Meta title="Data Display/Charts" />
 
@@ -11,7 +11,7 @@ data visualization framework), and inspired by [tremor](https://www.tremor.so).
 
 To update styles, modify the css variables in `src/styles/chart.css`.
 
-```css
+<Source language={'css'} code={`
 @layer base {
   :root {
     --vis-tooltip-background-color: none !important;
@@ -25,7 +25,8 @@ To update styles, modify the css variables in `src/styles/chart.css`.
     --vis-secondary-color: var(--secondary);
     --vis-text-color: var(--muted-foreground);
   }
-```
+}
+`} />
 
 ## Custom tooltip 
 
@@ -35,7 +36,8 @@ check out ChartTooltip.vue component for example.
 
 The `CustomChartTooltip.vue` component:
 
-```vue
+
+<Source code={`
 <script setup>
 const props = defineProps({
   title: String,
@@ -70,12 +72,12 @@ const props = defineProps({
     </CardContent>
   </Card>
 </template>
-
-```
+`} />
 
 And the usage,
 
-```vue
+
+<Source code={`
 <template>
   <LineChart
     :data="data"
@@ -83,10 +85,10 @@ And the usage,
     :categories="['Export Growth Rate', 'Import Growth Rate']"
     :y-formatter="(tick, i) => {
       return typeof tick === 'number'
-        ? `$ ${new Intl.NumberFormat('us').format(tick).toString()}`
+        ? \`$ \${new Intl.NumberFormat('us').format(tick).toString()}\`
         : ''
     }"
     :custom-tooltip="CustomChartTooltip"
   />
 </template>
-```
+`} />
