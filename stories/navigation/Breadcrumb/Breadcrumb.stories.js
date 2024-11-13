@@ -1,3 +1,12 @@
+import {
+  Breadcrumb,
+  BreadcrumbEllipsis,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '~/components/ui/breadcrumb'
 import CollapsedStory from './CollapsedStory.vue'
 import CollapsedSource from './CollapsedStory.vue?raw'
 import CustomSeparatorStory from './CustomSeparatorStory.vue'
@@ -17,6 +26,15 @@ import ResponsiveSource from './ResponsiveStory.vue?raw'
 export default {
   title: 'Navigation/Breadcrumb',
   component: DefaultStory,
+  subcomponents: {
+    Breadcrumb,
+    BreadcrumbEllipsis,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbList,
+    BreadcrumbPage,
+    BreadcrumbSeparator,
+  },
   tags: ['autodocs'],
 }
 
