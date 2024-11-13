@@ -1,3 +1,8 @@
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '~/components/ui/collapsible'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
 
@@ -9,6 +14,11 @@ import DefaultSource from './DefaultStory.vue?raw'
 export default {
   title: 'Panels/Collapsible',
   component: DefaultStory,
+  subcomponents: {
+    Collapsible,
+    CollapsibleContent,
+    CollapsibleTrigger,
+  },
   tags: ['autodocs'],
 }
 
