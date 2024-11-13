@@ -4,15 +4,14 @@ import {
   ContextMenuRadioItem,
   useForwardPropsEmits,
 } from 'radix-vue'
-import { computed } from 'vue'
-import { cn } from '~/lib/utils'
 
 const props = defineProps({
   value: { type: String, required: true },
   disabled: { type: Boolean, required: false },
   textValue: { type: String, required: false },
-  asChild: { type: Boolean, required: false },
+
   as: { type: null, required: false },
+  asChild: { type: Boolean, required: false },
   class: { type: null, required: false },
 })
 const emits = defineEmits(['select'])
