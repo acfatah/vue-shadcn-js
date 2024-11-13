@@ -1,3 +1,5 @@
+import DateRangePickerStory from './DateRangePickerStory.vue'
+import DateRangePickerSource from './DateRangePickerStory.vue?raw'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
 
@@ -35,6 +37,28 @@ export const Default = {
 
     template: `
       <DefaultStory v-bind="args" />
+    `,
+  }),
+}
+
+export const DateRangePicker = {
+  parameters: {
+    docs: {
+      source: {
+        code: DateRangePickerSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { DateRangePickerStory },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <DateRangePickerStory v-bind="args" />
     `,
   }),
 }
