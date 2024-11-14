@@ -3,12 +3,14 @@ import DefaultSource from './DefaultStory.vue?raw'
 
 /**
  * The Calendar component is built on top of [VCalendar](https://vcalendar.io/getting-started/installation.html).
+ * It was the previous implementation of shadcn-vue calendar.
  *
- * Read more about VCalendar at https://vcalendar.io.<br>
- * There is a risk that the project is abandoned. Read issue [#1503](https://github.com/nathanreyes/v-calendar/issues/1503)
+ * VCalendar Component:https://www.shadcn-vue.com/docs/components/v-calendar.html<br>
+ * Primitive API Reference: https://vcalendar.io.<br>
+ * There is a risk that the project is `abandoned`. Read issue [#1503](https://github.com/nathanreyes/v-calendar/issues/1503)
  */
 export default {
-  title: 'Blocks/VCalendar',
+  title: 'Misc/VCalendar',
   component: DefaultStory,
   tags: ['autodocs'],
 }
