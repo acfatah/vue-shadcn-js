@@ -1,3 +1,4 @@
+import { DataTable } from '~/components/ui/data-table'
 import CustomFilterAndPaginationComponent from './CustomFilterAndPagination/CustomFilterAndPagination.vue'
 import CustomFilterAndPaginationSource from './CustomFilterAndPagination/CustomFilterAndPagination.vue?raw'
 import DefaultStory from './DefaultDataTable/DefaultDataTable.vue'
@@ -13,7 +14,7 @@ import SimplifiedSource from './PaymentDataTable/PaymentDataTable.vue?raw'
  */
 export default {
   title: 'Data Display/Data Table',
-  component: DefaultStory,
+  component: DataTable,
   tags: ['autodocs'],
 }
 

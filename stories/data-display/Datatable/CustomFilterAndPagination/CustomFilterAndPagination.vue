@@ -50,71 +50,85 @@ onMounted(async () => {
         </DropdownMenu>
       </div>
     </template>
+
     <!-- Pagination Slot -->
     <template #pagination="{ table }">
-      <div class="flex items-center justify-end space-x-2 py-4">
+      <div class="flex items-center justify-between px-2 py-4">
         <div class="flex-1 text-sm text-muted-foreground">
           {{ table.getFilteredSelectedRowModel().rows.length }} of
           {{ table.getFilteredRowModel().rows.length }} row(s) selected.
         </div>
-        <Button
-          class="px-1"
-          variant="outline"
-          size="sm"
-          :disabled="!table.getCanPreviousPage()"
-          @click="table.setPageIndex(0)"
-        >
-          <ChevronsLeftIcon size="18" />
-        </Button>
-        <Button
-          class="px-1"
-          variant="outline"
-          size="sm"
-          :disabled="!table.getCanPreviousPage()"
-          @click="table.previousPage()"
-        >
-          <ChevronLeftIcon size="18" />
-        </Button>
-        <span className="flex items-center gap-1 text-sm text-muted-foreground">
-          <div>Page</div>
-          <!--
-          <strong>
-            {{ table.getState().pagination.pageIndex + 1 }}
-          </strong> of{{ ' ' }}
-          -->
-          <Input
-            type="number"
-            min="1"
-            class="h-8 w-16 rounded border p-1 text-right"
-            :max="table.getPageCount()"
-            :default-value="table.getState().pagination.pageIndex + 1"
-            @change="evt => {
-              const page = evt.target.value ? Number(evt.target.value) - 1 : 0
-              table.setPageIndex(page)
-            }"
-          /> of{{ ' ' }}
-          <strong>
-            {{ table.getPageCount() }}
-          </strong>
-        </span>
-        <Button
-          class="px-1"
-          variant="outline"
-          size="sm"
-          :disabled="!table.getCanNextPage()"
-          @click="table.nextPage()"
-        >
-          <ChevronRightIcon size="18" />
-        </Button>
-        <Button
-          class="px-1"
-          variant="outline"
-          size="sm"
-          :disabled="!table.getCanNextPage()"
-          @click="table.setPageIndex(table.getPageCount() - 1)"
-        >
-          <ChevronsRightIcon size="18" />
-        </Button>
+        <div class="flex items-center space-x-6 lg:space-x-8">
+          <div class="flex items-center space-x-2">
+            <p class="text-sm font-medium">
+              Rows per page
+            </p>
+            <Select
+              :model-value="`${table.getState().pagination.pageSize}`"
+              @update:model-value="table.setPageSize"
+            >
+              <SelectTrigger class="h-8 w-[70px]">
+                <SelectValue :placeholder="`${table.getState().pagination.pageSize}`" />
+              </SelectTrigger>
+              <SelectContent side="top">
+                <SelectItem v-for="pageSize in [10, 20, 30, 40, 50]" :key="pageSize" :value="`${pageSize}`">
+                  {{ pageSize }}
+                </SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div class="flex w-min items-center justify-center whitespace-nowrap text-sm font-medium">
+            Page <Input
+              type="number"
+              min="1"
+              class="m-1 h-8 w-16 rounded border p-1 text-right"
+              :max="table.getPageCount()"
+              :default-value="table.getState().pagination.pageIndex + 1"
+              @change="evt => {
+                const page = evt.target.value ? Number(evt.target.value) - 1 : 0
+                table.setPageIndex(page)
+              }"
+            /> of {{ table.getPageCount() }}
+          </div>
+          <div class="flex items-center space-x-2">
+            <Button
+              variant="outline"
+              class="hidden size-8 p-0 lg:flex"
+              :disabled="!table.getCanPreviousPage()"
+              @click="table.setPageIndex(0)"
+            >
+              <span class="sr-only">Go to first page</span>
+              <ChevronsLeftIcon class="size-4" />
+            </Button>
+            <Button
+              variant="outline"
+              class="size-8 p-0"
+              :disabled="!table.getCanPreviousPage()"
+              @click="table.previousPage()"
+            >
+              <span class="sr-only">Go to previous page</span>
+              <ChevronLeftIcon class="size-4" />
+            </Button>
+            <Button
+              variant="outline"
+              class="size-8 p-0"
+              :disabled="!table.getCanNextPage()"
+              @click="table.nextPage()"
+            >
+              <span class="sr-only">Go to next page</span>
+              <ChevronRightIcon class="size-4" />
+            </Button>
+            <Button
+              variant="outline"
+              class="hidden size-8 p-0 lg:flex"
+              :disabled="!table.getCanNextPage()"
+              @click="table.setPageIndex(table.getPageCount() - 1)"
+            >
+              <span class="sr-only">Go to last page</span>
+              <ChevronsRightIcon class="size-4" />
+            </Button>
+          </div>
+        </div>
       </div>
     </template>
   </DataTable>
