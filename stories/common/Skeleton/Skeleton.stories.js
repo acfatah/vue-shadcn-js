@@ -1,3 +1,4 @@
+import { Skeleton } from '~/components/ui/skeleton'
 import CardStory from './CardStory.vue'
 import CardSource from './CardStory.vue?raw'
 import DefaultStory from './DefaultStory.vue'
@@ -12,7 +13,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  */
 export default {
   title: 'Common/Skeleton',
-  component: DefaultStory,
+  component: Skeleton,
   tags: ['autodocs'],
 }
 
