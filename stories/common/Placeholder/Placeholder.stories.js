@@ -1,3 +1,4 @@
+import { Placeholder } from '~/components/ui/placeholder'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
 
@@ -6,7 +7,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  */
 export default {
   title: 'Common/Placeholder',
-  component: DefaultStory,
+  component: Placeholder,
   tags: ['autodocs'],
 }
 
