@@ -5,7 +5,7 @@ import { TooltipArrow } from 'radix-vue'
 <template>
   <TooltipArrow
     v-bind="$attrs"
-    :class="cn('fill-border-primary', $attrs.class)"
+    :class="cn('fill-primary', $attrs.class)"
   >
     <slot />
   </TooltipArrow>
