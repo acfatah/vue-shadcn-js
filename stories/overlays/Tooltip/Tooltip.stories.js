@@ -28,6 +28,7 @@ export const Default = {
   },
 
   args: {
+    disabled: false,
     text: 'Add to library',
   },
 
@@ -55,12 +56,13 @@ export const Default = {
     },
 
     template: `
-      <div class="flex justify-center items-center h-[140px]">
+      <div class="flex flex-col gap-4 justify-center items-center h-[140px]">
         <Tooltip v-bind="args">
           <Button variant="outline">
             Hover
           </Button>
         </Tooltip>
+        <p>Tooltip: {{ args.disabled ? 'disabled' : 'enabled' }}</p>
       </div>
     `,
   }),
