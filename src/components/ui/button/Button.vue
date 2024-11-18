@@ -13,13 +13,20 @@ const props = defineProps({
   asChild: { type: Boolean, required: false },
   class: { type: null, required: false },
 })
+
+const attrs = useAttrs()
+
+const isReset = computed(() => attrs?.type === 'reset')
 </script>
 
 <template>
   <Primitive
     :as="props.as"
     :as-child="props.asChild"
-    :class="cn(buttonVariants({ variant, size }), props.class)"
+    :class="cn(
+      buttonVariants({ variant: isReset ? 'secondary' : props.variant, size }),
+      props.class,
+    )"
   >
     <slot />
   </Primitive>
