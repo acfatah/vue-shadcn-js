@@ -16,6 +16,10 @@ export default antfu(
         'warn',
         {
           whitelist: [
+            'success',
+            'info',
+            'warning',
+            'error',
             'destructive',
           ],
         },
