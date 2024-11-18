@@ -16,6 +16,12 @@ export default {
   title: 'Data Display/Data Table',
   component: DataTable,
   tags: ['autodocs'],
+
+  args: {
+    hideFilter: false,
+    hidePagination: false,
+  },
+
 }
 
 export const Default = {
