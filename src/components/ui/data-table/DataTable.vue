@@ -15,6 +15,8 @@ const props = defineProps({
   filterable: { type: Boolean, default: true },
   pagination: { type: Boolean, default: true },
   loading: { type: Boolean, default: false },
+  hideFilter: { type: Boolean, default: false },
+  hidePagination: { type: Boolean, default: false },
 })
 
 const sorting = ref([])
@@ -45,7 +47,7 @@ const table = useVueTable({
 
 <template>
   <div>
-    <slot name="filter" :table="table">
+    <slot v-if="!props.hideFilter" name="filter" :table="table">
       <div v-if="filterable" class="flex items-center py-4">
         <Input
           class="max-w-sm" placeholder="Filter emails..."
@@ -110,7 +112,7 @@ const table = useVueTable({
         </TableBody>
       </Table>
     </div>
-    <slot name="pagination" :table="table">
+    <slot v-if="!props.hidePagination" name="pagination" :table="table">
       <div v-if="pagination" class="flex items-center justify-end space-x-2 py-4">
         <div class="flex-1 text-sm text-muted-foreground">
           {{ table.getFilteredSelectedRowModel().rows.length }} of
