@@ -12,6 +12,33 @@ Streamlining Front-end Development with Modern Tools.
 
 > WORK IN PROGRESS
 
+## Usage
+
+1. Copy the repository,
+
+```bash
+npx tiged acfatah/vue-shadcn-spa newproject
+```
+
+2. Include VSCode configurations in the repository. By default, the directory
+   will be ignored.
+
+```bash
+git add -f .vscode
+```
+
+3. Initialize `simple-git-hooks`,
+
+```bash
+rm -rf .git/hooks && npx simple-git-hooks
+```
+
+4. Update and install dependencies
+
+```bash
+npm run update-deps
+```
+
 ## Introduction
 
 This template is built using the [Shadcn UI](https://ui.shadcn.com) design system
