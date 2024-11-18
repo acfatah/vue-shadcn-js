@@ -50,10 +50,10 @@ onMounted(() => {
 
     <!-- Other FormField(s) -->
 
-    <FormAction>
+    <FormAction justify-end>
       <Button
         type="submit"
-        :disabled="!(meta.valid && meta.touched)"
+        :disabled="!(meta.dirty && meta.valid)"
       >
         Submit
       </Button>
