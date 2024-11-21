@@ -49,6 +49,31 @@ export const Default = {
   }),
 }
 
+export const Form = {
+  parameters: {
+    docs: {
+      source: {
+        code: FormSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { FormStory, Toaster },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <Teleport to="body">
+        <Toaster />
+      </Teleport>
+      <FormStory v-bind="args" />
+    `,
+  }),
+}
+
 export const DateRangePicker = {
   parameters: {
     docs: {
@@ -111,31 +136,6 @@ export const WithPreset = {
 
     template: `
       <WithPresetStory v-bind="args" />
-    `,
-  }),
-}
-
-export const Form = {
-  parameters: {
-    docs: {
-      source: {
-        code: FormSource,
-      },
-    },
-  },
-
-  render: args => ({
-    components: { FormStory, Toaster },
-
-    setup() {
-      return { args }
-    },
-
-    template: `
-      <Teleport to="body">
-        <Toaster />
-      </Teleport>
-      <FormStory v-bind="args" />
     `,
   }),
 }
