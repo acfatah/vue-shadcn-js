@@ -9,7 +9,9 @@ import { Toaster } from '~/components/ui/toast'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
 import FormStory from './FormStory.vue'
-import WithComboboxComponent from './WithCombobox.vue'
+import FormSource from './FormStory.vue?raw'
+import WithComboboxStory from './WithCombobox.vue'
+import WithComboboxSource from './WithCombobox.vue?raw'
 
 /**
  * Tag inputs render tags inside an input, followed by an actual text input.
@@ -38,6 +40,10 @@ export const Default = {
     },
   },
 
+  args: {
+    disabled: false,
+  },
+
   render: args => ({
     components: { DefaultStory },
 
@@ -51,21 +57,15 @@ export const Default = {
   }),
 }
 
-export const WithCombobox = {
-  render: args => ({
-    components: { WithComboboxComponent },
-
-    setup() {
-      return { args }
-    },
-
-    template: `
-      <WithComboboxComponent v-bind="args" />
-    `,
-  }),
-}
-
 export const Form = {
+  parameters: {
+    docs: {
+      source: {
+        code: FormSource,
+      },
+    },
+  },
+
   render: args => ({
     components: { FormStory, Toaster },
 
@@ -78,6 +78,31 @@ export const Form = {
         <Toaster />
       </Teleport>
       <FormStory v-bind="args" />
+    `,
+  }),
+}
+
+export const WithCombobox = {
+  parameters: {
+    docs: {
+      source: {
+        code: WithComboboxSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { WithComboboxStory, Toaster },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <Teleport to="body">
+        <Toaster />
+      </Teleport>
+      <WithComboboxStory v-bind="args" />
     `,
   }),
 }
