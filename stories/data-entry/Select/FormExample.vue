@@ -20,11 +20,14 @@ function onSubmit(values) {
 </script>
 
 <template>
-  <Form class="w-2/3 space-y-6" :validation-schema="formSchema" @submit="onSubmit">
+  <Form
+    class="w-2/3 space-y-6"
+    :validation-schema="formSchema"
+    @submit="onSubmit"
+  >
     <FormField v-slot="{ componentField }" name="email">
       <FormItem>
         <FormLabel>Email</FormLabel>
-
         <Select v-bind="componentField">
           <FormControl>
             <SelectTrigger>
