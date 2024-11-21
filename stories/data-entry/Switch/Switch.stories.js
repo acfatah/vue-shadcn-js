@@ -11,7 +11,7 @@ import FormSource from './FormStory.vue?raw'
  * Primitive API Reference: https://www.radix-vue.com/components/switch.html
  */
 export default {
-  title: 'Forms/Switch',
+  title: 'Data Entry/Switch',
   component: Switch,
   tags: ['autodocs'],
 }

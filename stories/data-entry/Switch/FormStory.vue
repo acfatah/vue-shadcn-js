@@ -1,6 +1,5 @@
 <script setup>
 import { toTypedSchema } from '@vee-validate/zod'
-import { useForm } from 'vee-validate'
 import * as z from 'zod'
 import { toast } from '~/components/ui/toast'
 
@@ -9,24 +8,26 @@ const formSchema = toTypedSchema(z.object({
   security_emails: z.boolean(),
 }))
 
-const { handleSubmit } = useForm({
-  validationSchema: formSchema,
-  initialValues: {
-    marketing_emails: false,
-    security_emails: true,
-  },
-})
+const initialValues = {
+  marketing_emails: false,
+  security_emails: true,
+}
 
-const onSubmit = handleSubmit((values) => {
+function onSubmit(values) {
   toast({
     title: 'You submitted the following values:',
     description: h('pre', { class: 'mt-2 w-[340px] rounded-md bg-slate-950 p-4' }, h('code', { class: 'text-white' }, JSON.stringify(values, null, 2))),
   })
-})
+}
 </script>
 
 <template>
-  <form class="w-full space-y-6" @submit="onSubmit">
+  <Form
+    class="w-full space-y-6"
+    :validation-schema="formSchema"
+    :initial-values="initialValues"
+    @submit="onSubmit"
+  >
     <div>
       <h3 class="mb-4 text-lg font-medium">
         Email Notifications
@@ -51,6 +52,7 @@ const onSubmit = handleSubmit((values) => {
             </FormControl>
           </FormItem>
         </FormField>
+
         <FormField v-slot="{ value, handleChange }" name="security_emails">
           <FormItem class="flex flex-row items-center justify-between rounded-lg border p-4">
             <div class="space-y-0.5">
@@ -71,10 +73,13 @@ const onSubmit = handleSubmit((values) => {
             </FormControl>
           </FormItem>
         </FormField>
+
+        <!-- Other fields -->
       </div>
     </div>
+
     <Button type="submit">
       Submit
     </Button>
-  </form>
+  </Form>
 </template>
