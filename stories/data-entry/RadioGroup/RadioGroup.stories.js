@@ -15,7 +15,7 @@ import FormSource from './FormStory.vue?raw'
  * Primitive API Reference: https://www.radix-vue.com/components/radio-group.html
  */
 export default {
-  title: 'Forms/Radio Group',
+  title: 'Data Entry/Radio Group',
   component: DefaultStory,
   subcomponents: {
     RadioGroup,
@@ -31,6 +31,10 @@ export const Default = {
         code: DefaultSource,
       },
     },
+  },
+
+  args: {
+    disabled: false,
   },
 
   render: args => ({

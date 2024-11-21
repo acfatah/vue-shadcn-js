@@ -1,5 +1,11 @@
+<script setup>
+const props = defineProps({
+  disabled: { type: Boolean, required: false },
+})
+</script>
+
 <template>
-  <RadioGroup default-value="comfortable" orientation="vertical">
+  <RadioGroup default-value="comfortable" orientation="vertical" :disabled="props.disabled">
     <div class="flex items-center space-x-2">
       <RadioGroupItem id="r1" value="default" />
       <Label for="r1">Default</Label>
