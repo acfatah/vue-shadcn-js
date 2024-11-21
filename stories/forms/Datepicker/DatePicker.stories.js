@@ -1,3 +1,4 @@
+import { Calendar } from '~/components/ui/calendar'
 import { Toaster } from '~/components/ui/toast'
 import DateRangePickerStory from './DateRangePickerStory.vue'
 import DateRangePickerSource from './DateRangePickerStory.vue?raw'
@@ -22,7 +23,7 @@ import WithPresetSource from './WithPresetStory.vue?raw'
  */
 export default {
   title: 'Forms/Datepicker',
-  component: DefaultStory,
+  component: Calendar,
   tags: ['autodocs'],
 }
 
