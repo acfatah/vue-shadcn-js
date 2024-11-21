@@ -4,6 +4,8 @@ import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
 import FormStory from './FormStory.vue'
 import FormSource from './FormStory.vue?raw'
+import WithTextStory from './WithText.vue'
+import WithTextSource from './WithText.vue?raw'
 
 /**
  * A two-state button that can be either on or off.
@@ -65,4 +67,47 @@ export const Form = {
       <FormStory v-bind="args" />
     `,
   }),
+}
+
+export const WithText = {
+  parameters: {
+    docs: {
+      source: {
+        code: WithTextSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { WithTextStory },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <WithTextStory v-bind="args" />
+    `,
+  }),
+}
+
+export const Outline = {
+  ...Default,
+  args: {
+    variant: 'outline',
+  },
+}
+
+export const Small = {
+  ...Default,
+  args: {
+    size: 'sm',
+  },
+}
+
+export const Large = {
+  ...Default,
+  args: {
+    size: 'lg',
+  },
 }
