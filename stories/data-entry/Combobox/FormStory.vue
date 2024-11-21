@@ -1,7 +1,5 @@
 <script setup>
 import { toTypedSchema } from '@vee-validate/zod'
-import { useForm } from 'vee-validate'
-import { h } from 'vue'
 import * as z from 'zod'
 import { toast } from '~/components/ui/toast'
 
@@ -25,23 +23,26 @@ const formSchema = toTypedSchema(z.object({
   }),
 }))
 
-const { handleSubmit, setFieldValue, values } = useForm({
-  validationSchema: formSchema,
-  initialValues: {
-    language: '',
-  },
-})
+const initialValues = {
+  language: '',
+}
 
-const onSubmit = handleSubmit((values) => {
+function onSubmit(values) {
   toast({
     title: 'You submitted the following values:',
     description: h('pre', { class: 'mt-2 w-[340px] rounded-md bg-slate-950 p-4' }, h('code', { class: 'text-white' }, JSON.stringify(values, null, 2))),
   })
-})
+}
 </script>
 
 <template>
-  <form class="space-y-6" @submit="onSubmit">
+  <Form
+    v-slot="{ values, setFieldValue }"
+    class="space-y-6"
+    :validation-schema="formSchema"
+    :initial-values="initialValues"
+    @submit="onSubmit"
+  >
     <FormField name="language">
       <FormItem class="flex flex-col">
         <FormLabel>Language</FormLabel>
@@ -96,5 +97,5 @@ const onSubmit = handleSubmit((values) => {
     <Button type="submit">
       Submit
     </Button>
-  </form>
+  </Form>
 </template>
