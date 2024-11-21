@@ -1,5 +1,5 @@
 <script setup>
-import * as z from 'zod'
+import { z } from 'zod'
 
 const schema = z.object({
   subObject: z.object({

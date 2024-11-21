@@ -1,7 +1,7 @@
 <script setup>
 import { toTypedSchema } from '@vee-validate/zod'
 import { useForm } from 'vee-validate'
-import * as z from 'zod'
+import { z } from 'zod'
 
 const schema = z.object({
   username: z.string(),

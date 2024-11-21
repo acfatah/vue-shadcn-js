@@ -1,6 +1,6 @@
 <script setup>
 import { toTypedSchema } from '@vee-validate/zod'
-import * as z from 'zod'
+import { z } from 'zod'
 import { buttonVariants } from '~/components/ui/button'
 import { toast } from '~/components/ui/toast'
 

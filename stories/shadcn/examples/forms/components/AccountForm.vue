@@ -2,7 +2,7 @@
 import { CalendarDate, DateFormatter, getLocalTimeZone, today } from '@internationalized/date'
 import { toTypedSchema } from '@vee-validate/zod'
 import { toDate } from 'radix-vue/date'
-import * as z from 'zod'
+import { z } from 'zod'
 import { toast } from '~/components/ui/toast'
 
 const open = ref(false)

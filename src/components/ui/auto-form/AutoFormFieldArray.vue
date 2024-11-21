@@ -1,6 +1,6 @@
 <script setup>
 import { FieldArray, FieldContextKey, useField } from 'vee-validate'
-import * as z from 'zod'
+import { z } from 'zod'
 import AutoFormField from './AutoFormField.vue'
 import AutoFormLabel from './AutoFormLabel.vue'
 import { beautifyObjectName, getBaseType } from './utils'

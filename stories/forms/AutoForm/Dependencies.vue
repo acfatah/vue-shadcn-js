@@ -1,5 +1,5 @@
 <script setup>
-import * as z from 'zod'
+import { z } from 'zod'
 import { DependencyType } from '~/components/ui/auto-form/interface'
 
 const schema = z.object({
