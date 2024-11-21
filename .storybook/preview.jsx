@@ -52,10 +52,10 @@ const preview = {
           'Panels',
           'Forms',
           [
-            'Auto Form',
+            'AutoForm',
             'VeeValidate Form',
           ],
-          'Inputs',
+          'Data Entry',
           'Data Display',
           'Common',
           'Misc',
