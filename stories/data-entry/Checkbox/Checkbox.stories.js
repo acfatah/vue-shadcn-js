@@ -10,7 +10,7 @@ import WithTextSource from './WithTextStory.vue?raw'
  * Primitive API Reference: https://www.radix-vue.com/components/checkbox.html
  */
 export default {
-  title: 'Forms/Checkbox',
+  title: 'Data Entry/Checkbox',
   component: Checkbox,
   tags: ['autodocs'],
 }
