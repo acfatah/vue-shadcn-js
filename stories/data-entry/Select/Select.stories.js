@@ -18,7 +18,7 @@ import FormExampleSource from './FormExample.vue?raw'
  * Primitive API Reference: https://www.radix-vue.com/components/select.html
  */
 export default {
-  title: 'Forms/Select',
+  title: 'Data Entry/Select',
   component: Select,
   subcomponents: {
     Select,
