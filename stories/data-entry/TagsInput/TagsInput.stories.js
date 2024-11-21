@@ -17,7 +17,7 @@ import WithComboboxComponent from './WithCombobox.vue'
  * Primitive API Reference: https://www.radix-vue.com/components/tags-input
  */
 export default {
-  title: 'Forms/Tags Input',
+  title: 'Data Entry/Tags Input',
   component: DefaultStory,
   subcomponents: {
     TagsInput,
