@@ -13,7 +13,7 @@ import WithTextSource from './WithText.vue?raw'
  * Displays a form textarea or a component that looks like a textarea.
  */
 export default {
-  title: 'Forms/Textarea',
+  title: 'Data Entry/Textarea',
   component: Textarea,
   tags: ['autodocs'],
 }
