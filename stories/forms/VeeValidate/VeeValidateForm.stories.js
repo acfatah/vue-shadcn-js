@@ -1,8 +1,20 @@
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
+import {
+  Form,
+  FormAction,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '~/components/ui/form'
+import ComponentStory from './ComponentStory.vue'
+import ComponentSource from './ComponentStory.vue?raw'
+import CompositionApiStory from './CompositionApiStory.vue'
+import CompositionApiSource from './CompositionApiStory.vue?raw'
 
 /**
- * Basic form using `Form` component.
+ * Form components using `vee-validate` and `zod`.
  *
  * Read more at: https://www.shadcn-vue.com/docs/components/form.html<br />
  * Primitive API Reference: [https://vee-validate.logaretm.com/v4/guide/overview](https://vee-validate.logaretm.com/v4/guide/overview)<br />
@@ -10,28 +22,81 @@ import DefaultSource from './DefaultStory.vue?raw'
  */
 export default {
   title: 'Forms/VeeValidate Form',
-  component: DefaultStory,
+  component: Form,
+  subcomponents: {
+    FormAction,
+    FormControl,
+    FormDescription,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+  },
   tags: ['autodocs'],
 }
 
 export const Default = {
+  render: args => ({
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <pre>Refer to stories below...</pre>
+    `,
+  }),
+}
+
+/**
+ * Using Single File Component (SFC).
+ */
+export const Component = {
   parameters: {
     docs: {
       source: {
-        code: DefaultSource,
+        code: ComponentSource,
       },
     },
   },
 
   render: args => ({
-    components: { DefaultStory },
+    components: { ComponentStory },
 
     setup() {
       return { args }
     },
 
     template: `
-      <DefaultStory v-bind="args" />
+      <ComponentStory v-bind="args" />
     `,
   }),
 }
+Component.storyName = 'Single File Component (SFC)'
+
+/**
+ * Using composition API and native HTML `form` element.
+ *
+ * Read more at: https://vee-validate.logaretm.com/v4/guide/composition-api/getting-started/
+ */
+export const CompositionApi = {
+  parameters: {
+    docs: {
+      source: {
+        code: CompositionApiSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { CompositionApiStory },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <CompositionApiStory v-bind="args" />
+    `,
+  }),
+}
+CompositionApi.storyName = 'Composition API'
