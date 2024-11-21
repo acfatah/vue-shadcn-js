@@ -8,9 +8,9 @@ import {
   SelectValue,
 } from '~/components/ui/select'
 import { Toaster } from '~/components/ui/toast'
-import ExampleComponent from './Example.vue'
-import FormExampleComponent from './FormExample.vue'
-import FormExampleSource from './FormExample.vue?raw'
+import DefaultStory from './DefaultStory.vue'
+import FormStory from './FormStory.vue'
+import FormSource from './FormStory.vue?raw'
 
 /**
  * Displays a list of options for the user to pick from—triggered by a button.
@@ -59,29 +59,29 @@ export const Default = {
   },
 
   render: args => ({
-    components: { ExampleComponent },
+    components: { DefaultStory },
 
     setup() {
       return { args }
     },
 
     template: `
-      <ExampleComponent v-bind="args" />
+      <DefaultStory v-bind="args" />
     `,
   }),
 }
 
-export const FormExample = {
+export const Form = {
   parameters: {
     docs: {
       source: {
-        code: FormExampleSource,
+        code: FormSource,
       },
     },
   },
 
   render: args => ({
-    components: { FormExampleComponent, Toaster },
+    components: { FormStory, Toaster },
 
     setup() {
       return { args }
@@ -91,7 +91,7 @@ export const FormExample = {
       <Teleport defer to="body">
         <Toaster />
       </Teleport>
-      <FormExampleComponent v-bind="args" />
+      <FormStory v-bind="args" />
     `,
   }),
 }
