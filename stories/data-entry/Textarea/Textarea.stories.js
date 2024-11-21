@@ -40,6 +40,31 @@ export const Default = {
   }),
 }
 
+export const Form = {
+  parameters: {
+    docs: {
+      source: {
+        code: FormSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { FormStory, Toaster },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <Teleport to="body">
+        <Toaster />
+      </Teleport>
+      <FormStory v-bind="args" />
+    `,
+  }),
+}
+
 export const WithLabel = {
   parameters: {
     docs: {
@@ -80,31 +105,6 @@ export const WithText = {
 
     template: `
       <WithTextStory v-bind="args" />
-    `,
-  }),
-}
-
-export const Form = {
-  parameters: {
-    docs: {
-      source: {
-        code: FormSource,
-      },
-    },
-  },
-
-  render: args => ({
-    components: { FormStory, Toaster },
-
-    setup() {
-      return { args }
-    },
-
-    template: `
-      <Teleport to="body">
-        <Toaster />
-      </Teleport>
-      <FormStory v-bind="args" />
     `,
   }),
 }
