@@ -15,6 +15,7 @@ const props = defineProps({
   asChild: { type: Boolean, required: false },
   class: { type: null, required: false },
 })
+
 const emits = defineEmits(['update:modelValue'])
 
 const delegatedProps = computed(() => {

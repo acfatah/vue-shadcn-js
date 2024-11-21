@@ -17,6 +17,7 @@ const props = defineProps({
   id: { type: String, required: false },
   convertValue: { type: Function, required: false },
   displayValue: { type: Function, required: false },
+
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
   class: { type: null, required: false },
@@ -37,7 +38,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <TagsInputRoot
     v-bind="forwarded"
     :class="cn(
-      'flex flex-wrap items-center gap-2 rounded-md border border-input bg-background px-3 py-1.5 text-sm',
+      'flex flex-wrap items-center gap-2 rounded-md border border-input bg-background px-3 py-1.5 text-sm data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50',
       props.class,
     )"
   >

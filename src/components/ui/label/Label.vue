@@ -1,5 +1,5 @@
 <script setup>
-import { Label } from 'radix-vue'
+import { Label, useForwardProps } from 'radix-vue'
 
 const props = defineProps({
   for: { type: String, required: false },
@@ -14,13 +14,15 @@ const delegatedProps = computed(() => {
 
   return delegated
 })
+
+const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
   <Label
-    v-bind="delegatedProps"
+    v-bind="forwardedProps"
     :class="cn(
-      'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
+      'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-50',
       props.class,
     )"
   >

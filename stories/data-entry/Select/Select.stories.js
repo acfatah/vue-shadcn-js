@@ -19,7 +19,7 @@ import FormSource from './FormStory.vue?raw'
  */
 export default {
   title: 'Data Entry/Select',
-  component: Select,
+  component: DefaultStory,
   subcomponents: {
     Select,
     SelectContent,
@@ -56,6 +56,10 @@ export const Default = {
 `,
       },
     },
+  },
+
+  args: {
+    disabled: false,
   },
 
   render: args => ({

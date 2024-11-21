@@ -29,6 +29,10 @@ export const Default = {
     },
   },
 
+  args: {
+    disabled: false,
+  },
+
   render: args => ({
     components: { DefaultStory },
 

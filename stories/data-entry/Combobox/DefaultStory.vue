@@ -1,4 +1,8 @@
 <script setup>
+const props = defineProps({
+  disabled: { type: Boolean, required: false },
+})
+
 const frameworks = [
   { value: 'next.js', label: 'Next.js' },
   { value: 'sveltekit', label: 'SvelteKit' },
@@ -13,7 +17,7 @@ const value = ref('')
 
 <template>
   <Popover v-model:open="open">
-    <PopoverTrigger as-child>
+    <PopoverTrigger as-child :disabled="props.disabled">
       <Button
         variant="outline"
         role="combobox"

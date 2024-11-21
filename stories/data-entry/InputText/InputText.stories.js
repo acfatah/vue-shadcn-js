@@ -28,6 +28,7 @@ export const Default = {
 
   args: {
     placeholder: 'Username',
+    disabled: false,
   },
 
   render: args => ({

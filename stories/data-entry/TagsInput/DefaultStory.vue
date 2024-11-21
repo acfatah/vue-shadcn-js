@@ -1,13 +1,16 @@
 <script setup>
+import { useForwardProps } from 'radix-vue'
+
 const props = defineProps({
   disabled: { type: Boolean, required: false },
 })
 
 const modelValue = ref(['Apple', 'Banana'])
+const forwardProps = useForwardProps(props)
 </script>
 
 <template>
-  <TagsInput v-model="modelValue" :disabled="props.disabled">
+  <TagsInput v-bind="forwardProps">
     <TagsInputItem v-for="item in modelValue" :key="item" :value="item">
       <TagsInputItemText />
       <TagsInputItemDelete />

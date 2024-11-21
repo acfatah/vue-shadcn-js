@@ -12,7 +12,10 @@ import FormSource from './FormStory.vue?raw'
  */
 export default {
   title: 'Data Entry/Switch',
-  component: Switch,
+  component: DefaultStory,
+  subcomponents: {
+    Switch,
+  },
   tags: ['autodocs'],
 }
 
@@ -23,6 +26,10 @@ export const Default = {
         code: DefaultSource,
       },
     },
+  },
+
+  args: {
+    disabled: false,
   },
 
   render: args => ({
