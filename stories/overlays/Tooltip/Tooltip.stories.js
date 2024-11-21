@@ -15,7 +15,6 @@ export default {
 
 export const Default = {
   parameters: {
-    height: 400,
     docs: {
       source: {
         code: `

@@ -20,10 +20,6 @@ export default {
 }
 
 export const Default = {
-  parameters: {
-    height: 400,
-  },
-
   argTypes: {
     side: {
       options: ['top', 'right', 'bottom', 'left'],
