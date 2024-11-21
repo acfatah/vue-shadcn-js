@@ -20,7 +20,7 @@ import ResponsiveSource from './ResponsiveStory.vue?raw'
  * - [Overlays/Popover](?path=/docs/overlays-popover--docs) component
  */
 export default {
-  title: 'Forms/Combobox',
+  title: 'Data Entry/Combobox',
   component: DefaultStory,
   tags: ['autodocs'],
 }
@@ -43,6 +43,31 @@ export const Default = {
 
     template: `
       <DefaultStory v-bind="args" />
+    `,
+  }),
+}
+
+export const Form = {
+  parameters: {
+    docs: {
+      source: {
+        code: FormSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { FormStory, Toaster },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <Teleport defer to="body">
+        <Toaster />
+      </Teleport>
+      <FormStory v-bind="args" />
     `,
   }),
 }
@@ -111,30 +136,4 @@ export const Responsive = {
       <ResponsiveStory v-bind="args" />
     `,
   }),
-}
-
-export const Form = {
-  parameters: {
-    docs: {
-      source: {
-        code: FormSource,
-      },
-    },
-  },
-
-  render: args => ({
-    components: { FormStory, Toaster },
-
-    setup() {
-      return { args }
-    },
-
-    template: `
-      <Teleport defer to="body">
-        <Toaster />
-      </Teleport>
-      <FormStory v-bind="args" />
-    `,
-  }),
-
 }
