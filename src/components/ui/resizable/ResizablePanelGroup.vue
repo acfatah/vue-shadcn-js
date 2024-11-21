@@ -1,7 +1,5 @@
 <script setup>
 import { SplitterGroup, useForwardPropsEmits } from 'radix-vue'
-import { computed } from 'vue'
-import { cn } from '~/lib/utils'
 
 const props = defineProps({
   id: { type: [String, null], required: false },
@@ -9,6 +7,7 @@ const props = defineProps({
   direction: { type: String, required: true },
   keyboardResizeBy: { type: [Number, null], required: false },
   storage: { type: Object, required: false },
+
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
   class: { type: null, required: false },

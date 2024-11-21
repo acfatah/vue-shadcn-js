@@ -1,22 +1,23 @@
 <script setup>
 import { SplitterResizeHandle, useForwardPropsEmits } from 'radix-vue'
-import { computed } from 'vue'
-import { cn } from '~/lib/utils'
 
 const props = defineProps({
   id: { type: String, required: false },
   hitAreaMargins: { type: Object, required: false },
   tabindex: { type: Number, required: false },
   disabled: { type: Boolean, required: false },
+  withHandle: { type: Boolean, required: false },
+
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
   class: { type: null, required: false },
-  withHandle: { type: Boolean, required: false },
 })
+
 const emits = defineEmits(['dragging'])
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
+
   return delegated
 })
 
