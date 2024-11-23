@@ -22,7 +22,7 @@ import WithPresetSource from './WithPresetStory.vue?raw'
  * - [Overlays/Popover](?path=/docs/overlays-popover--docs) component
  */
 export default {
-  title: 'Forms/Datepicker',
+  title: 'Data Entry/Datepicker',
   component: Calendar,
   tags: ['autodocs'],
 }
