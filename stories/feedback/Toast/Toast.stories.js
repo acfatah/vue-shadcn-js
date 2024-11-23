@@ -26,7 +26,7 @@ import WithTitleSource from './WithTitle.vue?raw'
  * Read more at [https://www.radix-vue.com/components/toast](https://www.radix-vue.com/components/toast)
  */
 export default {
-  title: 'Overlays/Toast',
+  title: 'Feedback/Toast',
   component: DefaultStory,
   subcomponents: {
     Toast,
