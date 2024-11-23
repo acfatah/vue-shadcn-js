@@ -47,7 +47,7 @@ const preview = {
             'AlertDialog',
             'Dialog',
             'Tooltip',
-            ['Default', 'Primitive'],
+            ['Simplified', 'Primitive'],
           ],
           'Panels',
           'Forms',
