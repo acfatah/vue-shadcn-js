@@ -1,8 +1,5 @@
 <script setup>
 import { StepperRoot, useForwardPropsEmits } from 'radix-vue'
-import { computed } from 'vue'
-
-import { cn } from '~/lib/utils'
 
 const props = defineProps({
   defaultValue: { type: Number, required: false },
@@ -10,6 +7,7 @@ const props = defineProps({
   dir: { type: String, required: false },
   modelValue: { type: Number, required: false },
   linear: { type: Boolean, required: false },
+
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
   class: { type: null, required: false },
