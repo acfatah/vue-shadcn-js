@@ -1,25 +1,46 @@
-import Example from './Example.vue'
-import ExampleSource from './Example.vue?raw'
+import {
+  TooltipArrow,
+  TooltipContent,
+  TooltipProvider,
+  TooltipRoot,
+  TooltipTrigger,
+} from '~/components/ui/tooltip'
+import DefaultStory from './DefaultStory.vue'
+import DefaultSource from './DefaultStory.vue?raw'
 
 /**
  * When more customization is required, we can use the primitive tooltip components.
  *
  * Primitive API Reference: https://www.radix-vue.com/components/tooltip
+ *
+ * See also:
+ * - [Overlays/Popover](?path=/docs/overlays-popover--docs) component
  */
 export default {
   title: 'Overlays/Tooltip/Primitive',
-  component: Example,
+  component: DefaultStory,
+  subcomponents: {
+    TooltipArrow,
+    TooltipContent,
+    TooltipProvider,
+    TooltipRoot,
+    TooltipTrigger,
+  },
   tags: ['autodocs'],
   parameters: {
     docs: {
       source: {
-        code: ExampleSource,
+        code: DefaultSource,
       },
     },
   },
 }
 
 export const Default = {
+  args: {
+    side: 'top',
+  },
+
   argTypes: {
     side: {
       options: ['top', 'right', 'bottom', 'left'],
@@ -31,7 +52,7 @@ export const Default = {
   },
 
   render: args => ({
-    components: { Example },
+    components: { DefaultStory },
 
     setup() {
       return { args }
@@ -39,7 +60,7 @@ export const Default = {
 
     template: `
       <div class="flex justify-center items-center h-[140px]">
-        <Example v-bind="args" />
+        <DefaultStory v-bind="args" />
       </div>
     `,
   }),

@@ -5,12 +5,11 @@ import Tooltip from '~/components/ui/tooltip/Tooltip.vue'
 /**
  * Simplified tooltip component.
  *
- * See `Primitive Tooltip`.
+ * See [Primitive Tooltip](?path=/docs/overlays-command--docs) component.
  */
 export default {
   title: 'Overlays/Tooltip/Default',
   component: Tooltip,
-  tags: ['autodocs'],
 }
 
 export const Default = {
