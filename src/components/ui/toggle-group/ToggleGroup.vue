@@ -1,7 +1,5 @@
 <script setup>
 import { ToggleGroupRoot, useForwardPropsEmits } from 'radix-vue'
-import { computed, provide } from 'vue'
-import { cn } from '~/lib/utils'
 
 const props = defineProps({
   rovingFocus: { type: Boolean, required: false },
@@ -9,14 +7,15 @@ const props = defineProps({
   orientation: { type: String, required: false },
   dir: { type: String, required: false },
   loop: { type: Boolean, required: false },
-  asChild: { type: Boolean, required: false },
-  as: { type: null, required: false },
   type: { type: null, required: false },
   modelValue: { type: null, required: false },
   defaultValue: { type: null, required: false },
-  class: { type: null, required: false },
   variant: { type: null, required: false },
   size: { type: null, required: false },
+
+  asChild: { type: Boolean, required: false },
+  as: { type: null, required: false },
+  class: { type: null, required: false },
 })
 const emits = defineEmits(['update:modelValue'])
 
