@@ -8,7 +8,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * Primitive API Reference: https://www.radix-vue.com/components/separator.html
  */
 export default {
-  title: 'Common/Separator',
+  title: 'Panels/Separator',
   component: Separator,
   tags: ['autodocs'],
 }

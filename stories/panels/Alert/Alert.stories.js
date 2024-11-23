@@ -12,7 +12,7 @@ import DestructiveAlertSource from './DestructiveAlert.vue?raw'
  * Displays a callout for user attention.
  */
 export default {
-  title: 'Common/Alert',
+  title: 'Panels/Alert',
   component: DefaultStory,
   subcomponents: {
     Alert,
