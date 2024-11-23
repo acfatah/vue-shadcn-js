@@ -1,9 +1,9 @@
 import { Input } from '~/components/ui/input'
 import { Toaster } from '~/components/ui/toast'
+import DefaultStory from './DefaultStory.vue'
+import DefaultSource from './DefaultStory.vue?raw'
 import FormStory from './FormStory.vue'
 import FormSource from './FormStory.vue?raw'
-import InputTextStory from './InputText.vue'
-import InputTextSource from './InputText.vue?raw'
 import WithButtonStory from './WithButton.vue'
 import WithButtonSource from './WithButton.vue?raw'
 import WithIconStory from './WithIcon.vue'
@@ -21,7 +21,7 @@ export const Default = {
   parameters: {
     docs: {
       source: {
-        code: InputTextSource,
+        code: DefaultSource,
       },
     },
   },
@@ -32,14 +32,14 @@ export const Default = {
   },
 
   render: args => ({
-    components: { InputTextStory },
+    components: { DefaultStory },
 
     setup() {
       return { args }
     },
 
     template: `
-      <InputTextStory v-bind="args" />
+      <DefaultStory v-bind="args" />
     `,
   }),
 }
