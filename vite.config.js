@@ -1,4 +1,3 @@
-import fs from 'node:fs'
 import path from 'node:path'
 import vue from '@vitejs/plugin-vue'
 import autoprefixer from 'autoprefixer'
@@ -8,6 +7,7 @@ import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import svgLoader from 'vite-svg-loader'
 import {
+  localComponentsResolver,
   lucideIconResolver,
   radixVueResolver,
   veeValidateResolver,
@@ -43,12 +43,7 @@ export default defineConfig({
         'src/layouts',
       ],
       resolvers: [
-        (componentName) => {
-          const filePath = path.resolve(__dirname, `src/components/${componentName}.vue`)
-
-          if (fs.existsSync(filePath))
-            return { name: 'default', from: filePath }
-        },
+        localComponentsResolver,
         lucideIconResolver,
         radixVueResolver,
         veeValidateResolver,
