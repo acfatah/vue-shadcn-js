@@ -1,13 +1,12 @@
 <script setup>
 import { MenubarRoot, useForwardPropsEmits } from 'radix-vue'
-import { computed } from 'vue'
-import { cn } from '~/lib/utils'
 
 const props = defineProps({
   modelValue: { type: String, required: false },
   defaultValue: { type: String, required: false },
   dir: { type: String, required: false },
   loop: { type: Boolean, required: false },
+
   class: { type: null, required: false },
 })
 const emits = defineEmits(['update:modelValue'])
