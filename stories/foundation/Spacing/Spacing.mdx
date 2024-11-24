@@ -1,0 +1,20 @@
+import { useState, useEffect } from "react"
+import { Meta } from "@storybook/blocks"
+import { ColorPalette, ColorItem } from "@storybook/addon-docs"
+import Table from '/.storybook/components/Table'
+import spacing from './spacing.js'
+
+<Meta title="Foundation/Spacing" />
+
+# Spacing
+
+By default, Tailwind includes a generous and comprehensive numeric spacing scale. 
+The values are proportional, so 16 is twice as much spacing as 8 for example. One 
+spacing unit is equal to 0.25rem, which translates to 4px by default in common browsers.
+
+
+<Table
+  headers={['Name', 'Size', 'Pixel', '']}
+  rows={spacing}
+
+/>
