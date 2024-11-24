@@ -1,5 +1,3 @@
-import DefaultStory from './DefaultStory.vue'
-import DefaultSource from './DefaultStory.vue?raw'
 import {
   Menubar,
   MenubarCheckboxItem,
@@ -15,8 +13,9 @@ import {
   MenubarSub,
   MenubarSubContent,
   MenubarSubTrigger,
-  MenubarTrigger,
 } from '~/components/ui/menubar'
+import DefaultStory from './DefaultStory.vue'
+import DefaultSource from './DefaultStory.vue?raw'
 
 /**
  * A visually persistent menu common in desktop applications that provides quick
