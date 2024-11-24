@@ -44,11 +44,11 @@ const preview = {
           'Navigation',
           'Overlays',
           [
-            'AlertDialog',
             'Dialog',
             'Tooltip',
             ['Simplified', 'Primitive'],
           ],
+          'Feedback',
           'Panels',
           'Forms',
           [
