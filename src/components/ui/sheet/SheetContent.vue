@@ -13,13 +13,14 @@ defineOptions({
 })
 
 const props = defineProps({
-  class: { type: null, required: false },
   side: { type: null, required: false },
   forceMount: { type: Boolean, required: false },
   trapFocus: { type: Boolean, required: false },
   disableOutsidePointerEvents: { type: Boolean, required: false },
+
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
+  class: { type: null, required: false },
 })
 
 const emits = defineEmits([
