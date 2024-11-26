@@ -1,4 +1,4 @@
-import { SvgIcon } from '~/components/ui/icon'
+import SvgIcon from '~/components/extras/SvgIcon.vue'
 
 /**
  * Dynamically load svg icon from `src/assets/icons` using [`vite-svg-loader`](https://github.com/jpkleemans/vite-svg-loader)

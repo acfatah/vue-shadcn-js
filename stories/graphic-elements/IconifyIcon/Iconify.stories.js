@@ -1,5 +1,5 @@
 import { Icon as IconifyComponent } from '@iconify/vue'
-import { Iconify } from '~/components/ui/icon'
+import Iconify from '~/components/extras/Iconify.vue'
 
 /**
  * Icon component using Iconify library.
