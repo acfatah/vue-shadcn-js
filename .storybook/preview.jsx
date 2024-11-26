@@ -53,7 +53,7 @@ const preview = {
           'Data Entry',
           'Data Display',
           'Common',
-          'Misc',
+          'Extras',
           ['Charts'],
           'Blocks',
           'shadcn',
