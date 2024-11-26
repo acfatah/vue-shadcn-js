@@ -1,4 +1,4 @@
-import GithubCorner from '~/components/misc/GithubCorner/GithubCorner.vue'
+import GithubCorner from '~/components/extras/GithubCorner/GithubCorner.vue'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
 

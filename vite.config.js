@@ -39,7 +39,7 @@ export default defineConfig({
     Components({
       dirs: [
         'src/components/ui',
-        'src/components/misc',
+        'src/components/extras',
         'src/layouts',
       ],
       resolvers: [
