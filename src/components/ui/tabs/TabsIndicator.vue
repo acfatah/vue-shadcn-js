@@ -1,10 +1,7 @@
 <script setup>
-import { TabsContent } from 'radix-vue'
+import { TabsIndicator, useForwardProps } from 'radix-vue'
 
 const props = defineProps({
-  value: { type: [String, Number], required: true },
-  forceMount: { type: Boolean, required: false },
-
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
   class: { type: null, required: false },
@@ -15,16 +12,18 @@ const delegatedProps = computed(() => {
 
   return delegated
 })
+
+const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
-  <TabsContent
+  <TabsIndicator
+    v-bind="forwardedProps"
     :class="cn(
-      'mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+      'absolute bottom-0 left-0 h-[2px] w-[--radix-tabs-indicator-size] translate-x-[--radix-tabs-indicator-position] rounded-full transition-[width,transform] duration-300',
       props.class,
     )"
-    v-bind="delegatedProps"
   >
     <slot />
-  </TabsContent>
+  </TabsIndicator>
 </template>

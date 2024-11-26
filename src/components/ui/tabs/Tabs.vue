@@ -7,6 +7,7 @@ const props = defineProps({
   dir: { type: String, required: false },
   activationMode: { type: String, required: false },
   modelValue: { type: null, required: false },
+
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
 })
