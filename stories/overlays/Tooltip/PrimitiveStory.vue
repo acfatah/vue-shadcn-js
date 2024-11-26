@@ -12,6 +12,7 @@ const props = defineProps({
           Hover
         </Button>
       </TooltipTrigger>
+
       <TooltipContent :side="props.side">
         <p>Add to library</p>
         <TooltipArrow />

@@ -43,11 +43,6 @@ const preview = {
           ['Lucide Icon'],
           'Navigation',
           'Overlays',
-          [
-            'Dialog',
-            'Tooltip',
-            ['Simplified', 'Primitive'],
-          ],
           'Feedback',
           'Panels',
           'Forms',
