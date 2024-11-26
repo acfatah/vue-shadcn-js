@@ -1,7 +1,5 @@
 <script setup>
 import { NavigationMenuTrigger, useForwardProps } from 'radix-vue'
-import { computed } from 'vue'
-import { cn } from '~/lib/utils'
 import { navigationMenuTriggerStyle } from '.'
 
 const props = defineProps({

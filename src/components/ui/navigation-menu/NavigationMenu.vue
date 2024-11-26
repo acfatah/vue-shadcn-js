@@ -1,7 +1,5 @@
 <script setup>
 import { NavigationMenuRoot, useForwardPropsEmits } from 'radix-vue'
-import { computed } from 'vue'
-import { cn } from '~/lib/utils'
 import NavigationMenuViewport from './NavigationMenuViewport.vue'
 
 const props = defineProps({
@@ -13,6 +11,7 @@ const props = defineProps({
   skipDelayDuration: { type: Number, required: false },
   disableClickTrigger: { type: Boolean, required: false },
   disableHoverTrigger: { type: Boolean, required: false },
+
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
   class: { type: null, required: false },
