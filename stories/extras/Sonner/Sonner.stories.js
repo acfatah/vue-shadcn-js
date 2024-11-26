@@ -30,7 +30,7 @@ import DialogWithToastSource from './DialogWithToast.vue?raw'
  * [2]: https://twitter.com/emilkowalski_
  */
 export default {
-  title: 'Misc/Sonner',
+  title: 'Extras/Sonner',
   component: DefaultStory,
   tags: ['autodocs'],
 }

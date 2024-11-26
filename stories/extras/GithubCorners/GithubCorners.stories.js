@@ -1,13 +1,21 @@
+import GithubCorner from '~/components/extras/GithubCorner/GithubCorner.vue'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
 
 /**
- * Dark mode toggle
+ * Inspired by https://github.com/tholman/github-corners
  */
 export default {
-  title: 'Misc/Dark Mode Toggle',
-  component: DefaultStory,
+  title: 'Extras/Github Corner Icon',
+  component: GithubCorner,
   tags: ['autodocs'],
+
+  argTypes: {
+    side: {
+      control: { type: 'select' },
+      options: ['right', 'left'],
+    },
+  },
 }
 
 export const Default = {

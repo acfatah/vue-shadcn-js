@@ -10,7 +10,7 @@ import DefaultSource from './DefaultStory.vue?raw'
  * There is a risk that the project is `abandoned`. Read issue [#1503](https://github.com/nathanreyes/v-calendar/issues/1503)
  */
 export default {
-  title: 'Misc/VCalendar',
+  title: 'Extras/VCalendar',
   component: DefaultStory,
   tags: ['autodocs'],
 }
