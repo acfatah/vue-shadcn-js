@@ -1,6 +1,5 @@
 <script setup>
 import { PaginationFirst } from 'radix-vue'
-import { cn } from '~/lib/utils'
 
 const props = defineProps({
   asChild: { type: Boolean, required: false, default: true },
@@ -19,7 +18,7 @@ const delegatedProps = computed(() => {
   <PaginationFirst v-bind="delegatedProps">
     <Button :class="cn('w-9 h-9 p-0', props.class)" variant="outline">
       <slot>
-        <ChevronsLeftIcon />
+        <ChevronsLeftIcon class="size-4" />
       </slot>
     </Button>
   </PaginationFirst>
