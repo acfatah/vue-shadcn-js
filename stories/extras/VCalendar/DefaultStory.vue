@@ -1,5 +1,5 @@
 <script setup>
-import { VCalendar } from '~/components/ui/v-calendar'
+import { VCalendar } from '~/components/extras/VCalendar'
 
 const date = ref(new Date())
 </script>

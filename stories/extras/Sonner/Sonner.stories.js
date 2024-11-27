@@ -1,4 +1,4 @@
-import { Toaster } from '~/components/ui/sonner'
+import { Toaster } from '~/components/extras/Sonner'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
 import DialogWithToastStory from './DialogWithToast.vue'
