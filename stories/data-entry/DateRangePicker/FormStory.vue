@@ -66,6 +66,7 @@ function onSubmit(values) {
           <PopoverContent align="start" class="w-auto p-0">
             <RangeCalendar
               :value="value"
+              class="min-h-[346px] p-3"
               initial-focus
               :number-of-months="2"
               @update:model-value="(rangeDate) => {

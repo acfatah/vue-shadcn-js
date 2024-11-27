@@ -120,7 +120,7 @@ watch(secondMonthPlaceholder, (_secondMonthPlaceholder) => {
       </Button>
     </PopoverTrigger>
     <PopoverContent align="start" class="w-auto p-0">
-      <RangeCalendarRoot v-slot="{ weekDays }" v-model="value" v-model:placeholder="placeholder" class="p-3">
+      <RangeCalendarRoot v-slot="{ weekDays }" v-model="value" v-model:placeholder="placeholder" class="min-h-[346px] p-3">
         <div
           class="mt-4 flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 sm:gap-y-0"
         >

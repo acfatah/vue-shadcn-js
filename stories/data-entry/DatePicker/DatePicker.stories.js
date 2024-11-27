@@ -1,13 +1,9 @@
 import { Calendar } from '~/components/ui/calendar'
 import { Toaster } from '~/components/ui/toast'
-import DateRangePickerStory from './DateRangePickerStory.vue'
-import DateRangePickerSource from './DateRangePickerStory.vue?raw'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
 import FormStory from './FormStory.vue'
 import FormSource from './FormStory.vue?raw'
-import WithIndependentMonthsStory from './WithIndependentMonths.vue'
-import WithIndependentMonthsSource from './WithIndependentMonths.vue?raw'
 import WithPresetStory from './WithPresetStory.vue'
 import WithPresetSource from './WithPresetStory.vue?raw'
 
@@ -70,50 +66,6 @@ export const Form = {
         <Toaster />
       </Teleport>
       <FormStory v-bind="args" />
-    `,
-  }),
-}
-
-export const DateRangePicker = {
-  parameters: {
-    docs: {
-      source: {
-        code: DateRangePickerSource,
-      },
-    },
-  },
-
-  render: args => ({
-    components: { DateRangePickerStory },
-
-    setup() {
-      return { args }
-    },
-
-    template: `
-      <DateRangePickerStory v-bind="args" />
-    `,
-  }),
-}
-
-export const WithIndependentMonths = {
-  parameters: {
-    docs: {
-      source: {
-        code: WithIndependentMonthsSource,
-      },
-    },
-  },
-
-  render: args => ({
-    components: { WithIndependentMonthsStory },
-
-    setup() {
-      return { args }
-    },
-
-    template: `
-      <WithIndependentMonthsStory v-bind="args" />
     `,
   }),
 }

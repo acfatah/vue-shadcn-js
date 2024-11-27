@@ -17,6 +17,8 @@ import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
 import FormStory from './FormStory.vue'
 import FormSource from './FormStory.vue?raw'
+import WithIndependentMonthsStory from './WithIndependentMonths.vue'
+import WithIndependentMonthsSource from './WithIndependentMonths.vue?raw'
 
 /**
  * A calendar component that allows users to select a range of dates.
@@ -86,6 +88,28 @@ export const Form = {
         <Toaster />
       </Teleport>
       <FormStory v-bind="args" />
+    `,
+  }),
+}
+
+export const WithIndependentMonths = {
+  parameters: {
+    docs: {
+      source: {
+        code: WithIndependentMonthsSource,
+      },
+    },
+  },
+
+  render: args => ({
+    components: { WithIndependentMonthsStory },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <WithIndependentMonthsStory v-bind="args" />
     `,
   }),
 }
