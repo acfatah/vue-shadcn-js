@@ -1,7 +1,5 @@
 import { Calendar } from '~/components/ui/calendar'
 import { Toaster } from '~/components/ui/toast'
-import DateRangePickerFormStory from './DateRangePickerFormStory.vue'
-import DateRangePickerFormSource from './DateRangePickerFormStory.vue?raw'
 import DateRangePickerStory from './DateRangePickerStory.vue'
 import DateRangePickerSource from './DateRangePickerStory.vue?raw'
 import DefaultStory from './DefaultStory.vue'
@@ -24,7 +22,7 @@ import WithPresetSource from './WithPresetStory.vue?raw'
  * - [Overlays/Popover](?path=/docs/overlays-popover--docs) component
  */
 export default {
-  title: 'Data Entry/Datepicker',
+  title: 'Data Entry/Date Picker',
   component: Calendar,
   tags: ['autodocs'],
 }
@@ -72,31 +70,6 @@ export const Form = {
         <Toaster />
       </Teleport>
       <FormStory v-bind="args" />
-    `,
-  }),
-}
-
-export const DateRangePickerForm = {
-  parameters: {
-    docs: {
-      source: {
-        code: DateRangePickerFormSource,
-      },
-    },
-  },
-
-  render: args => ({
-    components: { DateRangePickerFormStory, Toaster },
-
-    setup() {
-      return { args }
-    },
-
-    template: `
-      <Teleport to="body">
-        <Toaster />
-      </Teleport>
-      <DateRangePickerFormStory v-bind="args" />
     `,
   }),
 }
