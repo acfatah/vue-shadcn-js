@@ -28,7 +28,7 @@ import WithRadioGroupSource from './WithRadioGroup.vue?raw'
  * Primitive API Reference: https://www.radix-vue.com/components/dropdown-menu.html
  */
 export default {
-  title: 'Overlays/DropdownMenu',
+  title: 'Overlays/Dropdown Menu',
   component: DefaultStory,
   subcomponents: {
     DropdownMenu,
