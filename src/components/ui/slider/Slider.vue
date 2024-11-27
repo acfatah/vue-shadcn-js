@@ -6,8 +6,6 @@ import {
   SliderTrack,
   useForwardPropsEmits,
 } from 'radix-vue'
-import { computed } from 'vue'
-import { cn } from '~/lib/utils'
 
 const props = defineProps({
   name: { type: String, required: false },
@@ -21,6 +19,7 @@ const props = defineProps({
   max: { type: Number, required: false },
   step: { type: Number, required: false },
   minStepsBetweenThumbs: { type: Number, required: false },
+
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
   class: { type: null, required: false },
