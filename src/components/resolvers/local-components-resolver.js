@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 /**
- * Resolver for single-file Vue components in `src/components`
+ * Resolver for Vue single-file components in `src/components` directory
  */
 export default function (componentName) {
   const filePath = path.resolve(__dirname, `src/components/${componentName}.vue`)
