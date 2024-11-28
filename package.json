@@ -45,7 +45,6 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.9.2",
-    "@chromatic-com/storybook": "^3.2.2",
     "@iconify/vue": "^4.1.2",
     "@storybook/addon-essentials": "^8.4.5",
     "@storybook/addon-interactions": "^8.4.5",
