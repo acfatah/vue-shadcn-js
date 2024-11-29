@@ -1,12 +1,5 @@
-<script setup>
-const value = ref(['bold'])
-</script>
-
 <template>
-  <ToggleGroup
-    v-model="value"
-    type="multiple"
-  >
+  <ToggleGroup>
     <ToggleGroupItem value="bold" aria-label="Toggle bold">
       <BoldIcon class="size-4" />
     </ToggleGroupItem>
@@ -17,8 +10,4 @@ const value = ref(['bold'])
       <UnderlineIcon class="size-4" />
     </ToggleGroupItem>
   </ToggleGroup>
-
-  <div class="mt-4 text-center">
-    value: {{ value }}
-  </div>
 </template>

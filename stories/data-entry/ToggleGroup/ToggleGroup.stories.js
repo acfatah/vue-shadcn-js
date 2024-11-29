@@ -17,6 +17,32 @@ export default {
     ToggleGroupItem,
   },
   tags: ['autodocs'],
+
+  args: {
+    defaultValue: 'italic',
+  },
+
+  argTypes: {
+    variant: {
+      control: { type: 'select' },
+      options: ['default', 'outline'],
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'default' },
+      },
+      description: 'The button variant',
+    },
+
+    orientation: {
+      control: { type: 'select' },
+      options: ['horizontal', 'vertical'],
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'horizontal' },
+      },
+      description: 'The button orientation',
+    },
+  },
 }
 
 export const Default = {
@@ -32,11 +58,19 @@ export const Default = {
     components: { DefaultStory },
 
     setup() {
-      return { args }
+      const value = ref(args.defaultValue)
+
+      return { args, value }
     },
 
     template: `
-      <DefaultStory v-bind="args" />
+      <DefaultStory
+        v-bind="args"
+        @update:model-value="value = $event"
+      />
+      <div class="mt-4">
+        value: {{ value }}
+      </div>
     `,
   }),
 }

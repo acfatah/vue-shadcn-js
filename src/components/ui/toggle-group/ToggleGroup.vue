@@ -42,7 +42,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <ToggleGroupRoot
     v-bind="forwarded"
     :class="cn(
-      'flex items-center justify-center gap-1',
+      'inline-flex w-min gap-1',
       props.class,
       props.orientation === 'vertical' && 'flex-col',
     )"
