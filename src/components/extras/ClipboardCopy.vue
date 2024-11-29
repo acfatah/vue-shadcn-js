@@ -1,5 +1,5 @@
 <script setup>
-import { Clipboard, ClipboardCheck } from 'lucide-vue-next'
+import { ClipboardCheck, ClipboardCopy } from 'lucide-vue-next'
 
 const props = defineProps({
   timeout: { type: Number, required: false, default: 1000 },
@@ -26,8 +26,8 @@ function handleClick() {
 <template>
   <component
     v-bind="delegatedProps"
-    :is="copied ? ClipboardCheck : Clipboard"
-    :class="cn('size-5 cursor-pointer', props.class)"
+    :is="copied ? ClipboardCheck : ClipboardCopy"
+    :class="cn('size-5 cursor-pointer', props.class, { 'cursor-default': copied })"
     @click="handleClick"
   />
 </template>
