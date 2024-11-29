@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 
 function Table({ headers, rows }) {
@@ -14,11 +15,9 @@ function Table({ headers, rows }) {
         {rows.map((row, rowIndex) => (
           <tr key={rowIndex}>
             {Object.keys(row).map((cell, cellIndex) => (
-              <>
-                <td key={cellIndex}>
-                  {row[cell]}
-                </td>
-              </>
+              <td key={cellIndex}>
+                {row[cell]}
+              </td>
             ))}
             <td>
               <div
