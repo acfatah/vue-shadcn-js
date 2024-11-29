@@ -1,5 +1,5 @@
 <template>
-  <div class="grid w-full max-w-sm items-center gap-1.5">
+  <div class="flex w-full flex-col gap-2">
     <Label for="username">Username</Label>
     <Input id="username" type="text" placeholder="johndoe" />
   </div>

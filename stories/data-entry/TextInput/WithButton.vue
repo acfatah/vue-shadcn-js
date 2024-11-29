@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-full max-w-sm items-center gap-1.5">
+  <div class="flex w-full items-center gap-1.5">
     <Input id="email" type="email" placeholder="Email" />
     <Button type="submit">
       Subscribe
