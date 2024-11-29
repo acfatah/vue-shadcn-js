@@ -3,15 +3,20 @@ import { ToggleGroupRoot, useForwardPropsEmits } from 'radix-vue'
 
 const props = defineProps({
   rovingFocus: { type: Boolean, required: false },
-  disabled: { type: Boolean, required: false },
-  orientation: { type: String, required: false },
-  dir: { type: String, required: false },
   loop: { type: Boolean, required: false },
   type: { type: null, required: false },
+
+  disabled: { type: Boolean, required: false },
   modelValue: { type: null, required: false },
   defaultValue: { type: null, required: false },
   variant: { type: null, required: false },
   size: { type: null, required: false },
+
+  /** @type { 'ltr' | 'rtl' } */
+  dir: { type: String, required: false },
+
+  /** @type { 'vertical' | 'horizontal' } */
+  orientation: { type: String, required: false },
 
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
@@ -26,6 +31,7 @@ provide('toggleGroup', {
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
+
   return delegated
 })
 
@@ -35,7 +41,11 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <ToggleGroupRoot
     v-bind="forwarded"
-    :class="cn('flex items-center justify-center gap-1', props.class)"
+    :class="cn(
+      'flex items-center justify-center gap-1',
+      props.class,
+      props.orientation === 'vertical' && 'flex-col',
+    )"
   >
     <slot />
   </ToggleGroupRoot>

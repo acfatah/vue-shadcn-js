@@ -3,9 +3,10 @@ import { ToggleGroupItem, useForwardProps } from 'radix-vue'
 import { toggleVariants } from '~/components/ui/toggle'
 
 const props = defineProps({
+  pressed: { type: Boolean, required: false },
+
   value: { type: String, required: true },
   defaultValue: { type: Boolean, required: false },
-  pressed: { type: Boolean, required: false },
   disabled: { type: Boolean, required: false },
   variant: { type: null, required: false },
   size: { type: null, required: false },
@@ -19,6 +20,7 @@ const context = inject('toggleGroup')
 
 const delegatedProps = computed(() => {
   const { class: _, variant, size, ...delegated } = props
+
   return delegated
 })
 
