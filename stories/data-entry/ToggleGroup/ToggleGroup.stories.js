@@ -1,5 +1,5 @@
 import { Toaster } from '~/components/ui/toast'
-import { ToggleGroup } from '~/components/ui/toggle-group'
+import { ToggleGroup, ToggleGroupItem } from '~/components/ui/toggle-group'
 import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
 import FormStory from './FormStory.vue'
@@ -11,8 +11,11 @@ import FormSource from './FormStory.vue?raw'
  * Primitive API Reference: https://www.radix-vue.com/components/toggle-group.html
  */
 export default {
-  title: '',
+  title: 'Data Entry/Toggle Group',
   component: ToggleGroup,
+  subcomponents: {
+    ToggleGroupItem,
+  },
   tags: ['autodocs'],
 }
 
@@ -67,5 +70,13 @@ export const Single = {
   ...Default,
   args: {
     type: 'single',
+  },
+}
+
+export const Vertical = {
+  ...Default,
+  args: {
+    type: 'single',
+    orientation: 'vertical',
   },
 }
