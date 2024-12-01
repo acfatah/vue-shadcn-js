@@ -15,8 +15,7 @@ export const componentResolvers = [
 export const deepSearchDirs = [
   'src/components/ui',
   'src/components/extras',
-  'src/components/page',
-  'src/layouts',
+  'src/components/layouts',
 ]
 
 export const searchDirs = [

@@ -1,4 +1,4 @@
-import DefaultLayout from '~/layouts/DefaultLayout.vue'
+import DefaultLayout from '~/components/layouts/DefaultLayout.vue'
 import Dashboard01 from './Dashboard01.vue'
 
 export default [

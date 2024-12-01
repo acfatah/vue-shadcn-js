@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import DefaultLayout from '~/layouts/DefaultLayout.vue'
-import HomeView from '~/views/HomeView.vue'
+import DefaultLayout from '~/components/layouts/DefaultLayout.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,8 +7,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      meta: { layout: DefaultLayout },
-      component: HomeView,
+      component: () => import('~/views/HomeView/HomeView.vue'),
     },
     {
       path: '/about',
