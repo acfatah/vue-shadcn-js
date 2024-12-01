@@ -15,7 +15,8 @@
     "check-updates": "npx npm-check-updates -u --target semver",
     "update-deps": "npm run check-updates && npm install && npm audit fix",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "generate": "npx plop --plopfile .templates/generator.js"
   },
   "dependencies": {
     "@internationalized/date": "^3.6.0",
