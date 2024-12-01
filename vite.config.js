@@ -7,12 +7,9 @@ import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import svgLoader from 'vite-svg-loader'
 import {
-  localComponentsResolver,
-  lucideIconResolver,
-  radixVueResolver,
-  veeValidateResolver,
-  vueuseComponentsResolver,
-} from './src/components/resolvers'
+  componentResolvers,
+  deepSearchDirs,
+} from './src/components'
 
 export default defineConfig({
   css: {
@@ -37,18 +34,8 @@ export default defineConfig({
       ],
     }),
     Components({
-      dirs: [
-        'src/components/ui',
-        'src/components/extras',
-        'src/layouts',
-      ],
-      resolvers: [
-        localComponentsResolver,
-        lucideIconResolver,
-        radixVueResolver,
-        veeValidateResolver,
-        vueuseComponentsResolver,
-      ],
+      dirs: deepSearchDirs,
+      resolvers: componentResolvers,
     }),
     vue(),
     svgLoader({
