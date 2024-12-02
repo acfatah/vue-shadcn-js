@@ -11,7 +11,7 @@
     "lint:changed": "eslint --no-warn-ignored $(git diff --name-only --diff-filter=d HEAD)",
     "lint:fix": "npm run lint:changed -- --fix",
     "lint:inspect": "npx eslint --inspect-config",
-    "precommit": "npm run lint:fix",
+    "precommit": "npm run lint:changed",
     "check-updates": "npx npm-check-updates -u --target semver",
     "update-deps": "npm run check-updates && npm install && npm audit fix",
     "storybook": "storybook dev -p 6006",
