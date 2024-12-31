@@ -41,7 +41,7 @@ npm run update-deps
 
 ## Introduction
 
-This template is built using the [Shadcn UI](https://ui.shadcn.com) design system
+This template is built using the [Shadcn UI](https://shadcn-vue.com) design system
 and integrates seamlessly with our front-end stack of Vite, Vue, and [TailwindCSS](https://tailwindcss.com)
 to build a single page application.
 

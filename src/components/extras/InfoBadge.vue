@@ -1,7 +1,7 @@
 <template>
   <Popover>
     <PopoverTrigger as-child>
-      <Badge variant="outline" class="border-transparent p-1">
+      <Badge variant="outline" class="cursor-help border-transparent p-1">
         <span class="sr-only absolute">Info</span>
         <InfoIcon class="size-4 translate-y-0.5" />
       </Badge>
