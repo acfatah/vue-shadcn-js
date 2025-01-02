@@ -7,8 +7,7 @@ const formSchema = toTypedSchema(z.object({
   pin: z
     .array(z.coerce.string())
     .length(5, { message: 'Invalid input' })
-    .transform(value => value.join(''))
-  ,
+    .transform(value => value.join('')),
 }))
 
 function onSubmit(values) {

@@ -18,12 +18,12 @@ export const storyGenerator = {
   actions: [
     {
       type: 'add',
-      path: '../stories/{{orValues path name}}/{{name}}.stories.js',
+      path: '../.storybook/stories/{{orValues path name}}/{{name}}.stories.js',
       templateFile: 'stories/files/Name.stories.js.hbs',
     },
     {
       type: 'add',
-      path: '../stories/{{orValues path name}}/DefaultStory.vue',
+      path: '../.storybook/stories/{{orValues path name}}/DefaultStory.vue',
       templateFile: 'stories/files/DefaultStory.vue.hbs',
     },
   ],

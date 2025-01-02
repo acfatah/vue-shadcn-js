@@ -1,6 +1,6 @@
 # Vite, Vue 3 and shadcn/ui Single Page Application Boilerplate
 
-<p>
+<p style="display: inline-flex; gap: 0.25rem;">
   <a href="./LICENSE">
   <img alt="GitHub" src="https://img.shields.io/github/license/acfatah/vue-shadcn-spa?style=flat-square"></a>
 

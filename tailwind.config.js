@@ -26,7 +26,7 @@ module.exports = {
     './components/**/*.{js,jsx,vue}',
     './app/**/*.{js,jsx,vue}',
     './src/**/*.{js,jsx,vue}',
-    './stories/**/*.{js,jsx,vue}',
+    './.storybook/stories/**/*.{js,jsx,vue}',
   ],
 
   theme: {
