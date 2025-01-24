@@ -3,7 +3,7 @@ import { TabsContent } from 'radix-vue'
 
 const props = defineProps({
   value: { type: [String, Number], required: true },
-  forceMount: { type: Boolean, required: false },
+  forceMount: { type: Boolean, default: true },
 
   asChild: { type: Boolean, required: false },
   as: { type: null, required: false },
