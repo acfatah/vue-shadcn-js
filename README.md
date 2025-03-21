@@ -10,14 +10,18 @@
 
 Streamlining Front-end Development with Modern Tools.
 
-> WORK IN PROGRESS
+> [!IMPORTANT]
+> I'm gradually moving to TypeScript. See [@acfatah/reka-dashboard](https://github.com/acfatah/reka-dashboard) repository to follow the latest updates.
+
+> [!CAUTION]
+> Significant updates have been made to `radix-vue` and `tailwindcss`. As a result, some components may become outdated!
 
 ## Usage
 
 1. Copy the repository,
 
 ```bash
-npx tiged acfatah/vue-shadcn-spa newproject
+npx tiged acfatah/vue-shadcn-js
 ```
 
 2. Include VSCode configurations in the repository. By default, the directory
